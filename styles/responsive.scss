@@ -372,63 +372,100 @@
 .aboutpage {
   .about-inner {
     .zigzag {
-      padding: 80px 0;
-      display: flex;
-      gap: 30px;
-      align-items: center;
+      .zigzag-inner {
+        padding: 80px 0;
+        display: flex;
+        gap: 30px;
+        align-items: center;
 
-      .zigzag-img {
-        width: 50%;
+        .zigzag-img {
+          width: 50%;
 
-        img {
-          width: 100%;
-        }
-      }
-
-      .zigzag-text {
-        width: 50%;
-
-        h2 {
-          margin-bottom: 20px;
-        }
-
-        p {
-          margin-bottom: 15px;
-        }
-
-        .our-work {
-          display: grid;
-          gap: 10px;
-
-          p {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            svg {
-              width: 20px;
-              height: 20px;
-              color: var(--primary);
-            }
+          img {
+            width: 100%;
           }
         }
 
-        button {
-          margin-top: 30px;
+        .zigzag-text {
+          width: 50%;
+
+          h2 {
+            margin-bottom: 20px;
+          }
+
+          p {
+            margin-bottom: 15px;
+          }
+
+          .our-work {
+            display: grid;
+            gap: 10px;
+
+            p {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              svg {
+                width: 20px;
+                height: 20px;
+                color: var(--primary);
+              }
+            }
+          }
+
+          button {
+            margin-top: 30px;
+          }
         }
       }
     }
 
     .team {
       padding: 80px 0;
-
       h2 {
         margin-bottom: 30px;
+        text-align: center;
       }
-
       .team-inner {
         display: grid;
-        grid-template-columns: repeat(3,minmax(0,1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 20px;
+
+        .team-card {
+          .team-img {
+            border-radius: 10px;
+
+            img {
+              border-radius: 10px;
+            }
+          }
+          .team-text {
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgb(205 205 205 / 90%);
+            margin: 0 20px;
+            position: relative;
+            margin-top: -70px;
+
+            h3 {
+              font-size: 28px;
+              line-height: 1;
+              font-weight: 600;
+              margin-bottom: 5px;
+            }
+            span {
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 1;
+              color: var(--primary);
+            }
+            p {
+              color: #7a7a7a;
+              margin-top: 10px;
+            }
+          }
+        }
       }
     }
   }
@@ -808,7 +845,6 @@
       }
 
       .portfolio {
-
         .portfolio-inner {
           flex-direction: column;
           gap: 30px;
@@ -861,6 +897,40 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .aboutpage {
+    .about-inner {
+      .zigzag {
+        .zigzag-inner {
+          flex-direction: column;
+          padding: 60px 0;
+          gap: 20px;
+
+          .zigzag-img {
+            width: 100%;
+          }
+          .zigzag-text {
+            width: 100%;
+          }
+        }
+      }
+
+      .team {
+        padding: 60px 0;
+
+        .team-inner {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+
+          .team-card {
+            width: 46%;
           }
         }
       }
@@ -957,11 +1027,8 @@
       }
 
       .portfolio {
-
         .portfolio-inner {
-
           .big-card {
-
             .bc-img {
               width: 100%;
               height: 100%;
@@ -1002,6 +1069,44 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .aboutpage {
+    .about-inner {
+      .zigzag {
+        .zigzag-inner {
+          padding: 40px 0;
+        }
+      }
+      .team {
+        padding: 40px 0;
+
+        .team-inner {
+          flex-direction: column;
+          flex-wrap: nowrap;
+          gap: 30px;
+          align-items: center;
+
+          .team-card {
+            width: 56%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .aboutpage {
+    .about-inner {
+      .team {
+        .team-inner {
+          .team-card {
+            width: 80%;
           }
         }
       }
