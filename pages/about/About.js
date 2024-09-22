@@ -42,6 +42,19 @@ class About extends Component {
                 <button className="prm-btn">Connect with us</button>
               </div>
             </div>
+            <div className="team">
+              <h2>Our team</h2>
+              <div className="team-inner">
+                <div className="team-card">
+                  <div className="team-img">
+                    <img src="dummy.svg" alt="Dummy"/>
+                  </div>
+                  <div className="team-text">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
