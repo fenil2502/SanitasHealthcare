@@ -10,7 +10,8 @@ module.exports = {
       { source: '/pageNotFound', destination: '/notFound/PageNotFound' },
       { source: '/', destination: '/home/Home' },
       { source: '/portfolio', destination: '/portfolio/Portfolio' },
-      { source: '/contact', destination: '/contact/Contact' }
+      { source: '/contact', destination: '/contact/Contact' },
+      { source: '/about', destination: '/about/About' },
     ];
   },
 };

@@ -1,15 +1,9 @@
 import Router from "next/router";
 import { IsQueryParamsEncryption, SGTechWebUrl } from "../utils/AppSetting";
 
-import {
-  encryptAES,
-  decryptAES,
-  decryptionAPI,
-} from "../utils/Encryption";
+import { encryptAES, decryptAES, decryptionAPI } from "../utils/Encryption";
 //application routes
 export const Routes = {
-
-
   home: {
     rawPath: "/home/Home",
     urlPath: "/",
@@ -27,6 +21,13 @@ export const Routes = {
   contact: {
     rawPath: "/contact/Contact",
     urlPath: "/contact",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  about: {
+    rawPath: "/about/About",
+    urlPath: "/about",
     isQueryParams: true,
     isEncryptParams: false,
   },
