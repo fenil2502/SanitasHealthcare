@@ -10,7 +10,7 @@ class Portfolio extends Component {
           <div className="portfolio-inner">
             <div className="zigzag">
               <div className="zigzag-img">
-                <img src="dummy.svg" alt="DUmmy" />
+                <img src="ortho.jpg" alt="Orthoprdic" />
               </div>
               <div className="zigzag-text">
                 <h3>Orthopedic Suppliments</h3>
@@ -88,6 +88,24 @@ class Portfolio extends Component {
               </div>
             </div>
             <div className="two-row">
+              <div className="protein-card">
+                <div className="protein-img">
+                  <img src="dummy.svg" alt="Dummy" />
+                </div>
+                <div className="protein-text">
+                  <h3>Protein Supplement</h3>
+                  <p>
+                    Proteins, Omega-3 Fatty Acid, Methylcobalamine, Amino Acid
+                    Blend, Weight Management Bleng (Conjugated Linoleic Acid
+                    Powder, L-Carnitine, L-Tartrate, Green Tea Ext, Green Coffee
+                    Ext, Natural Energy and Focus Blend (Caffeine, Theobromine))
+                  </p>
+                  <button className="download-btn">
+                    Know More
+                    <FontAwesomeIcon icon={faArrowDown} />
+                  </button>
+                </div>
+              </div>
               <div className="two-col">
                 <div className="gastro-card">
                   <div className="gastro-img">
@@ -129,18 +147,50 @@ class Portfolio extends Component {
                   </div>
                 </div>
               </div>
-              <div className="protein-card">
-                <div className="protein-img">
+            </div>
+            <div className="zigzag">
+              <div className="zigzag-img">
+                <img src="dummy.svg" alt="Dummy" />
+              </div>
+              <div className="zigzag-text">
+                <h3>Skin & hair Supplement</h3>
+                <p>
+                  Extract Preparation, Pinebark Ext. (pycnogenol), Moringa
+                  Oleifera, Saw Palmetto, Biotin, Msm, lnositol, Zinc,stinging
+                  Nettle, Glutamic Acid.dl-methionine, Aspartic Acid, L-lysine,
+                  Proline, Serine, Phenylalanine, Isoleucine,valine, Glycine,
+                  Tyrosine, Alanine, Threonine,histidine, Cystine...
+                </p>
+                <button className="download-btn">
+                  Know More
+                  <FontAwesomeIcon icon={faArrowDown} />
+                </button>
+              </div>
+            </div>
+            <div className="two-cards">
+              <div className="side-card">
+                <div className="side-card-img">
                   <img src="dummy.svg" alt="Dummy" />
                 </div>
-                <div className="protein-text">
-                  <h3>Protein Supplement</h3>
+                <div className="side-card-text">
+                  <h3>UTI Supplement</h3>
                   <p>
-                    Proteins, Omega-3 Fatty Acid, Methylcobalamine, Amino Acid
-                    Blend, Weight Management Bleng (Conjugated Linoleic Acid
-                    Powder, L-Carnitine, L-Tartrate, Green Tea Ext, Green Coffee
-                    Ext, Natural Energy and Focus Blend (Caffeine, Theobromine))
+                    Cranberry & hibiscuss, D-Mannose, Propolis Ext. &
+                    Pomegranate Ext...
                   </p>
+                  <button className="download-btn">
+                    Know More
+                    <FontAwesomeIcon icon={faArrowDown} />
+                  </button>
+                </div>
+              </div>
+              <div className="side-card">
+                <div className="side-card-img">
+                  <img src="dummy.svg" alt="Dummy" />
+                </div>
+                <div className="side-card-text">
+                  <h3>Appetizer</h3>
+                  <p>Enzyme preparation</p>
                   <button className="download-btn">
                     Know More
                     <FontAwesomeIcon icon={faArrowDown} />

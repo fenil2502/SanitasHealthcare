@@ -420,6 +420,45 @@
       }
     }
 
+    .stats {
+      background-image: url(../public/About-stats.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .stats-outer {
+        background-color: rgba(0, 0, 0, 0.65);
+
+        .stats-inner {
+          padding: 80px 0;
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+
+          .stat-box {
+            padding: 0 30px;
+            border-right: 1px solid var(--white);
+
+            span {
+              font-size: 26px;
+              font-weight: 700;
+              line-height: 1;
+              color: var(--white);
+            }
+            p {
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 1;
+              margin-top: 10px;
+              color: var(--white);
+            }
+          }
+          .stat-box:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+
     .team {
       padding: 80px 0;
       h2 {
@@ -572,6 +611,66 @@
         p {
           margin-bottom: 30px;
           text-align: justify;
+        }
+      }
+    }
+
+    .two-row {
+      display: flex;
+      gap: 30px;
+
+      .protein-card {
+        width: 35%;
+        padding: 20px;
+        background-color: var(--primary);
+        box-shadow: rgb(211, 211, 211, 10%);
+        border-radius: 10px;
+      }
+
+      .two-col {
+        width: 65%;
+
+        .gastro-card, .liver-card {
+          display: flex;
+          gap: 20px;
+          border-radius: 10px;
+          background-color: var(--primary);
+          padding: 20px;
+
+          .gastro-img, .liver-img {
+            width: 40%;
+          }
+          .gastro-text, .liver-text {
+            width: 60%;
+          }
+        }
+      }
+    }
+
+    .two-cards {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+
+      .side-card {
+        padding: 20px;
+        background-color: var(--white);
+        border-radius: 10px;
+
+        .side-card-img {
+          width: 100%;
+          height: 200px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+          }
+        }
+        .side-card-text {
+          p {
+            margin: 10px 0 20px;
+          }
         }
       }
     }
@@ -920,6 +1019,28 @@
         }
       }
 
+      .stats {
+        .stats-outer {
+          .stats-inner {
+            padding: 60px 0;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            .stat-box {
+              padding: 30px;
+              border-right: 1px solid var(--white);
+              text-align: center;
+            }
+            .stat-box:nth-child(1) {
+              border-bottom: 1px solid var(--white);
+            }
+            .stat-box:nth-child(2) {
+              border-bottom: 1px solid var(--white);
+              border-right: none;
+            }
+          }
+        }
+      }
+
       .team {
         padding: 60px 0;
 
@@ -1082,6 +1203,26 @@
           padding: 40px 0;
         }
       }
+
+      .stats {
+        .stats-outer {
+          .stats-inner {
+            padding: 40px 0;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+
+            .stat-box {
+              padding: 30px;
+              border-bottom: 1px solid var(--white);
+              border-right: none;
+              text-align: center;
+            }
+            .stat-box:nth-child(1) {
+              border-bottom: 1px solid var(--white);
+            }
+          }
+        }
+      }
+
       .team {
         padding: 40px 0;
 

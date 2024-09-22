@@ -54,6 +54,30 @@ class About extends Component {
               </div>
             </div>
           </div>
+          <div className="stats">
+            <div className="stats-outer">
+              <div className="container">
+                <div className="stats-inner">
+                  <div className="stat-box">
+                    <span>1 crore/month</span>
+                    <p>Tablet manufacturing capacity</p>
+                  </div>
+                  <div className="stat-box">
+                    <span>80 lac/month</span>
+                    <p>Capsule manufacturing capacity</p>
+                  </div>
+                  <div className="stat-box">
+                    <span>45 lacs ltr/month</span>
+                    <p>Liquid manufacturing capacity</p>
+                  </div>
+                  <div className="stat-box">
+                    <span>10 lacs kg/month</span>
+                    <p>Powder manufacturing capacity</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="team">
             <div className="container">
               <h2>Our team</h2>

@@ -23,23 +23,19 @@ class Footer extends Component {
               <div className="footer-col-2">
                 <h5>Quick Links</h5>
                 <ul className="footer-links">
-                  <li>
+                  <li onClick={() => Navigate(Routes.home)}>
                     <FontAwesomeIcon icon={faAnglesRight} />
                     Home
                   </li>
-                  <li>
+                  <li onClick={() => Navigate(Routes.about)}>
                     <FontAwesomeIcon icon={faAnglesRight} />
                     About
                   </li>
-                  <li>
-                    <FontAwesomeIcon icon={faAnglesRight} />
-                    Capabilities
-                  </li>
-                  <li>
+                  <li onClick={() => Navigate(Routes.portfolio)}>
                     <FontAwesomeIcon icon={faAnglesRight} />
                     Portfolio
                   </li>
-                  <li>
+                  <li onClick={() => Navigate(Routes.contact)}>
                     <FontAwesomeIcon icon={faAnglesRight} />
                     Contact
                   </li>
