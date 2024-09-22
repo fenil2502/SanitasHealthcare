@@ -47,10 +47,32 @@ class About extends Component {
               <div className="team-inner">
                 <div className="team-card">
                   <div className="team-img">
-                    <img src="dummy.svg" alt="Dummy"/>
+                    <img src="Devendra-Patel.jpg" alt="Devendra Patel"/>
                   </div>
                   <div className="team-text">
-                    
+                    <h3>Devendra Patel</h3>
+                    <span>Co-owner</span>
+                    <p>Bachlore in PharmacyManager, Formulation & Development</p>
+                  </div>
+                </div>
+                <div className="team-card">
+                  <div className="team-img">
+                    <img src="Tapan-Patel.jpg" alt="Tapan Patel"/>
+                  </div>
+                  <div className="team-text">
+                    <h3>Tapan Patel</h3>
+                    <span>Co-owner</span>
+                    <p>Master in PharmacyHOD, Sales</p>
+                  </div>
+                </div>
+                <div className="team-card">
+                  <div className="team-img">
+                    <img src="Vikram-Patel.jpg" alt="Vikram Patel"/>
+                  </div>
+                  <div className="team-text">
+                    <h3>Vikram Patel</h3>
+                    <span>Co-owner</span>
+                    <p>Bachlore in PharmacyHOD, Production</p>
                   </div>
                 </div>
               </div>
