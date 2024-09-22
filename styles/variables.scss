@@ -1,0 +1,26 @@
+:root {
+  --primary: #eb7e29;
+  --secondary: #ffe4c8;
+  --white: #ffffff;
+  --black: #09101a;
+  --background: #f0f2f5;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50px;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+}

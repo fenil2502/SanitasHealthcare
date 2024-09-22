@@ -1,0 +1,23 @@
+1) npm i @fortawesome/fontawesome-free
+
+2) npm install react-multi-carousel --save
+
+3) npm i react-js-pagination
+
+4) npm i react-select
+
+5) npm install sass  
+
+7) npm install react-image-crop
+
+8) npm i file-saver
+
+9) npm install react-slick --save
+
+10) npm install slick-carousel
+
+11) npm i react-daterange-picker --f
+
+12) npm i moment-range
+
+13) npm install --save react-cropper
