@@ -119,6 +119,7 @@
             line-height: normal;
             font-weight: 500;
             color: var(--white);
+            cursor: pointer;
 
             svg {
               width: 14px;
@@ -278,8 +279,9 @@
 
           .card {
             padding: 15px;
-            background-color: #F8E9E9;
-            box-shadow: 0 1px 4px rgb(211 211 211 / 10%);
+            background-color: var(--white);
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
             border-radius: 5px;
 
             span {
@@ -298,6 +300,8 @@
             height: 100%;
             background-color: var(--primary);
             border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
             span {
               font-size: 16px;
@@ -338,6 +342,7 @@
           padding: 20px;
           background-color: var(--white);
           border-radius: 5px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
           h3 {
             font-size: 36px;
@@ -354,7 +359,7 @@
 
     .portfolio {
       padding: 80px 0;
-      
+
       .portfolio-heading {
         display: flex;
         justify-content: space-between;
@@ -375,6 +380,8 @@
           background-color: var(--white);
           border-radius: 10px;
           width: 30%;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
           .bc-img {
             width: 100%;
@@ -402,6 +409,8 @@
             background-color: var(--white);
             padding: 20px;
             border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
             .card-img {
               width: 40%;
@@ -580,6 +589,8 @@
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 30px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
       .zigzag-img {
         width: 25%;
@@ -593,7 +604,6 @@
 
       .zigzag-text {
         width: 75%;
-        padding-right: 30px;
 
         h3 {
           font-size: 30px;
@@ -618,6 +628,8 @@
         background-color: var(--white);
         border-radius: 10px;
         padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
         .immunity-img,
         .gynec-img {
@@ -646,6 +658,8 @@
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 30px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
       .zigzag-rev-img {
         width: 25%;
@@ -659,7 +673,6 @@
 
       .zigzag-rev-text {
         width: 75%;
-        padding-left: 30px;
 
         h3 {
           font-size: 30px;
@@ -681,7 +694,8 @@
         width: 35%;
         padding: 20px;
         background-color: var(--primary);
-        box-shadow: rgb(211, 211, 211, 10%);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         border-radius: 10px;
       }
 
@@ -695,6 +709,8 @@
           border-radius: 10px;
           background-color: var(--primary);
           padding: 20px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
           .gastro-img,
           .liver-img {
@@ -718,6 +734,8 @@
         padding: 20px;
         background-color: var(--white);
         border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
         .side-card-img {
           width: 100%;
@@ -925,66 +943,82 @@
 
   .homepage {
     .home-inner {
+      .banner {
+        .banner-text {
+          h1 {
+            font-size: 42px;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+      }
+
       .zigzag {
-        padding: 60px 0;
-        gap: 40px;
+        .zigzag-inner {
+          padding: 60px 0;
+          gap: 40px;
+        }
       }
 
       .card-col {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 60px 0 10px;
-
-        .four-card {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
+        .card-col-inner {
+          display: flex;
+          flex-direction: column;
           gap: 20px;
+          padding: 60px 0 10px;
 
-          .card {
-            padding: 15px;
-            background-color: var(--white);
-            box-shadow: 0 1px 4px rgb(211 211 211 / 10%);
-            border-radius: 5px;
+          .four-card {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
 
-            span {
-              font-size: 22px;
-              font-weight: 600;
-            }
-            p {
-              margin-top: 10px;
+            .card {
+              padding: 15px;
+              background-color: var(--white);
+              box-shadow: 0 1px 4px rgb(211 211 211 / 10%);
+              border-radius: 5px;
+
+              span {
+                font-size: 22px;
+                font-weight: 600;
+              }
+              p {
+                margin-top: 10px;
+              }
             }
           }
-        }
 
-        .single-card {
-          .card {
-            padding: 30px;
-            height: 100%;
-            background-color: var(--primary);
-            border-radius: 5px;
+          .single-card {
+            .card {
+              padding: 30px;
+              height: 100%;
+              background-color: var(--primary);
+              border-radius: 5px;
 
-            span {
-              font-size: 16px;
-              font-weight: 500;
-              color: var(--white);
-            }
+              span {
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--white);
+              }
 
-            h3 {
-              margin-top: 10px;
-            }
+              h3 {
+                margin-top: 10px;
+              }
 
-            p {
-              margin-top: 20px;
+              p {
+                margin-top: 20px;
+              }
             }
           }
         }
       }
 
       .card-col-rev {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 10px 0 60px;
+        .card-col-rev-inner {
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 10px 0 60px;
+        }
       }
 
       .how-we-work {
@@ -1042,6 +1076,8 @@
               background-color: var(--white);
               padding: 20px;
               border-radius: 10px;
+              box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
               .card-img {
                 width: 100%;
@@ -1162,32 +1198,38 @@
   .homepage {
     .home-inner {
       .zigzag {
-        padding: 40px 0;
-        flex-direction: column;
-        gap: 20px;
+        .zigzag-inner {
+          padding: 40px 0;
+          flex-direction: column;
+          gap: 20px;
 
-        .zigzag-img {
-          width: 100%;
-        }
+          .zigzag-img {
+            width: 100%;
+          }
 
-        .zigzag-text {
-          width: 100%;
+          .zigzag-text {
+            width: 100%;
+          }
         }
       }
 
       .card-col {
-        padding: 40px 0 10px;
+        .card-col-inner {
+          padding: 40px 0 10px;
 
-        .four-card {
-          grid-template-columns: repeat(1, minmax(0, 1fr));
+          .four-card {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+          }
         }
       }
 
       .card-col-rev {
-        padding: 10px 0 40px;
+        .card-col-rev-inner {
+          padding: 10px 0 40px;
 
-        .four-card {
-          grid-template-columns: repeat(1, minmax(0, 1fr));
+          .four-card {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+          }
         }
       }
 
