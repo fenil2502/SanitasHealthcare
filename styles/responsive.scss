@@ -4,6 +4,8 @@
 }
 
 .header {
+  border-bottom: 2px solid var(--primary);
+
   .header-inner {
     .header-desktop {
       display: flex;
@@ -77,6 +79,8 @@
 
 /* ----- Footer CSS start ----- */
 .footer {
+  background-color: var(--background);
+
   .footer-inner {
     .footer-top {
       display: grid;
@@ -92,12 +96,14 @@
         p {
           margin: 15px 0 0;
           font-weight: 300;
+          color: var(--white);
         }
       }
 
       .footer-col-2 {
         h5 {
           margin: 0 0 20px;
+          color: var(--white);
         }
 
         .footer-links {
@@ -112,10 +118,12 @@
             font-size: 18px;
             line-height: normal;
             font-weight: 500;
+            color: var(--white);
 
             svg {
               width: 14px;
               height: 14px;
+              color: var(--white);
             }
           }
         }
@@ -124,17 +132,26 @@
       .footer-col-3 {
         h5 {
           margin: 0 0 20px;
+          color: var(--white);
         }
 
         .connect-box {
           .connect-details {
             margin-bottom: 20px;
 
+            a {
+              color: var(--white);
+            }
+
             .connect-title {
               display: flex;
               align-items: center;
               gap: 10px;
               margin-bottom: 5px;
+
+              h6 {
+                color: var(--white);
+              }
 
               .connect-icon {
                 width: 30px;
@@ -155,6 +172,7 @@
 
             p {
               margin: 0;
+              color: var(--white);
             }
 
             a:hover {
@@ -170,10 +188,12 @@
 
     .footer-copyright {
       padding: 20px 0;
+      border-top: 1px solid var(--white);
 
       p {
         text-align: center;
         margin: 0;
+        color: var(--white);
       }
     }
   }
@@ -183,86 +203,122 @@
 /* ----- Home css start ----- */
 .homepage {
   .home-inner {
-    .zigzag {
-      display: flex;
-      flex-direction: row;
-      gap: 50px;
-      padding: 80px 0;
+    .banner {
+      width: 100%;
+      height: 80vh;
+      background-image: url(../public/Home-banner.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0 0 30px 30px;
 
-      .zigzag-img {
-        width: 40%;
+      .banner-outer {
+        background-color: rgb(0, 0, 0, 0.5);
+        border-radius: 0 0 30px 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
 
-        img {
-          width: 100%;
+        .banner-text {
+          text-align: center;
+
+          h1 {
+            color: var(--white);
+          }
         }
       }
+    }
 
-      .zigzag-text {
-        width: 60%;
+    .zigzag {
+      .zigzag-inner {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding: 80px 0;
 
-        h2 {
-          margin-bottom: 30px;
+        .zigzag-img {
+          width: 40%;
+
+          img {
+            width: 100%;
+          }
         }
 
-        p {
-          margin-bottom: 15px;
-        }
+        .zigzag-text {
+          width: 60%;
 
-        :nth-child(3) {
-          margin-bottom: 0;
+          h2 {
+            margin-bottom: 30px;
+          }
+
+          p {
+            margin-bottom: 15px;
+          }
+
+          :nth-child(3) {
+            margin-bottom: 0;
+          }
         }
       }
     }
 
     .card-col,
     .card-col-rev {
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
-      gap: 20px;
-
-      .four-card {
+      .card-col-inner,
+      .card-col-rev-inner {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 50%);
         gap: 20px;
 
-        .card {
-          padding: 15px;
-          background-color: var(--white);
-          box-shadow: 0 1px 4px rgb(211 211 211 / 10%);
-          border-radius: 5px;
+        .four-card {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
 
-          span {
-            font-size: 22px;
-            font-weight: 600;
+          .card {
+            padding: 15px;
+            background-color: #F8E9E9;
+            box-shadow: 0 1px 4px rgb(211 211 211 / 10%);
+            border-radius: 5px;
+
+            span {
+              font-size: 22px;
+              font-weight: 600;
+            }
+            p {
+              margin-top: 10px;
+            }
           }
-          p {
-            margin-top: 10px;
+        }
+
+        .single-card {
+          .card {
+            padding: 30px;
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 5px;
+
+            span {
+              font-size: 16px;
+              font-weight: 500;
+              color: var(--white);
+            }
+
+            h3 {
+              margin-top: 10px;
+            }
+
+            p {
+              margin-top: 20px;
+            }
           }
         }
       }
+    }
 
-      .single-card {
-        .card {
-          padding: 30px;
-          height: 100%;
-          background-color: var(--primary);
-          border-radius: 5px;
-
-          span {
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--white);
-          }
-
-          h3 {
-            margin-top: 10px;
-          }
-
-          p {
-            margin-top: 20px;
-          }
-        }
-      }
+    .card-col {
+      padding-bottom: 40px;
     }
 
     .how-we-work {
@@ -297,6 +353,8 @@
     }
 
     .portfolio {
+      padding: 80px 0;
+      
       .portfolio-heading {
         display: flex;
         justify-content: space-between;
@@ -630,17 +688,20 @@
       .two-col {
         width: 65%;
 
-        .gastro-card, .liver-card {
+        .gastro-card,
+        .liver-card {
           display: flex;
           gap: 20px;
           border-radius: 10px;
           background-color: var(--primary);
           padding: 20px;
 
-          .gastro-img, .liver-img {
+          .gastro-img,
+          .liver-img {
             width: 40%;
           }
-          .gastro-text, .liver-text {
+          .gastro-text,
+          .liver-text {
             width: 60%;
           }
         }
@@ -649,7 +710,7 @@
 
     .two-cards {
       display: grid;
-      grid-template-columns: repeat(2,minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 30px;
       margin-top: 20px;
 
