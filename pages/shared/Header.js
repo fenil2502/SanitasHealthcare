@@ -1,6 +1,9 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faBarsStaggered,
+} from "@fortawesome/free-solid-svg-icons";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import Link from "next/link";
 
@@ -16,11 +19,11 @@ class Header extends Component {
               </div>
               <div className="header-menu">
                 <div className="header-links">
-                  <Link href='/'>Home</Link>
-                  <Link href='/about'>About</Link>
-                  <Link href='/portfolio'>Portfolio</Link>
+                  <Link href="/">Home</Link>
+                  <Link href="/about">About</Link>
+                  <Link href="/portfolio">Portfolio</Link>
                 </div>
-                <button onClick={()=>Navigate(Routes.contact)}>
+                <button onClick={() => Navigate(Routes.contact)}>
                   Contact Us
                   <div className="btn-arrow">
                     <FontAwesomeIcon icon={faArrowRight} />
@@ -36,11 +39,16 @@ class Header extends Component {
                 <div className="navbar-links">
                   <FontAwesomeIcon icon={faBarsStaggered} />
                 </div>
-                <button onClick={()=>Navigate(Routes.contact)}>
+                <button onClick={() => Navigate(Routes.contact)}>
                   <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
             </div>
+          </div>
+          <div className="nav-links">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/portfolio">Portfolio</Link>
           </div>
         </div>
       </div>

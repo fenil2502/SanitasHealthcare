@@ -1,9 +1,10 @@
 :root {
   --primary: #eb7e29;
-  --secondary: #ffe4c8;
+  --secondary: #eeeeee;
   --white: #ffffff;
   --black: #09101a;
-  --background: #090C02;
+  --footer: #090c02;
+  --light-orange: #f4a460;
 }
 
 .download-btn {
@@ -18,11 +19,41 @@
   background-color: var(--primary);
   color: var(--white);
   border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   svg {
     width: 15px;
     height: 15px;
+    transition: transform 0.3s ease;
   }
+}
+
+.download-btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+
+  svg {
+    transform: translateX(5px);
+  }
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.download-btn:hover::before {
+  transform: translateX(100%);
 }
 
 .prm-btn {
@@ -34,4 +65,12 @@
   background-color: var(--primary);
   color: var(--white);
   border-radius: 50px;
+
+  &:hover {
+    background-color: var(
+      --light-orange
+    );
+    color: var(--black);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  }
 }

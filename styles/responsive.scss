@@ -15,7 +15,7 @@
 
       .header-logo {
         width: auto;
-        height: 70px;
+        height: 50px;
 
         img {
           height: 100%;
@@ -42,29 +42,36 @@
           display: flex;
           gap: 10px;
           align-items: center;
+          cursor: pointer;
+          transition: background-color 0.3s ease, color 0.3s ease,
+            transform 0.3s ease;
 
           .btn-arrow {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: var(--primary);
             border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
 
             svg {
               width: 15px;
               height: 15px;
               color: var(--white);
+              transition: color 0.3s ease;
             }
           }
         }
         button:hover {
           background-color: #eb7e29;
           color: #ffffff;
+          transform: scale(1.05);
 
           .btn-arrow {
             background-color: var(--white);
+            transform: rotate(360deg);
 
             svg {
               color: var(--primary);
@@ -74,12 +81,16 @@
       }
     }
   }
+
+  .nav-links {
+    display: none;
+  }
 }
 /* ----- Header CSS end ----- */
 
 /* ----- Footer CSS start ----- */
 .footer {
-  background-color: var(--background);
+  background-color: var(--footer);
 
   .footer-inner {
     .footer-top {
@@ -211,11 +222,9 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      border-radius: 0 0 30px 30px;
 
       .banner-outer {
         background-color: rgb(0, 0, 0, 0.5);
-        border-radius: 0 0 30px 30px;
         width: 100%;
         height: 100%;
         display: flex;
@@ -232,14 +241,18 @@
     }
 
     .zigzag {
+      background-color: var(--secondary);
       .zigzag-inner {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 50px;
         padding: 80px 0;
+        overflow: hidden;
 
         .zigzag-img {
-          width: 40%;
+          width: 30%;
+          animation: scaleIn 1s ease-in-out forwards;
 
           img {
             width: 100%;
@@ -247,7 +260,9 @@
         }
 
         .zigzag-text {
-          width: 60%;
+          width: 70%;
+          transform: translateY(20px);
+          animation: slideUpFadeIn 1s ease-in-out 0.5s forwards;
 
           h2 {
             margin-bottom: 30px;
@@ -260,7 +275,31 @@
           :nth-child(3) {
             margin-bottom: 0;
           }
+
+          button {
+            margin-top: 40px;
+          }
         }
+      }
+    }
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    @keyframes slideUpFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -280,8 +319,8 @@
           .card {
             padding: 15px;
             background-color: var(--white);
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            box-shadow: rgba(248, 194, 145, 0.2) 0px 6px 24px 0px,
+              rgba(248, 194, 145, 0.3) 0px 0px 0px 1px;
             border-radius: 5px;
 
             span {
@@ -298,7 +337,7 @@
           .card {
             padding: 30px;
             height: 100%;
-            background-color: var(--primary);
+            background: linear-gradient(45deg, #eb7e29, #f4a460);
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
               rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -322,11 +361,17 @@
     }
 
     .card-col {
-      padding-bottom: 40px;
+      padding-top: 80px;
+      padding-bottom: 10px;
+    }
+    .card-col-rev {
+      padding-top: 10px;
+      padding-bottom: 80px;
     }
 
     .how-we-work {
       padding: 80px 0;
+      background-color: var(--secondary);
 
       h2 {
         text-align: center;
@@ -342,16 +387,43 @@
           padding: 20px;
           background-color: var(--white);
           border-radius: 5px;
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
 
           h3 {
-            font-size: 36px;
+            font-size: 24px;
             font-weight: 700;
             margin-bottom: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            border-radius: 10px;
+            color: var(--white);
+            transition: background-color 0.3s ease;
           }
+
           h4 {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 400;
+            transition: color 0.3s ease;
+          }
+
+          &:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
+
+            h3 {
+              background-color: var(--secondary);
+              color: var(--primary);
+            }
+
+            h4 {
+              color: var(--primary);
+            }
           }
         }
       }
@@ -360,74 +432,91 @@
     .portfolio {
       padding: 80px 0;
 
-      .portfolio-heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
       }
 
       .portfolio-inner {
         display: flex;
+        flex-direction: column;
         gap: 30px;
         width: 100%;
+        align-items: center;
 
-        .big-card {
+        .zigzag {
           display: flex;
-          flex-direction: column;
-          gap: 20px;
-          padding: 20px;
+          align-items: center;
+          gap: 30px;
           background-color: var(--white);
+          padding: 20px;
           border-radius: 10px;
-          width: 30%;
           box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
             rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
-          .bc-img {
-            width: 100%;
+          .zigzag-img {
+            width: 265px;
+            height: 265px;
+
             img {
               width: 100%;
+              height: 100%;
+              border-radius: 5px;
+              object-fit: cover;
             }
           }
 
-          .bc-text {
-            p {
-              margin: 20px 0;
+          .zigzag-text {
+            width: 75%;
+
+            h3 {
+              font-size: 30px;
+              font-weight: 500;
+              margin-bottom: 20px;
+            }
+            .download-btn {
+              margin-top: 30px;
             }
           }
         }
 
-        .two-cards {
+        .zigzag-rev {
           display: flex;
-          flex-direction: column;
+          flex-direction: row-reverse;
+          align-items: center;
           gap: 30px;
-          width: 70%;
+          background-color: var(--white);
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
-          .card {
-            display: flex;
-            gap: 20px;
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          .zigzag-rev-img {
+            width: 265px;
+            height: 265px;
 
-            .card-img {
-              width: 40%;
-              img {
-                width: 100%;
-              }
-            }
-            .card-text {
-              width: 60%;
-              display: flex;
-              flex-direction: column;
-
-              p {
-                margin: 10px 0 20px;
-              }
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 5px;
+              object-fit: cover;
             }
           }
+
+          .zigzag-rev-text {
+            width: 75%;
+            h3 {
+              font-size: 30px;
+              font-weight: 500;
+              margin-bottom: 20px;
+            }
+            .download-btn {
+              margin-top: 30px;
+            }
+          }
+        }
+        button.prm-btn {
+          margin-top: 20px;
         }
       }
     }
@@ -438,6 +527,32 @@
 /* ----- About css start ----- */
 .aboutpage {
   .about-inner {
+    .banner {
+      background-image: url(../public/About-banner.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: fit-content;
+
+      .banner-outer {
+        background-color: rgb(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .banner-text {
+          text-align: center;
+
+          h1 {
+            color: var(--white);
+            padding: 80px 0;
+          }
+        }
+      }
+    }
+
     .zigzag {
       .zigzag-inner {
         padding: 80px 0;
@@ -581,175 +696,144 @@
 /* ----- Portfolio CSS start ----- */
 .portfoliopage {
   .portfolio-inner {
-    .zigzag {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-      background-color: var(--white);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    .banner {
+      background-image: url(../public/Portfolio-banner.jpg);
+      background-position: 80% 80%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: fit-content;
 
-      .zigzag-img {
-        width: 25%;
-        height: auto;
+      .banner-outer {
+        background-color: rgb(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
 
-        img {
-          width: 100%;
-          border-radius: 5px;
-        }
-      }
+        .banner-text {
+          text-align: center;
 
-      .zigzag-text {
-        width: 75%;
-
-        h3 {
-          font-size: 30px;
-          font-weight: 500;
-          margin-bottom: 20px;
-        }
-        p {
-          margin-bottom: 30px;
-          text-align: justify;
+          h1 {
+            color: var(--white);
+            padding: 80px 0;
+          }
         }
       }
     }
 
-    .two-card {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 30px;
-      margin-bottom: 30px;
+    .portfolio-cards {
+      padding: 80px 0;
+      h3 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
 
-      .immunity-card,
-      .gynec-card {
+      .zigzag {
+        display: flex;
+        align-items: center;
+        gap: 30px;
         background-color: var(--white);
-        border-radius: 10px;
         padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
           rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
-        .immunity-img,
-        .gynec-img {
-          margin-bottom: 10px;
-        }
-        .immunity-text,
-        .gynec-text {
-          h3 {
-            font-size: 30px;
-            font-weight: 500;
-            margin-bottom: 20px;
-          }
-          p {
-            margin-bottom: 20px;
+        .zigzag-img {
+          width: 265px;
+          height: 265px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
           }
         }
-      }
-    }
 
-    .zigzag-rev {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 50px;
-      background-color: var(--white);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-
-      .zigzag-rev-img {
-        width: 25%;
-        height: auto;
-
-        img {
-          width: 100%;
-          border-radius: 5px;
+        .zigzag-text {
+          width: 75%;
         }
       }
 
-      .zigzag-rev-text {
-        width: 75%;
+      .two-card {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+        margin-bottom: 30px;
 
-        h3 {
-          font-size: 30px;
-          font-weight: 500;
-          margin-bottom: 20px;
-        }
-        p {
-          margin-bottom: 30px;
-          text-align: justify;
-        }
-      }
-    }
-
-    .two-row {
-      display: flex;
-      gap: 30px;
-
-      .protein-card {
-        width: 35%;
-        padding: 20px;
-        background-color: var(--primary);
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-        border-radius: 10px;
-      }
-
-      .two-col {
-        width: 65%;
-
+        .immunity-card,
+        .gynec-card,
         .gastro-card,
-        .liver-card {
-          display: flex;
-          gap: 20px;
+        .liver-card,
+        .side-card {
+          background-color: var(--white);
           border-radius: 10px;
-          background-color: var(--primary);
           padding: 20px;
           box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
             rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
+          .immunity-img,
+          .gynec-img,
           .gastro-img,
-          .liver-img {
-            width: 40%;
+          .liver-img,
+          .side-card-img {
+            width: 100%;
+            height: 265px;
+            margin-bottom: 10px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 5px;
+              object-fit: cover;
+            }
           }
-          .gastro-text,
-          .liver-text {
-            width: 60%;
-          }
+          // .immunity-text,
+          // .gynec-text {
+          //   h3 {
+          //     font-size: 30px;
+          //     font-weight: 500;
+          //     margin-bottom: 20px;
+          //   }
+          //   p {
+          //     margin-bottom: 20px;
+          //   }
+          // }
         }
       }
-    }
 
-    .two-cards {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 30px;
-      margin-top: 20px;
-
-      .side-card {
-        padding: 20px;
+      .zigzag-rev {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 30px;
         background-color: var(--white);
+        padding: 20px;
         border-radius: 10px;
+        margin-bottom: 30px;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
           rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
-        .side-card-img {
-          width: 100%;
-          height: 200px;
+        .zigzag-rev-img {
+          width: 265px;
+          height: 265px;
+
           img {
             width: 100%;
             height: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
+            object-fit: cover;
           }
         }
-        .side-card-text {
-          p {
-            margin: 10px 0 20px;
-          }
+
+        .zigzag-rev-text {
+          width: 75%;
         }
       }
     }
@@ -780,6 +864,9 @@
         }
 
         .contact-address {
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid #cccccc;
           h2 {
             font-size: 30px;
             font-weight: 500;
@@ -804,6 +891,41 @@
             }
           }
         }
+
+        .social-media {
+          display: flex;
+          gap: 20px;
+
+          a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            transition: box-shadow 0.3s ease;
+
+            svg {
+              width: 20px;
+              height: 20px;
+              color: var(--primary);
+              transition: color 0.3s ease;
+            }
+
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px,
+                rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+              background-color: var(--primary);
+
+              svg {
+                color: var(--white);
+              }
+            }
+          }
+        }
       }
 
       .map {
@@ -816,7 +938,7 @@
     }
 
     .contact-bottom {
-      padding-top: 30px;
+      padding-top: 40px;
 
       h4 {
         font-weight: 600;
@@ -834,6 +956,8 @@
             padding: 10px 20px;
             font-size: 18px;
             border-radius: 20px;
+            background-color: var(--secondary);
+            outline: none;
           }
         }
 
@@ -843,6 +967,8 @@
             font-size: 18px;
             border-radius: 20px;
             width: 100%;
+            background-color: var(--secondary);
+            outline: none;
           }
         }
 
@@ -884,12 +1010,14 @@
 
         .navbar-menu {
           display: flex;
-          gap: 20px;
           align-items: center;
 
           .navbar-links {
-            width: 25px;
-            height: 25px;
+            width: 35px;
+            height: 35px;
+            padding-right: 10px;
+            margin-right: 10px;
+            border-right: 1px solid #b7b7b7;
 
             svg {
               width: 100%;
@@ -919,6 +1047,24 @@
               color: var(--white);
             }
           }
+        }
+      }
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      height: 92vh;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      display: none;
+
+      a {
+        font-size: 30px;
+        font-weight: 600;
+
+        &:hover {
+          color: var(--primary);
         }
       }
     }
@@ -961,11 +1107,11 @@
       }
 
       .card-col {
+        padding: 60px 0 10px;
         .card-col-inner {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          padding: 60px 0 10px;
 
           .four-card {
             display: grid;
@@ -991,7 +1137,6 @@
             .card {
               padding: 30px;
               height: 100%;
-              background-color: var(--primary);
               border-radius: 5px;
 
               span {
@@ -1013,10 +1158,10 @@
       }
 
       .card-col-rev {
+        padding: 10px 0 60px;
         .card-col-rev-inner {
           display: flex;
           flex-direction: column-reverse;
-          padding: 10px 0 60px;
         }
       }
 
@@ -1038,6 +1183,7 @@
       }
 
       .portfolio {
+        padding: 60px 0;
         .portfolio-inner {
           flex-direction: column;
           gap: 30px;
@@ -1100,6 +1246,16 @@
 
   .aboutpage {
     .about-inner {
+      .banner {
+        .banner-text {
+          h1 {
+            font-size: 42px;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+      }
+
       .zigzag {
         .zigzag-inner {
           flex-direction: column;
@@ -1150,6 +1306,23 @@
             width: 46%;
           }
         }
+      }
+    }
+  }
+
+  .portfoliopage {
+    .portfolio-inner {
+      .banner {
+        .banner-text {
+          h1 {
+            font-size: 42px;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+      }
+      .portfolio-cards {
+        padding: 60px 0 40px;
       }
     }
   }
@@ -1213,9 +1386,8 @@
       }
 
       .card-col {
+        padding: 40px 0 10px;
         .card-col-inner {
-          padding: 40px 0 10px;
-
           .four-card {
             grid-template-columns: repeat(1, minmax(0, 1fr));
           }
@@ -1223,9 +1395,8 @@
       }
 
       .card-col-rev {
+        padding: 10px 0 40px;
         .card-col-rev-inner {
-          padding: 10px 0 40px;
-
           .four-card {
             grid-template-columns: repeat(1, minmax(0, 1fr));
           }
@@ -1240,7 +1411,7 @@
 
           .step-card {
             h3 {
-              font-size: 30px;
+              font-size: 24px;
             }
             h4 {
               font-size: 20px;
@@ -1250,47 +1421,27 @@
       }
 
       .portfolio {
+        padding: 40px 0;
         .portfolio-inner {
-          .big-card {
-            .bc-img {
+          .zigzag {
+            flex-direction: column;
+            gap: 10px;
+            .zigzag-img {
               width: 100%;
-              height: 100%;
-              img {
-                width: 100%;
-                height: 100%;
-              }
             }
-
-            .bc-text {
-              p {
-                margin: 20px 0;
-              }
+            .zigzag-text {
+              width: 100%;
             }
           }
 
-          .two-cards {
-            width: 100%;
-
-            .card {
-              flex-direction: column;
-              gap: 20px;
-              background-color: var(--white);
-              padding: 20px;
-              border-radius: 10px;
-
-              .card-img {
-                width: 100%;
-                img {
-                  width: 100%;
-                }
-              }
-              .card-text {
-                width: 100%;
-
-                p {
-                  margin: 10px 0 20px;
-                }
-              }
+          .zigzag-rev {
+            flex-direction: column;
+            gap: 10px;
+            .zigzag-rev-img {
+              width: 100%;
+            }
+            .zigzag-rev-text {
+              width: 100%;
             }
           }
         }
@@ -1336,6 +1487,39 @@
 
           .team-card {
             width: 56%;
+          }
+        }
+      }
+    }
+  }
+
+  .portfoliopage {
+    .portfolio-inner {
+      .portfolio-cards {
+        padding: 40px 0;
+        .zigzag {
+          flex-direction: column;
+          gap: 10px;
+          .zigzag-img {
+            width: 100%;
+          }
+          .zigzag-text {
+            width: 100%;
+          }
+        }
+
+        .two-card {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .zigzag-rev {
+          flex-direction: column;
+          gap: 10px;
+          .zigzag-rev-img {
+            width: 100%;
+          }
+          .zigzag-rev-text {
+            width: 100%;
           }
         }
       }

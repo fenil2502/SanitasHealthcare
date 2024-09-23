@@ -1,5 +1,6 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 class Contact extends Component {
@@ -43,7 +44,14 @@ class Contact extends Component {
                     </a>
                   </div>
                 </div>
-                <div className="social-media"></div>
+                <div className="social-media">
+                  <a href="facebook.com">
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </a>
+                  <a href="facebook.com">
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                </div>
               </div>
               <div className="map">
                 <iframe

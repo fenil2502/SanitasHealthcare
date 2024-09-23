@@ -2,6 +2,7 @@ import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { Navigate, Routes } from "react-router-dom";
 
 class Home extends Component {
   render() {
@@ -35,6 +36,7 @@ class Home extends Component {
                     manufacturing facility in Gujarat with large scale capacity
                     for wide range of nutraceuticals products.
                   </p>
+                  <button className="prm-btn">About us</button>
                 </div>
               </div>
             </div>
@@ -140,35 +142,35 @@ class Home extends Component {
               <h2>How we work</h2>
               <div className="hww-inner">
                 <div className="step-card">
-                  <h3>Step 01</h3>
+                  <h3>01</h3>
                   <h4>One to one meeting</h4>
                 </div>
                 <div className="step-card">
-                  <h3>Step 02</h3>
+                  <h3>02</h3>
                   <h4>Discussion for product & business development</h4>
                 </div>
                 <div className="step-card">
-                  <h3>Step 03</h3>
+                  <h3>03</h3>
                   <h4>Order generation</h4>
                 </div>
                 <div className="step-card">
-                  <h3>Step 04</h3>
+                  <h3>04</h3>
                   <h4>P.O. approval</h4>
                 </div>
                 <div className="step-card">
-                  <h3>Step 05</h3>
+                  <h3>05</h3>
                   <h4>Art work, design selection(2-3 days)</h4>
                 </div>
                 <div className="step-card">
-                  <h3>Step 06</h3>
+                  <h3>06</h3>
                   <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
                 </div>
                 <div className="step-card">
-                  <h3>Step 07</h3>
+                  <h3>07</h3>
                   <h4>Manufacturinbg process(10-15 days)</h4>
                 </div>
                 <div className="step-card">
-                  <h3>Step 08</h3>
+                  <h3>08</h3>
                   <h4>Dispatch of goods(1-2 days)</h4>
                 </div>
               </div>
@@ -176,23 +178,21 @@ class Home extends Component {
           </div>
           <div className="portfolio">
             <div className="container">
-              <div className="portfolio-heading">
-                <h2>Portfolio</h2>
-                <Link href="/portfolio">Explore more</Link>
-              </div>
+              <h2>Portfolio</h2>
               <div className="portfolio-inner">
-                <div className="big-card">
-                  <div className="bc-img">
-                    <img src="dummy.svg" alt="Dummy" />
+                <div className="zigzag">
+                  <div className="zigzag-img">
+                    <img src="Skin-hair-Supplement.jpg" alt="Skin and Hair" />
                   </div>
-                  <div className="bc-text">
-                    <h3>Gynec Infertility Supply</h3>
+                  <div className="zigzag-text">
+                    <h3>Skin & hair Supplement</h3>
                     <p>
-                      Multi amins, Mineral with Omega 3 Fatty Acid, Iron
-                      Supplement- L-Methyl Folate, Methylcobalamine, Pyridoxine
-                      with Phosphate, Ferrous Bisglycinate, Mangenese, Vit. B2,
-                      Copper, Folic Acid, Vit. B12, Ferrous Ascorbate, Folic
-                      Acid, Zinc Sulphate.
+                      Extract Preparation, Pinebark Ext. (pycnogenol), Moringa
+                      Oleifera, Saw Palmetto, Biotin, Msm, lnositol,
+                      Zinc,stinging Nettle, Glutamic Acid.dl-methionine,
+                      Aspartic Acid, L-lysine, Proline, Serine, Phenylalanine,
+                      Isoleucine,valine, Glycine, Tyrosine, Alanine,
+                      Threonine,histidine, Cystine...
                     </p>
                     <button className="download-btn">
                       Know More
@@ -200,50 +200,26 @@ class Home extends Component {
                     </button>
                   </div>
                 </div>
-                <div className="two-cards">
-                  <div className="card">
-                    <div className="card-img">
-                      <img src="dummy.svg" alt="DUmmy" />
-                    </div>
-                    <div className="card-text">
-                      <h3>Orthopedic Suppliments</h3>
-                      <p>
-                        Products that supports bone growth Formulations with
-                        Calcium Supplement like Calcium Citrate, Calcium
-                        Carbonate, Calcitrol, Vitamin D, Minerals; Vitamin D,
-                        Magnesium, Zinc Folic Acid, Methylcobalamin, Vitamin
-                        K27, Calcitrol, Glucosamine, Diacerein, Boswellia
-                        Serrata Extract, Rosehip Ext, Cissus Quadrangularis,
-                        Collagen Peptide, Sodium Hyaluronate, Vitamin C,
-                        L-Arginine, Chondrotine and many more.
-                      </p>
-                      <button className="download-btn">
-                        Know More
-                        <FontAwesomeIcon icon={faArrowDown} />
-                      </button>
-                    </div>
+                <div className="zigzag-rev">
+                  <div className="zigzag-rev-img">
+                    <img src="Pediatric-Supplement.jpg" alt="Pediatric" />
                   </div>
-                  <div className="card">
-                    <div className="card-img">
-                      <img src="dummy.svg" alt="DUmmy" />
-                    </div>
-                    <div className="card-text">
-                      <h3>Gastro Intestinal Supplements</h3>
-                      <p>
-                        Mammal Milk, Enzymes (Pre & Pro Biotics), Multivitamin,
-                        Amino Acid, Mineral Saccaromyces Boulardi, Fructo
-                        Oligosaccharides, Clostridum, Butydcum, Lactobacillus
-                        Rhamnosus, Bifidobacterium Blidum„ Bifidobacteriorn
-                        Longum, Streptococcus Thermophilus & Lactobacillus
-                        Acidophilus...
-                      </p>
-                      <button className="download-btn">
-                        Know More
-                        <FontAwesomeIcon icon={faArrowDown} />
-                      </button>
-                    </div>
+                  <div className="zigzag-rev-text">
+                    <h3>Pediatric Supplement</h3>
+                    <p>
+                      Enzyme Preparation, Omega-3 Fatty Acid, Amylase, Protease,
+                      Lactase, lipase, DHA, L-Lysine HCL, Vitamin C, Vitamin A,
+                      E, B1, B2, B3, B5, B6, A, D3, Elemental Zinc, Choline,
+                      Biotin, Coenzyme Q10, Vitamin A, E, E1, B2, B3, B5, B6, A,
+                      E, C, D3„ Vitamin K1, Biotin, Zinc, Selenium, Sodium...
+                    </p>
+                    <button className="download-btn">
+                      Know More
+                      <FontAwesomeIcon icon={faArrowDown} />
+                    </button>
                   </div>
                 </div>
+                <button className="prm-btn">Visit our portfolio</button>
               </div>
             </div>
           </div>

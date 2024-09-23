@@ -8,6 +8,15 @@ class About extends Component {
     return (
       <div className="aboutpage">
         <div className="about-inner">
+          <div className="banner">
+            <div className="banner-outer">
+              <div className="container">
+                <div className="banner-text">
+                  <h1>About Us</h1>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="zigzag">
             <div className="container">
               <div className="zigzag-inner">
