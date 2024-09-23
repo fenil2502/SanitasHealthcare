@@ -21,7 +21,7 @@ class About extends Component {
             <div className="container">
               <div className="zigzag-inner">
                 <div className="zigzag-img">
-                  <img src="dummy.svg" alt="Dummy" />
+                  <img src="sanitas-about.jpg" alt="Sanitas" />
                 </div>
                 <div className="zigzag-text">
                   <h2>

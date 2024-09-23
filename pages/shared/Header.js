@@ -3,12 +3,43 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faBarsStaggered,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import Link from "next/link";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMenuOpen: false,
+    };
+  }
+
+  toggleMenu = () => {
+    this.setState((prevState) => {
+      const isMenuOpen = !prevState.isMenuOpen;
+
+      // Enable or disable body scrolling based on menu state
+      if (isMenuOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+
+      return { isMenuOpen };
+    });
+  };
+
+  closeMenu = () => {
+    this.setState({
+      isMenuOpen: false,
+    });
+    document.body.style.overflow = "auto";
+  };
+
   render() {
+    const { isMenuOpen } = this.state;
     return (
       <div className="header">
         <div className="container">
@@ -36,8 +67,10 @@ class Header extends Component {
                 <img src="Sanitash_logo.svg" alt="Sanitas" />
               </div>
               <div className="navbar-menu">
-                <div className="navbar-links">
-                  <FontAwesomeIcon icon={faBarsStaggered} />
+                <div className="navbar-links" onClick={this.toggleMenu}>
+                  <FontAwesomeIcon
+                    icon={isMenuOpen ? faXmark : faBarsStaggered}
+                  />
                 </div>
                 <button onClick={() => Navigate(Routes.contact)}>
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -45,10 +78,16 @@ class Header extends Component {
               </div>
             </div>
           </div>
-          <div className="nav-links">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/portfolio">Portfolio</Link>
+          <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
+            <Link href="/" onClick={this.closeMenu}>
+              Home
+            </Link>
+            <Link href="/about" onClick={this.closeMenu}>
+              About
+            </Link>
+            <Link href="/portfolio" onClick={this.closeMenu}>
+              Portfolio
+            </Link>
           </div>
         </div>
       </div>

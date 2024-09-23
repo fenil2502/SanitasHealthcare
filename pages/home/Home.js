@@ -18,11 +18,53 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <div className="card-col">
+            <div className="container">
+              <div className="card-col-inner">
+                <div className="four-card">
+                  <div className="card">
+                    <span>Tablet dosage form</span>
+                    <p>
+                      Chewable tablets, Mouth dissolving tablets, Effervescent
+                      tablets, Coated tablets, DT tablets
+                    </p>
+                  </div>
+                  <div className="card">
+                    <span>Capsule dosage form</span>
+                    <p>Veg capsules, Hard gelatine</p>
+                  </div>
+                  <div className="card">
+                    <span>Liquid dosage form</span>
+                    <p>Liquid syrup, 5ml shots, Taste masking syrup</p>
+                  </div>
+                  <div className="card">
+                    <span>Powder dosage form</span>
+                    <p>
+                      Protein powders including whey protein, soya protein, skim
+                      milk protein, energy powder, Free flowing powder
+                    </p>
+                  </div>
+                </div>
+                <div className="single-card">
+                  <div className="card">
+                    <span>We at Sanitas</span>
+                    <h3>Mission</h3>
+                    <p>
+                      To be a benchmark in manufacturing practices for
+                      production of nutraceuticals healthcare products. To
+                      Dedicate ourseleves for humanity’s quest for longer,
+                      healthier, happier lives through innovation in medicines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="zigzag">
             <div className="container">
               <div className="zigzag-inner">
                 <div className="zigzag-img">
-                  <img src="dummy.svg" alt="Dummy" />
+                  <img src="medicines.jpg" alt="Medicine" />
                 </div>
                 <div className="zigzag-text">
                   <h2>About Sanitas</h2>
@@ -41,96 +83,41 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="card-col">
-            <div className="container">
-              <div className="card-col-inner">
-                <div className="four-card">
-                  <div className="card">
-                    <span>Tablet dosage form</span>
-                    <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
-                    </p>
-                  </div>
-                  <div className="card">
-                    <span>Tablet dosage form</span>
-                    <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
-                    </p>
-                  </div>
-                  <div className="card">
-                    <span>Tablet dosage form</span>
-                    <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
-                    </p>
-                  </div>
-                  <div className="card">
-                    <span>Tablet dosage form</span>
-                    <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
-                    </p>
-                  </div>
-                </div>
-                <div className="single-card">
-                  <div className="card">
-                    <span>We at Sanitas</span>
-                    <h3>Mission</h3>
-                    <p>
-                      To be a benchmark in manufacturing practices for
-                      production of nutraceuticals healthcare products. To
-                      Dedicate ourseleves for humanity’s quest for longer,
-                      healthier, happier lives through innovation in medicines.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="card-col-rev">
             <div className="container">
               <div className="card-col-rev-inner">
                 <div className="single-card">
                   <div className="card">
                     <span>We at Sanitas</span>
-                    <h3>Mission</h3>
+                    <h3>Vision</h3>
                     <p>
-                      To be a benchmark in manufacturing practices for
-                      production of nutraceuticals healthcare products. To
-                      Dedicate ourseleves for humanity’s quest for longer,
-                      healthier, happier lives through innovation in medicines.
+                      To provide affordable and innovative health supplement
+                      products for better well-being of a society and be a vital
+                      part in nation building.
                     </p>
                   </div>
                 </div>
                 <div className="four-card">
                   <div className="card">
-                    <span>Tablet dosage form</span>
+                    <span>Dosage in sachets</span>
+                    <p>Sachet with delicious flavour and free flow powder</p>
+                  </div>
+                  <div className="card">
+                    <span>Packing solution</span>
                     <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
+                      Attractive and asthetic packing at special rates from
+                      small to large scale production
                     </p>
                   </div>
                   <div className="card">
-                    <span>Tablet dosage form</span>
-                    <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
-                    </p>
+                    <span>Customized solution</span>
+                    <p>Specialist for bespoke formulation service</p>
                   </div>
                   <div className="card">
-                    <span>Tablet dosage form</span>
+                    <span>Innovative approach</span>
                     <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
-                    </p>
-                  </div>
-                  <div className="card">
-                    <span>Tablet dosage form</span>
-                    <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
+                      Special attention towards customers demand in new product
+                      development
                     </p>
                   </div>
                 </div>

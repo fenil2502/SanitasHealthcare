@@ -362,10 +362,10 @@
 
     .card-col {
       padding-top: 80px;
-      padding-bottom: 10px;
+      padding-bottom: 80px;
     }
     .card-col-rev {
-      padding-top: 10px;
+      padding-top: 80px;
       padding-bottom: 80px;
     }
 
@@ -1053,18 +1053,30 @@
     .nav-links {
       display: flex;
       flex-direction: column;
-      height: 92vh;
       align-items: center;
       justify-content: center;
       gap: 50px;
-      display: none;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 0;
+
+      &.open {
+        height: 92vh;
+        opacity: 1;
+      }
 
       a {
         font-size: 30px;
         font-weight: 600;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
 
         &:hover {
-          color: var(--primary);
+          color: var(
+            --primary
+          );
         }
       }
     }
@@ -1107,7 +1119,7 @@
       }
 
       .card-col {
-        padding: 60px 0 10px;
+        padding: 60px 0;
         .card-col-inner {
           display: flex;
           flex-direction: column;
@@ -1158,7 +1170,7 @@
       }
 
       .card-col-rev {
-        padding: 10px 0 60px;
+        padding: 60px 0;
         .card-col-rev-inner {
           display: flex;
           flex-direction: column-reverse;
@@ -1386,7 +1398,7 @@
       }
 
       .card-col {
-        padding: 40px 0 10px;
+        padding: 40px 0;
         .card-col-inner {
           .four-card {
             grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1395,7 +1407,7 @@
       }
 
       .card-col-rev {
-        padding: 10px 0 40px;
+        padding: 40px 0;
         .card-col-rev-inner {
           .four-card {
             grid-template-columns: repeat(1, minmax(0, 1fr));
