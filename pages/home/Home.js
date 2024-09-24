@@ -26,7 +26,7 @@ class Home extends Component {
                     <span>Tablet dosage form</span>
                     <p>
                       Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT Tablets
+                      tablets, Coated tablets, DT tablets
                     </p>
                   </div>
                   <div className="card">

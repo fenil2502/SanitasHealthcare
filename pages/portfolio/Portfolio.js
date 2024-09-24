@@ -153,7 +153,7 @@ class Portfolio extends Component {
                   <div className="liver-text">
                     <h3>Liver Supplements</h3>
                     <p>
-                      Flavonoid, Amino Acid, Multivitamins Flavonoid,
+                      Flavonoid, Amino Acid, Multivitamins,
                       Phospholipid, Silymarin, L-Ornithine L-Asparate, Vitamin,
                       Calcium Pantothenate, Niacinamide, Selenium Dioxide,
                       Dextrose, Sugar, Vit. C, Zinc, Lactobacillus, Sodium

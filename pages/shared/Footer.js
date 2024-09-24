@@ -63,12 +63,12 @@ class Footer extends Component {
                       </div>
                       <h6>Email</h6>
                     </div>
-                    <a href="mailto:info@sanitashealthcare.com">
-                      info@sanitashealthcare.com
+                    <a href="mailto:info@sanitashealthcare.in">
+                      info@sanitashealthcare.in
                     </a>
                     <br />
-                    <a href="mailto:export@sanitashealthcare.com">
-                      export@sanitashealthcare.com
+                    <a href="mailto:export@sanitashealthcare.in">
+                      export@sanitashealthcare.in
                     </a>
                   </div>
                   <div className="connect-details">
@@ -87,7 +87,7 @@ class Footer extends Component {
             </div>
             <div className="footer-copyright">
               <p>
-                Copyright &copy; 2022 Sanitas Healthcare. All Rights Are Reserved.
+                Copyright &copy; 2022 Sanitas Healthcare. All rights are reserved.
               </p>
             </div>
           </div>
