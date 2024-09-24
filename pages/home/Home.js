@@ -181,10 +181,10 @@ class Home extends Component {
                       Isoleucine,valine, Glycine, Tyrosine, Alanine,
                       Threonine,histidine, Cystine...
                     </p>
-                    <button className="download-btn">
+                    <a className="download-btn" href="./UTI_Skin_supply.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="zigzag-rev">
@@ -200,10 +200,10 @@ class Home extends Component {
                       Biotin, Coenzyme Q10, Vitamin A, E, E1, B2, B3, B5, B6, A,
                       E, C, D3„ Vitamin K1, Biotin, Zinc, Selenium, Sodium...
                     </p>
-                    <button className="download-btn">
+                    <a  className="download-btn" href="./Pediatric_Supply.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <button className="prm-btn">Visit our portfolio</button>
