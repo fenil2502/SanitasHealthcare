@@ -38,6 +38,17 @@ class Header extends Component {
     document.body.style.overflow = "auto";
   };
 
+  navigateFromHeader = (page) => {
+    if (page === "Home") {
+      Navigate(Routes.home)
+    }else if(page === "About"){
+      Navigate(Routes.about)
+    }else if(page === "Portfolio"){
+      Navigate(Routes.portfolio)
+    }
+    this.toggleMenu()
+  };
+
   render() {
     const { isMenuOpen } = this.state;
     return (
@@ -79,15 +90,11 @@ class Header extends Component {
             </div>
           </div>
           <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-            <Link href="/" onClick={this.closeMenu}>
-              Home
-            </Link>
-            <Link href="/about" onClick={this.closeMenu}>
-              About
-            </Link>
-            <Link href="/portfolio" onClick={this.closeMenu}>
+            <a onClick={() => this.navigateFromHeader("Home")}>Home</a>
+            <a onClick={() => this.navigateFromHeader("About")}>About</a>
+            <a onClick={() => this.navigateFromHeader("Portfolio")}>
               Portfolio
-            </Link>
+            </a>
           </div>
         </div>
       </div>

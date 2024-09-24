@@ -34,10 +34,10 @@ class Portfolio extends Component {
                     Hyaluronate, Vitamin C, L-Arginine, Chondrotine and many
                     more.
                   </p>
-                  <button className="download-btn">
+                  <a className="download-btn" href="./Ortho_supplements_Sanitus_Profile.pdf" target="_blank" rel="noopener noreferrer">
                     Know More
                     <FontAwesomeIcon icon={faArrowDown} />
-                  </button>
+                  </a>
                 </div>
               </div>
               <div className="two-card">
@@ -56,10 +56,10 @@ class Portfolio extends Component {
                       Vitamin K, Vit. D3, Lutein, Ginkgo Biloba, ALA, DHA,
                       Pycnogenol
                     </p>
-                    <button className="download-btn">
+                    <a className="download-btn" href="./Immun.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="gynec-card">
@@ -75,10 +75,10 @@ class Portfolio extends Component {
                       Copper, Folic Acid, Vit. B12, Ferrous Ascorbate, Folic
                       Acid, Zinc Sulphate.
                     </p>
-                    <button className="download-btn">
+                    <a className="download-btn" href="./Gynec_infertility_Supply.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -95,10 +95,10 @@ class Portfolio extends Component {
                     Coenzyme Q10, Vitamin A, E, E1, B2, B3, B5, B6, A, E, C, D3„
                     Vitamin K1, Biotin, Zinc, Selenium, Sodium...
                   </p>
-                  <button className="download-btn">
+                  <a className="download-btn" href="./Pediatric_Supply.pdf" target="_blank" rel="noopener noreferrer">
                     Know More
                     <FontAwesomeIcon icon={faArrowDown} />
-                  </button>
+                  </a>
                 </div>
               </div>
               <div className="two-card">
@@ -116,10 +116,10 @@ class Portfolio extends Component {
                       Longum, Streptococcus Thermophilus & Lactobacillus
                       Acidophilus...
                     </p>
-                    <button className="download-btn">
+                    <a className="download-btn" href="./gastro_liver_supply.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="liver-card">
@@ -135,10 +135,10 @@ class Portfolio extends Component {
                       Lactobacillus, Sod urn Chloride, Sodium Citrate, Pottasium
                       Chloride
                     </p>
-                    <button className="download-btn">
+                    <a className="download-btn" href="./gastro_liver_supply.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -155,10 +155,10 @@ class Portfolio extends Component {
                     L-lysine, Proline, Serine, Phenylalanine, Isoleucine,valine,
                     Glycine, Tyrosine, Alanine, Threonine,histidine, Cystine...
                   </p>
-                  <button className="download-btn">
+                  <a className="download-btn" href="./UTI_Skin_supply.pdf" target="_blank" rel="noopener noreferrer">
                     Know More
                     <FontAwesomeIcon icon={faArrowDown} />
-                  </button>
+                  </a>
                 </div>
               </div>
               <div className="two-card">
@@ -172,10 +172,10 @@ class Portfolio extends Component {
                       Cranberry & hibiscuss, D-Mannose, Propolis Ext. &
                       Pomegranate Ext...
                     </p>
-                    <button className="download-btn">
+                    <a className="download-btn" href="./UTI_Skin_supply.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="side-card">
@@ -185,10 +185,10 @@ class Portfolio extends Component {
                   <div className="side-card-text">
                     <h3>Appetizer</h3>
                     <p>Enzyme preparation</p>
-                    <button className="download-btn">
+                    <a className="download-btn" href="./UTI_Skin_supply.pdf" target="_blank" rel="noopener noreferrer">
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -204,10 +204,10 @@ class Portfolio extends Component {
                     Powder, L-Carnitine, L-Tartrate, Green Tea Ext, Green Coffee
                     Ext, Natural Energy and Focus Blend (Caffeine, Theobromine))
                   </p>
-                  <button className="download-btn">
+                  <a className="download-btn" href="./Protein supply.pdf" target="_blank" rel="noopener noreferrer">
                     Know More
                     <FontAwesomeIcon icon={faArrowDown} />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
