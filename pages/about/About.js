@@ -1,7 +1,7 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { Link, Navigate } from "react-router-dom";
+import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 class About extends Component {
   render() {
@@ -58,7 +58,7 @@ class About extends Component {
                       All dosage form at one place
                     </p>
                   </div>
-                  <button className="prm-btn">Connect with us</button>
+                  <button className="prm-btn" onClick={() => Navigate(Routes.contact)}>Connect with us</button>
                 </div>
               </div>
             </div>
