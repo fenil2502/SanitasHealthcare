@@ -25,7 +25,7 @@ class Portfolio extends Component {
                 <div className="zigzag-text">
                   <h3>Orthopedic Suppliments</h3>
                   <p>
-                    Products that supports bone growth Formulations with Calcium
+                    Products that supports bone growth formulations with Calcium
                     Supplement (Calcium Citrate, Calcium Carbonate, Calcitrol,
                     Minerals, Vitamin D, Magnesium, Zinc, Folic Acid,
                     Methylcobalamin, Vitamin K27, Calcitrol, Glucosamine,
