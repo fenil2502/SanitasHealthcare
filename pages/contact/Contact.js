@@ -45,10 +45,18 @@ class Contact extends Component {
                   </div>
                 </div>
                 <div className="social-media">
-                  <a href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/" target="_blank"  rel="noreferrer">
+                  <a
+                    href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
-                  <a href="https://www.instagram.com/sanitashealthcare?igsh=YTBycW5nc2lzd3Rl" target="_blank"  rel="noreferrer">
+                  <a
+                    href="https://www.instagram.com/sanitashealthcare?igsh=YTBycW5nc2lzd3Rl"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </div>
@@ -68,14 +76,19 @@ class Contact extends Component {
               <h4>Fill up the form if you have any question</h4>
               <div className="form">
                 <div className="user-details">
-                  <input placeholder="Name" />
-                  <input placeholder="Email" />
-                  <input placeholder="Mobile no." />
+                  <input type="text" placeholder="Name*" required />
+                  <input type="email" placeholder="Email" />
+                  <input
+                    type="tel"
+                    placeholder="Mobile no.*"
+                    pattern="[0-9]{10}"
+                    required
+                  />
                 </div>
                 <div className="user-msg">
                   <textarea placeholder="Message"></textarea>
                 </div>
-                <button>Send message</button>
+                <button className="prm-btn">Send message</button>
               </div>
             </div>
           </div>

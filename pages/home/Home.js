@@ -26,12 +26,12 @@ class Home extends Component {
                     <span>Tablet dosage form</span>
                     <p>
                       Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
+                      tablets, Coated tablets, DT Tablets
                     </p>
                   </div>
                   <div className="card">
                     <span>Capsule dosage form</span>
-                    <p>Veg capsules, Hard gelatine</p>
+                    <p>Veg capsules, Hard gelatine capsules</p>
                   </div>
                   <div className="card">
                     <span>Liquid dosage form</span>
@@ -78,7 +78,12 @@ class Home extends Component {
                     manufacturing facility in Gujarat with large scale capacity
                     for wide range of nutraceuticals products.
                   </p>
-                  <button className="prm-btn" onClick={() => Navigate(Routes.about)}>About us</button>
+                  <button
+                    className="prm-btn"
+                    onClick={() => Navigate(Routes.about)}
+                  >
+                    About us
+                  </button>
                 </div>
               </div>
             </div>
@@ -105,7 +110,7 @@ class Home extends Component {
                   <div className="card">
                     <span>Packing solution</span>
                     <p>
-                      Attractive and asthetic packing at special rates from
+                      Attractive and aesthetic packing at special rates from
                       small to large scale production
                     </p>
                   </div>
@@ -128,6 +133,74 @@ class Home extends Component {
             <div className="container">
               <h2>How we work</h2>
               <div className="hww-inner">
+                <div className="step-card">
+                  <h3>01</h3>
+                  <h4>One to one meeting with customer</h4>
+                </div>
+                <div className="step-card">
+                  <h3>02</h3>
+                  <h4>Discussion for product & Business Development</h4>
+                </div>
+                <div className="step-card">
+                  <h3>03</h3>
+                  <h4>Order generation</h4>
+                </div>
+                <div className="step-card">
+                  <h3>04</h3>
+                  <h4>P.O. approval</h4>
+                </div>
+                <div className="step-card">
+                  <h3>08</h3>
+                  <h4>Dispatch of goods(1-2 days)</h4>
+                </div>
+                <div className="step-card">
+                  <h3>07</h3>
+                  <h4>Manufacturing process(10-15 days)</h4>
+                </div>
+                <div className="step-card">
+                  <h3>06</h3>
+                  <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
+                </div>
+                <div className="step-card">
+                  <h3>05</h3>
+                  <h4>Art work, design selection(2-3 days)</h4>
+                </div>
+              </div>
+              <div className="hww-inner-tablet">
+                <div className="step-card">
+                  <h3>01</h3>
+                  <h4>One to one meeting</h4>
+                </div>
+                <div className="step-card">
+                  <h3>02</h3>
+                  <h4>Discussion for product & business development</h4>
+                </div>
+                <div className="step-card">
+                  <h3>03</h3>
+                  <h4>Order generation</h4>
+                </div>
+                <div className="step-card">
+                  <h3>06</h3>
+                  <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
+                </div>
+                <div className="step-card">
+                  <h3>05</h3>
+                  <h4>Art work, design selection(2-3 days)</h4>
+                </div>
+                <div className="step-card">
+                  <h3>04</h3>
+                  <h4>P.O. approval</h4>
+                </div>
+                <div className="step-card">
+                  <h3>07</h3>
+                  <h4>Manufacturinbg process(10-15 days)</h4>
+                </div>
+                <div className="step-card">
+                  <h3>08</h3>
+                  <h4>Dispatch of goods(1-2 days)</h4>
+                </div>
+              </div>
+              <div className="hww-inner-mobile">
                 <div className="step-card">
                   <h3>01</h3>
                   <h4>One to one meeting</h4>
@@ -175,13 +248,18 @@ class Home extends Component {
                     <h3>Skin & hair Supplement</h3>
                     <p>
                       Extract Preparation, Pinebark Ext. (pycnogenol), Moringa
-                      Oleifera, Saw Palmetto, Biotin, Msm, lnositol,
-                      Zinc,stinging Nettle, Glutamic Acid.dl-methionine,
-                      Aspartic Acid, L-lysine, Proline, Serine, Phenylalanine,
+                      Oleifera, Saw Palmetto, Biotin, Msm, lnositol, Zinc,
+                      stinging Nettle, Glutamic Acid.dl-methionine, Aspartic
+                      Acid, L-lysine, Proline, Serine, Phenylalanine,
                       Isoleucine,valine, Glycine, Tyrosine, Alanine,
                       Threonine,histidine, Cystine...
                     </p>
-                    <a className="download-btn" href="./UTI_Skin_supply.pdf" target="_blank" rel="noopener noreferrer">
+                    <a
+                      className="download-btn"
+                      href="./UTI_Skin_supply.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
                     </a>
@@ -197,16 +275,26 @@ class Home extends Component {
                       Enzyme Preparation, Omega-3 Fatty Acid, Amylase, Protease,
                       Lactase, lipase, DHA, L-Lysine HCL, Vitamin C, Vitamin A,
                       E, B1, B2, B3, B5, B6, A, D3, Elemental Zinc, Choline,
-                      Biotin, Coenzyme Q10, Vitamin A, E, E1, B2, B3, B5, B6, A,
-                      E, C, D3„ Vitamin K1, Biotin, Zinc, Selenium, Sodium...
+                      Biotin, Coenzyme Q10, Vitamin A, E, B1, B2, B3, B5, B6, A,
+                      E, C, D3, Vitamin K1, Biotin, Zinc, Selenium, Sodium...
                     </p>
-                    <a  className="download-btn" href="./Pediatric_Supply.pdf" target="_blank" rel="noopener noreferrer">
+                    <a
+                      className="download-btn"
+                      href="./Pediatric_Supply.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Know More
                       <FontAwesomeIcon icon={faArrowDown} />
                     </a>
                   </div>
                 </div>
-                <button className="prm-btn" onClick={() => Navigate(Routes.contact)}>Visit our portfolio</button>
+                <button
+                  className="prm-btn"
+                  onClick={() => Navigate(Routes.portfolio)}
+                >
+                  Visit our portfolio
+                </button>
               </div>
             </div>
           </div>

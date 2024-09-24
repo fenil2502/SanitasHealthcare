@@ -87,7 +87,7 @@ class Footer extends Component {
             </div>
             <div className="footer-copyright">
               <p>
-                Copyright &copy; 2024 Sanitas Healthcare. All Rights Reserved.
+                Copyright &copy; 2022 Sanitas Healthcare. All Rights Are Reserved.
               </p>
             </div>
           </div>

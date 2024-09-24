@@ -308,7 +308,7 @@
       .card-col-inner,
       .card-col-rev-inner {
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
 
         .four-card {
@@ -381,7 +381,7 @@
       .hww-inner {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 20px;
+        gap: 40px;
 
         .step-card {
           padding: 20px;
@@ -390,6 +390,7 @@
           box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
             rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          position: relative;
 
           h3 {
             font-size: 24px;
@@ -426,6 +427,46 @@
             }
           }
         }
+        .step-card:nth-child(1)::after,
+        .step-card:nth-child(2)::after,
+        .step-card:nth-child(3)::after {
+          content: url(../public/arrow.png);
+          position: absolute;
+          right: -25px;
+          top: 0;
+          rotate: 45deg;
+          z-index: 1;
+        }
+        .step-card:nth-child(4)::after {
+          content: url(../public/arrow.png);
+          position: absolute;
+          right: 10px;
+          top: 115px;
+          rotate: 135deg;
+          z-index: 1;
+        }
+        .step-card:nth-child(5)::after,
+        .step-card:nth-child(6)::after,
+        .step-card:nth-child(7)::after {
+          content: url(../public/arrow.png);
+          position: absolute;
+          right: -55px;
+          top: 0;
+          rotate: 225deg;
+          z-index: 1;
+        }
+
+        @media screen and (max-width: 1078px) {
+          .step-card:nth-child(4)::after {
+            top: 140px;
+          }
+        }
+      }
+      .hww-inner-tablet {
+        display: none;
+      }
+      .hww-inner-mobile {
+        display: none;
       }
     }
 
@@ -1074,9 +1115,7 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: var(
-            --primary
-          );
+          color: var(--primary);
         }
       }
     }
@@ -1180,17 +1219,110 @@
       .how-we-work {
         padding: 60px 0;
 
-        .hww-inner {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+        .hww-inner-tablet {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 40px;
 
           .step-card {
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+
             h3 {
-              font-size: 30px;
+              font-size: 24px;
+              font-weight: 700;
+              margin-bottom: 10px;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: var(--primary);
+              border-radius: 10px;
+              color: var(--white);
+              transition: background-color 0.3s ease;
             }
+
             h4 {
-              font-size: 20px;
+              font-size: 18px;
+              font-weight: 400;
+              transition: color 0.3s ease;
+            }
+
+            &:hover {
+              transform: translateY(-10px) scale(1.05);
+              box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
+
+              h3 {
+                background-color: var(--secondary);
+                color: var(--primary);
+              }
+
+              h4 {
+                color: var(--primary);
+              }
             }
           }
+          .step-card:nth-child(1)::after,
+          .step-card:nth-child(2)::after {
+            content: url(../public/arrow.png);
+            position: absolute;
+            right: -25px;
+            top: 0;
+            rotate: 45deg;
+            z-index: 1;
+          }
+          .step-card:nth-child(3)::after {
+            content: url(../public/arrow.png);
+            position: absolute;
+            right: 10px;
+            top: 115px;
+            rotate: 135deg;
+            z-index: 1;
+          }
+          .step-card:nth-child(5)::after,
+          .step-card:nth-child(6)::after {
+            content: url(../public/arrow.png);
+            position: absolute;
+            left: -25px;
+            top: 0;
+            rotate: 225deg;
+            z-index: 1;
+          }
+          .step-card:nth-child(4)::after {
+            content: url(../public/arrow.png);
+            position: absolute;
+            left: 10px;
+            top: 115px;
+            rotate: 135deg;
+            z-index: 1;
+          }
+          .step-card:nth-child(7)::after {
+            content: url(../public/arrow.png);
+            position: absolute;
+            right: -25px;
+            top: 0;
+            rotate: 45deg;
+            z-index: 1;
+          }
+          @media screen and (max-width: 808px) {
+            .step-card:nth-child(3)::after {
+              top: 140px;
+            }
+          }
+          @media screen and (max-width: 786px) {
+            .step-card:nth-child(4)::after {
+              top: 140px;
+            }
+          }
+        }
+        .hww-inner {
+          display: none;
         }
       }
 
@@ -1418,17 +1550,72 @@
       .how-we-work {
         padding: 40px 0;
 
-        .hww-inner {
-          grid-template-columns: repeat(1, minmax(0, 1fr));
+        .hww-inner-mobile {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px;
 
           .step-card {
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+
             h3 {
               font-size: 24px;
+              font-weight: 700;
+              margin-bottom: 10px;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: var(--primary);
+              border-radius: 10px;
+              color: var(--white);
+              transition: background-color 0.3s ease;
             }
+
             h4 {
-              font-size: 20px;
+              font-size: 18px;
+              font-weight: 400;
+              transition: color 0.3s ease;
+            }
+
+            &:hover {
+              transform: translateY(-10px) scale(1.05);
+              box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
+
+              h3 {
+                background-color: var(--secondary);
+                color: var(--primary);
+              }
+
+              h4 {
+                color: var(--primary);
+              }
             }
           }
+          .step-card:nth-child(1)::after,
+          .step-card:nth-child(2)::after,
+          .step-card:nth-child(3)::after,
+          .step-card:nth-child(4)::after,
+          .step-card:nth-child(5)::after,
+          .step-card:nth-child(6)::after,
+          .step-card:nth-child(7)::after {
+            content: url(../public/arrow.png);
+            position: absolute;
+            right: 20px;
+            bottom: -40px;
+            rotate: 135deg;
+            z-index: 1;
+          }
+        }
+        .hww-inner, .hww-inner-tablet {
+          display: none;
         }
       }
 

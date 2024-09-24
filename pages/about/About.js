@@ -99,7 +99,7 @@ class About extends Component {
                     <h3>Devendra Patel</h3>
                     <span>Co-owner</span>
                     <p>
-                      Bachlore in PharmacyManager,
+                      Bachlore in Pharmacy Manager,
                       <br />
                       Formulation & Development
                     </p>
@@ -113,7 +113,7 @@ class About extends Component {
                     <h3>Tapan Patel</h3>
                     <span>Co-owner</span>
                     <p>
-                      Master in PharmacyHOD,
+                      Master in Pharmacy HOD,
                       <br />
                       Sales
                     </p>
@@ -127,7 +127,7 @@ class About extends Component {
                     <h3>Vikram Patel</h3>
                     <span>Co-owner</span>
                     <p>
-                      Bachlore in PharmacyHOD,
+                      Bachlore in Pharmacy HOD,
                       <br />
                       Production
                     </p>
