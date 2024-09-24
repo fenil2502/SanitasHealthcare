@@ -45,10 +45,10 @@ class Contact extends Component {
                   </div>
                 </div>
                 <div className="social-media">
-                  <a href="facebook.com">
+                  <a href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/" target="_blank">
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
-                  <a href="facebook.com">
+                  <a href="https://www.instagram.com/sanitashealthcare?igsh=YTBycW5nc2lzd3Rl" target="_blank">
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </div>
