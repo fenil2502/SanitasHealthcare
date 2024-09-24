@@ -26,7 +26,7 @@ class Portfolio extends Component {
                   <h3>Orthopedic Suppliments</h3>
                   <p>
                     Products that supports bone growth formulations with Calcium
-                    Supplement (Calcium Citrate, Calcium Carbonate, Calcitrol,
+                    Supplement like Calcium Citrate, Calcium Carbonate, Calcitrol,
                     Minerals, Vitamin D, Magnesium, Zinc, Folic Acid,
                     Methylcobalamin, Vitamin K27, Calcitrol, Glucosamine,
                     Diacerein, Boswellia Serrata Extract, Rosehip Ext, Cissus
