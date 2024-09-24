@@ -2,7 +2,7 @@ import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import { Navigate, Routes } from "react-router-dom";
+import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 class Home extends Component {
   render() {
@@ -78,7 +78,7 @@ class Home extends Component {
                     manufacturing facility in Gujarat with large scale capacity
                     for wide range of nutraceuticals products.
                   </p>
-                  <button className="prm-btn">About us</button>
+                  <button className="prm-btn" onClick={() => Navigate(Routes.about)}>About us</button>
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@ class Home extends Component {
                     </a>
                   </div>
                 </div>
-                <button className="prm-btn">Visit our portfolio</button>
+                <button className="prm-btn" onClick={() => Navigate(Routes.contact)}>Visit our portfolio</button>
               </div>
             </div>
           </div>
