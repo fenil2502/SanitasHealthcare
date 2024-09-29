@@ -1,9 +1,126 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import CommonServices from "../../services/axios/apiServices/CommonServices";
+import { isValidForm, validate } from "../../utils/validations/CommonValidator";
+import ValidationText from "../../utils/validations/ValidationText";
+import { Messages } from "../../utils/Messages";
+import SwalServices from "../../services/swal/SwalServices";
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.CommonServices = new CommonServices();
+    this.SwalServices = new SwalServices();
+    this.state = {
+      contactDetails: {
+        name: "",
+        email: "",
+        mobileNo: "",
+        message: "",
+        adminEmail: "fenil9737@gmail.com",
+        emailtemplateId : 3
+      },
+      validationRules: {
+        name: [
+          {
+            type: "require",
+            message: Messages.CommonValidationMessages.FieldRequired.replace(
+              "{0}",
+              "name"
+            ),
+          },
+        ],
+        email: [
+          {
+            type: "require",
+            message: Messages.CommonValidationMessages.FieldRequired.replace(
+              "{0}",
+              "email"
+            ),
+          },
+          {
+            type: "email",
+            message: Messages.CommonValidationMessages.FieldRequired.replace(
+              "{0}",
+              "valid email"
+            ),
+          },
+        ],
+        mobileNo: [
+          {
+            type: "require",
+            message: Messages.CommonValidationMessages.FieldRequired.replace(
+              "{0}",
+              "mobile number"
+            ),
+          },
+        ],
+        message: [
+          {
+            type: "require",
+            message: Messages.CommonValidationMessages.FieldRequired.replace(
+              "{0}",
+              "message"
+            ),
+          },
+        ],
+      },
+      validState: {
+        isValid: true,
+        error: {},
+      },
+    };
+  }
+
+  handleChange = (event, name) => {
+    let value = event.target.value;
+    let details = this.state.contactDetails;
+    details[name] = value;
+    this.setState({ contactDetails: details });
+  };
+
+  validateField = (key) => {
+    const newValidState = validate(
+      key,
+      this.state.contactDetails,
+      this.state.validationRules,
+      this.state.validState
+    );
+    this.setState({ validState: newValidState });
+    return newValidState.isValid;
+  };
+
+  isAllvalidateField = () => {
+    const newValidState = isValidForm(
+      this.state.contactDetails,
+      this.state.validationRules,
+      this.state.validState
+    );
+    this.setState({ validState: newValidState });
+    return newValidState.isValid;
+  };
+
+  sendInquiryToAdmin = () => {
+    let isAllvalidateField = this.isAllvalidateField();
+    if (isAllvalidateField) {
+      this.setState({ isLoading: true });
+      let details = this.state.contactDetails;
+      this.CommonServices.sendInquiryToAdmin(details).then((response) => {
+        if (response.statusCode === 200 && response.responseItem != null) {
+          this.setState({ isLoading: false });
+          this.SwalServices.Success(
+            "Message sent successfully, Our team will get back to you soon"
+          );
+        } else {
+          this.SwalServices.Error('Something went wrong please contact zyden.itsolutions@gmail.com, Thank you');
+          this.setState({ isLoading: false });
+        }
+        this.setState({ isLoading: false });
+      });
+    }
+  };
+
   render() {
     return (
       <div className="contactpage">
@@ -76,19 +193,63 @@ class Contact extends Component {
               <h4>Fill up the form if you have any question</h4>
               <div className="form">
                 <div className="user-details">
-                  <input type="text" placeholder="Name*" required />
-                  <input type="email" placeholder="Email" />
-                  <input
-                    type="tel"
-                    placeholder="Mobile no.*"
-                    pattern="[0-9]{10}"
-                    required
-                  />
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="name*"
+                      id="name"
+                      name="name"
+                      value={this.state.contactDetails.name}
+                      onChange={(event) => this.handleChange(event, "name")}
+                      onBlur={() => this.validateField("name")}
+                    />
+                    <ValidationText error={this.state.validState.error.name} />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      id="email"
+                      name="email"
+                      value={this.state.contactDetails.email}
+                      onChange={(event) => this.handleChange(event, "email")}
+                      onBlur={() => this.validateField("email")}
+                    />
+                    <ValidationText error={this.state.validState.error.email} />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      placeholder="Mobile no.*"
+                      pattern="[0-9]{10}"
+                      id="mobileNo"
+                      name="mobileNo"
+                      value={this.state.contactDetails.mobileNo}
+                      onChange={(event) => this.handleChange(event, "mobileNo")}
+                      onBlur={() => this.validateField("mobileNo")}
+                    />
+                    <ValidationText
+                      error={this.state.validState.error.mobileNo}
+                    />
+                  </div>
                 </div>
                 <div className="user-msg">
-                  <textarea placeholder="Message"></textarea>
+                  <textarea
+                    placeholder="Message"
+                    id="message"
+                    name="message"
+                    value={this.state.contactDetails.message}
+                    onChange={(event) => this.handleChange(event, "message")}
+                    onBlur={() => this.validateField("message")}
+                  ></textarea>
+                  <ValidationText error={this.state.validState.error.message} />
                 </div>
-                <button className="prm-btn">Send message</button>
+                <button
+                  className="prm-btn"
+                  onClick={() => this.sendInquiryToAdmin()}
+                >
+                  Send message
+                </button>
               </div>
             </div>
           </div>

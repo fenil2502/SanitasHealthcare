@@ -169,3 +169,11 @@ export function axiosGetFileAuthorizeblob(url, params) {
     return axiosInstanceWithoutEnrypt.get(APIURL + url, { headers, responseType: 'blob' });
 }
 
+export function axiosGetMultiParamsWithOutEncryption(url, params) {
+    params.forEach((value, key) => {
+        url = url.replace("{" + key + "}", (IsEncryption) ? value : value)
+    });
+    let headers = { Authorization: "" };
+    return axiosInstanceWithoutEnrypt.get(APIURL + url, { headers, responseType: 'blob' });
+}
+

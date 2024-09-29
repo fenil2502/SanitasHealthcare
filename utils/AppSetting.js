@@ -8,10 +8,10 @@ export const IsEncryption = true;
 export const IsQueryParamsEncryption = true;
 
 // AESKey for encryption and decryption
-export const AESKeyValue = "azR2N3F4a3pycXFxd2M2dG5ya3E4MjBrbmYzZzM0YWU=";
+export const AESKeyValue = "SAWmqE7RVAvCnqQr7s53faDr5fp6OTuueZ40RUyPOM4=";
 
 // AESIV for encryption and decryption
-export const AESIVKey = "enZjZmptNTEybWhvb2U4Mg==";
+export const AESIVKey = "Zw6TTFlKVmcFfDQY/X/O4Q==";
 
 //Defines cookies should be encrypted or not
 export const IsCookieEncryption = true;
@@ -20,9 +20,9 @@ export const IsCookieEncryption = true;
 // export const BasicAuthKey = "Basic U0dUZWNoOlNHVGVjaEAyMDIy";
 export const BasicAuthKey = "U0dUZWNoOlNHVGVjaEAyMDIy";
 
-export const value1 = "azR2N3F4a3pycXFxd2M2dG5ya3E4MjBrbmYzZzM0YWU=";
+export const value1 = "SAWmqE7RVAvCnqQr7s53faDr5fp6OTuueZ40RUyPOM4=";
 
-export const value2 = "enZjZmptNTEybWhvb2U4Mg==";
+export const value2 = "Zw6TTFlKVmcFfDQY/X/O4Q==";
 
 export const value3 = 'AuthUserWeb101';
 
