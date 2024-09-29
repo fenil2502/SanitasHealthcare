@@ -19,8 +19,9 @@ class Contact extends Component {
         mobileNo: "",
         message: "",
         adminEmail: "fenil9737@gmail.com",
-        emailtemplateId : 3
+        emailtemplateId: 3,
       },
+      isLoading: false,
       validationRules: {
         name: [
           {
@@ -113,7 +114,9 @@ class Contact extends Component {
             "Message sent successfully, Our team will get back to you soon"
           );
         } else {
-          this.SwalServices.Error('Something went wrong please contact zyden.itsolutions@gmail.com, Thank you');
+          this.SwalServices.Error(
+            "Something went wrong please contact zyden.itsolutions@gmail.com, Thank you"
+          );
           this.setState({ isLoading: false });
         }
         this.setState({ isLoading: false });
@@ -244,12 +247,20 @@ class Contact extends Component {
                   ></textarea>
                   <ValidationText error={this.state.validState.error.message} />
                 </div>
-                <button
-                  className="prm-btn"
-                  onClick={() => this.sendInquiryToAdmin()}
-                >
-                  Send message
-                </button>
+                {this.state.isLoading === true ? (
+                  <button
+                    className="prm-btn"
+                  >
+                    Loading...
+                  </button>
+                ) : (
+                  <button
+                    className="prm-btn"
+                    onClick={() => this.sendInquiryToAdmin()}
+                  >
+                    Send message
+                  </button>
+                )}
               </div>
             </div>
           </div>
