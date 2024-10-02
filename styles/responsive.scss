@@ -216,26 +216,56 @@
 .homepage {
   .home-inner {
     .banner {
-      width: 100%;
-      height: 80vh;
-      background-image: url(../public/Home-banner.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background: linear-gradient(to right, #FFF7F1 55%, #DDC6BF 45%);
+      height: 100%;
 
-      .banner-outer {
-        background-color: rgb(0, 0, 0, 0.5);
-        width: 100%;
-        height: 100%;
+      .banner-inner {
         display: flex;
         align-items: center;
+        padding: 90px 0;
 
-        .banner-text {
-          text-align: center;
+        .banner-content {
+          width: 45%;
+          padding: 0 80px;
 
           h1 {
+            color: var(--black);
+            margin-bottom: 30px;
+          }
+
+          p {
+            margin-bottom: 40px;
+          }
+
+          .banner-btn {
+            background-color: var(--secondary);
+            padding: 15px 30px;
+            letter-spacing: 1px;
             color: var(--white);
           }
+
+          .banner-stats {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+
+            p {
+              color: var(--stats);
+              display: flex;
+              flex-direction: column;
+              margin: 0;
+
+              span {
+                font-size: 38px;
+                line-height: 44px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+        .banner-img {
+          width: 55%;
         }
       }
     }
@@ -323,72 +353,6 @@
           }
         }
       }
-    }
-
-    .card-col,
-    .card-col-rev {
-      .card-col-inner,
-      .card-col-rev-inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
-        .four-card {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-
-          .card {
-            padding: 15px;
-            background-color: var(--white);
-            box-shadow: rgba(248, 194, 145, 0.2) 0px 6px 24px 0px,
-              rgba(248, 194, 145, 0.3) 0px 0px 0px 1px;
-            border-radius: 5px;
-
-            span {
-              font-size: 22px;
-              font-weight: 600;
-            }
-            p {
-              margin-top: 10px;
-            }
-          }
-        }
-
-        .single-card {
-          .card {
-            padding: 30px;
-            height: 100%;
-            background: linear-gradient(45deg, #eb7e29, #f4a460);
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-
-            span {
-              font-size: 16px;
-              font-weight: 500;
-              color: var(--white);
-            }
-
-            h3 {
-              margin-top: 10px;
-            }
-
-            p {
-              margin-top: 20px;
-            }
-          }
-        }
-      }
-    }
-
-    .card-col {
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
-    .card-col-rev {
-      padding-top: 80px;
-      padding-bottom: 80px;
     }
 
     .how-we-work {

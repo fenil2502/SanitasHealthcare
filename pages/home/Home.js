@@ -10,53 +10,27 @@ class Home extends Component {
       <div className="homepage">
         <div className="home-inner">
           <div className="banner">
-            <div className="banner-outer">
-              <div className="container">
-                <div className="banner-text">
-                  <h1>Manufacturer of Nutraceuticals Products</h1>
+            <div className="banner-inner">
+              <div className="banner-content">
+                <h1>Manufacturer of Nutraceuticals Products</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <button className="banner-btn">Know more</button>
+                <div className="banner-stats">
+                  <p>
+                    <span>10+</span>Years of<br/>experience
+                  </p>
+                  <p>
+                    <span>10</span>Products
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="card-col">
-            <div className="container">
-              <div className="card-col-inner">
-                <div className="four-card">
-                  <div className="card">
-                    <span>Tablet dosage form</span>
-                    <p>
-                      Chewable tablets, Mouth dissolving tablets, Effervescent
-                      tablets, Coated tablets, DT tablets
-                    </p>
-                  </div>
-                  <div className="card">
-                    <span>Capsule dosage form</span>
-                    <p>Veg capsules, Hard gelatine capsules</p>
-                  </div>
-                  <div className="card">
-                    <span>Liquid dosage form</span>
-                    <p>Liquid syrup, 5ml shots, Taste masking syrup</p>
-                  </div>
-                  <div className="card">
-                    <span>Powder dosage form</span>
-                    <p>
-                      Protein powders including whey protein, soya protein, skim
-                      milk protein, energy powder, Free flowing powder
-                    </p>
-                  </div>
-                </div>
-                <div className="single-card">
-                  <div className="card">
-                    <span>We at Sanitas</span>
-                    <h3>Mission</h3>
-                    <p>
-                      To be a benchmark in manufacturing practices for
-                      production of nutraceuticals healthcare products. To
-                      Dedicate ourseleves for humanity’s quest for longer,
-                      healthier, happier lives through innovation in medicines.
-                    </p>
-                  </div>
-                </div>
+              <div className="banner-img">
+                <img src="Home-banner.jpg" alt="Sanitas" />
               </div>
             </div>
           </div>
