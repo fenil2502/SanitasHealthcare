@@ -60,72 +60,100 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="zigzag">
+          <div className="overview-sec">
             <div className="container">
-              <div className="zigzag-inner">
-                <div className="zigzag-img">
-                  <img src="medicines.jpg" alt="Medicine" />
-                </div>
-                <div className="zigzag-text">
-                  <h2>About Sanitas</h2>
-                  <p>
-                    Sanitas Healthcare is occupied in the manufacturing of
-                    different range of nutraceuticals products (Tablets,
-                    Capsules, Powders, Syrup etc.)
-                  </p>
+              <div className="overview-inner">
+                <div className="overview">
+                  <h2>
+                    Sanitas Healthcare
+                    <br />
+                    Where healthy life is created
+                  </h2>
                   <p>
                     We at Sanitas Healthcare work at a state of the art
                     manufacturing facility in Gujarat with large scale capacity
                     for wide range of nutraceuticals products.
                   </p>
-                  <button
-                    className="prm-btn"
-                    onClick={() => Navigate(Routes.about)}
-                  >
-                    About us
-                  </button>
+                  <p>
+                    WHO–GMP Certified Company - Sanitas Healthcare is occupied
+                    in the manufacturing of different range of Nutraceuticals
+                    products (Tablets, Capsules, Powders, Syrup etc.)
+                  </p>
+                  <p>
+                    We at Sanitas Healthcare work at a state of the art
+                    manufacturing facility in Gujarat with large scale capacity
+                    for wide range of Nutraceuticals products.
+                  </p>
+                  <div className="icon-set">
+                    <p className="icon-list">
+                      <img src="Quality.svg" alt="Quality" />
+                      Quality
+                    </p>
+                    <p className="icon-list">
+                      <img src="Consistancy.svg" alt="Consistancy" />
+                      Consistancy
+                    </p>
+                    <p className="icon-list">
+                      <img src="Transperancy.svg" alt="Transperancy" />
+                      Transperancy
+                    </p>
+                  </div>
+                  <img
+                    className="overview-img"
+                    src="medicines.jpg"
+                    alt="Sanitas Healthcare"
+                  />
+                  <div className="vision-mission">
+                    <div className="vision">
+                      <div className="icon-title">
+                        <div className="icon">
+                          <img src="vision.svg" alt="Vision" />
+                        </div>
+                        <h3>Vision</h3>
+                      </div>
+                      <p>
+                        To provide affordable and innovative health supplement
+                        products for better well-being of a society and be a
+                        vital part in nation building.
+                      </p>
+                    </div>
+                    <div className="mission">
+                      <div className="icon-title">
+                        <div className="icon">
+                          <img src="mission.svg" alt="Mission" />
+                        </div>
+                        <h3>Mission</h3>
+                      </div>
+                      <p>
+                        To be a benchmark in manufacturing practices for
+                        production of nutraceuticals healthcare products. To
+                        Dedicate ourseleves for humanity’s quest for longer,
+                        healthier, happier lives through innovation in
+                        medicines.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="card-col-rev">
+          <div className="contact-cta">
             <div className="container">
-              <div className="card-col-rev-inner">
-                <div className="single-card">
-                  <div className="card">
-                    <span>We at Sanitas</span>
-                    <h3>Vision</h3>
-                    <p>
-                      To provide affordable and innovative health supplement
-                      products for better well-being of a society and be a vital
-                      part in nation building.
-                    </p>
-                  </div>
+              <div className="cta-inner">
+                <div className="cta-text">
+                  <h2>
+                    Want More Information? Let’s Connect – Contact Us Today!
+                  </h2>
+                  <p>
+                    Our friendly and knowledgeable team is ready to help. Reach
+                    out for inquiries, support, or to learn more about our
+                    products.
+                  </p>
                 </div>
-                <div className="four-card">
-                  <div className="card">
-                    <span>Dosage in sachets</span>
-                    <p>Sachet with delicious flavour and free flow powder</p>
-                  </div>
-                  <div className="card">
-                    <span>Packing solution</span>
-                    <p>
-                      Attractive and aesthetic packing at special rates from
-                      small to large scale production
-                    </p>
-                  </div>
-                  <div className="card">
-                    <span>Customized solution</span>
-                    <p>Specialist for bespoke formulation service</p>
-                  </div>
-                  <div className="card">
-                    <span>Innovative approach</span>
-                    <p>
-                      Special attention towards customers demand in new product
-                      development
-                    </p>
-                  </div>
-                </div>
+                <button className="cta-btn">
+                  <img src="contact-support.svg" alt="Contact" />
+                  Contact now
+                </button>
               </div>
             </div>
           </div>

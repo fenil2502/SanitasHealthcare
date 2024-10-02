@@ -1,10 +1,48 @@
 :root {
-  --primary: #eb7e29;
-  --secondary: #eeeeee;
+  --primary: #fff7f1;
+  --secondary: #9d3a21;
   --white: #ffffff;
-  --black: #09101a;
-  --footer: #090c02;
-  --light-orange: #f4a460;
+  --black: #2e3031;
+  --background: #f5efee;
+  --card-bg: #fffdfb;
+  --stats: #785546;
+}
+
+.contact-cta {
+  background-image: url(../public/cta-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .cta-inner {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cta-text {
+      max-width: 660px;
+
+      h2 {
+        color: var(--white);
+        margin-bottom: 30px;
+      }
+      p {
+        color: var(--white);
+      }
+    }
+
+    button.cta-btn {
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--secondary);
+      border: 2px solid var(--white);
+      color: var(--white);
+      border-radius: 50px;
+    }
+  }
 }
 
 .download-btn {
@@ -67,9 +105,7 @@
   border-radius: 50px;
 
   &:hover {
-    background-color: var(
-      --light-orange
-    );
+    background-color: var(--light-orange);
     color: var(--black);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
   }

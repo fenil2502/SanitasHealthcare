@@ -127,140 +127,153 @@ class Contact extends Component {
   render() {
     return (
       <div className="contactpage">
-        <div className="container">
-          <div className="contact-inner">
-            <div className="contact-top">
-              <div className="contact-details">
-                <div className="contact-heading">
-                  <h1>How can we help you?</h1>
-                  <p>With just few details we will be able to respond you.</p>
-                </div>
-                <div className="contact-address">
-                  <h2>
-                    753-Nidhi Industrial Estate, Rakanpur, Kalol,
-                    Gandhinagar-382721, India
-                  </h2>
-                  <span>
-                    <strong>Monday - Saturday:</strong> 08:00am to 08:00pm
-                  </span>
-                  <br />
-                  <span>
-                    <strong>Sunday:</strong> Holiday
-                  </span>
-                  <div className="mobile-no">
-                    <h3>Talk to us:</h3>
-                    <a href="tel:+919687361880">+91-9687361880</a>
-                    <br />
-                    <a href="tel:+919426829676">+91-9426829676</a>
-                  </div>
-                  <div className="mail-id">
-                    <h3>Mail us on:</h3>
-                    <a href="mailto:info@sanitashealthcare.in">
-                      info@sanitashealthcare.in
-                    </a>
-                    <br />
-                    <a href="mailto:export@sanitashealthcare.in">
-                      export@sanitashealthcare.in
-                    </a>
-                  </div>
-                </div>
-                <div className="social-media">
-                  <a
-                    href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faFacebookF} />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/sanitashealthcare?igsh=YTBycW5nc2lzd3Rl"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                </div>
-              </div>
-              <div className="map">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.841651710847!2d72.47901561135409!3d23.10289177903038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9da63372eef3%3A0xf8e7767d96d8fdce!2sSanitas%20Healthcare!5e0!3m2!1sen!2sin!4v1726817008146!5m2!1sen!2sin"
-                  width="600"
-                  height="450"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Location Map: Senitaas Healthcare"
-                />
-              </div>
+        <div className="banner">
+          <div className="container">
+            <div className="banner-inner">
+              <h1>Contact Us</h1>
             </div>
-            <div className="contact-bottom">
-              <h4>Fill up the form if you have any question</h4>
-              <div className="form">
-                <div className="user-details">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="name*"
-                      id="name"
-                      name="name"
-                      value={this.state.contactDetails.name}
-                      onChange={(event) => this.handleChange(event, "name")}
-                      onBlur={() => this.validateField("name")}
-                    />
-                    <ValidationText error={this.state.validState.error.name} />
+          </div>
+        </div>
+        <div className="contact-sec">
+          <div className="container">
+            <div className="contact-inner">
+              <div className="contact-top">
+                <div className="contact-details">
+                  <div className="contact-heading">
+                    <h2>How can we help you?</h2>
+                    <p>With just few details we will be able to respond you.</p>
                   </div>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      id="email"
-                      name="email"
-                      value={this.state.contactDetails.email}
-                      onChange={(event) => this.handleChange(event, "email")}
-                      onBlur={() => this.validateField("email")}
-                    />
-                    <ValidationText error={this.state.validState.error.email} />
+                  <div className="contact-address">
+                    <h3>
+                      753-Nidhi Industrial Estate, Rakanpur, Kalol,
+                      Gandhinagar-382721, India
+                    </h3>
+                    <span>
+                      <strong>Monday - Saturday:</strong> 08:00am to 08:00pm
+                    </span>
+                    <br />
+                    <span>
+                      <strong>Sunday:</strong> Holiday
+                    </span>
+                    <div className="mobile-no">
+                      <h3>Talk to us:</h3>
+                      <a href="tel:+919687361880">+91-9687361880</a>
+                      <br />
+                      <a href="tel:+919426829676">+91-9426829676</a>
+                    </div>
+                    <div className="mail-id">
+                      <h3>Mail us on:</h3>
+                      <a href="mailto:info@sanitashealthcare.in">
+                        info@sanitashealthcare.in
+                      </a>
+                      <br />
+                      <a href="mailto:export@sanitashealthcare.in">
+                        export@sanitashealthcare.in
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="Mobile no.*"
-                      pattern="[0-9]{10}"
-                      id="mobileNo"
-                      name="mobileNo"
-                      value={this.state.contactDetails.mobileNo}
-                      onChange={(event) => this.handleChange(event, "mobileNo")}
-                      onBlur={() => this.validateField("mobileNo")}
-                    />
+                  <div className="social-media">
+                    <a
+                      href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faFacebookF} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/sanitashealthcare?igsh=YTBycW5nc2lzd3Rl"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </div>
+                </div>
+                <div className="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.841651710847!2d72.47901561135409!3d23.10289177903038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9da63372eef3%3A0xf8e7767d96d8fdce!2sSanitas%20Healthcare!5e0!3m2!1sen!2sin!4v1726817008146!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Location Map: Senitaas Healthcare"
+                  />
+                </div>
+              </div>
+              <div className="contact-bottom">
+                <h4>Fill up the form if you have any question</h4>
+                <div className="form">
+                  <div className="user-details">
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="name*"
+                        id="name"
+                        name="name"
+                        value={this.state.contactDetails.name}
+                        onChange={(event) => this.handleChange(event, "name")}
+                        onBlur={() => this.validateField("name")}
+                      />
+                      <ValidationText
+                        error={this.state.validState.error.name}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        id="email"
+                        name="email"
+                        value={this.state.contactDetails.email}
+                        onChange={(event) => this.handleChange(event, "email")}
+                        onBlur={() => this.validateField("email")}
+                      />
+                      <ValidationText
+                        error={this.state.validState.error.email}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="tel"
+                        placeholder="Mobile no.*"
+                        pattern="[0-9]{10}"
+                        id="mobileNo"
+                        name="mobileNo"
+                        value={this.state.contactDetails.mobileNo}
+                        onChange={(event) =>
+                          this.handleChange(event, "mobileNo")
+                        }
+                        onBlur={() => this.validateField("mobileNo")}
+                      />
+                      <ValidationText
+                        error={this.state.validState.error.mobileNo}
+                      />
+                    </div>
+                  </div>
+                  <div className="user-msg">
+                    <textarea
+                      placeholder="Message"
+                      id="message"
+                      name="message"
+                      value={this.state.contactDetails.message}
+                      onChange={(event) => this.handleChange(event, "message")}
+                      onBlur={() => this.validateField("message")}
+                    ></textarea>
                     <ValidationText
-                      error={this.state.validState.error.mobileNo}
+                      error={this.state.validState.error.message}
                     />
                   </div>
+                  {this.state.isLoading === true ? (
+                    <button className="prm-btn">Loading...</button>
+                  ) : (
+                    <button
+                      className="prm-btn"
+                      onClick={() => this.sendInquiryToAdmin()}
+                    >
+                      Send message
+                    </button>
+                  )}
                 </div>
-                <div className="user-msg">
-                  <textarea
-                    placeholder="Message"
-                    id="message"
-                    name="message"
-                    value={this.state.contactDetails.message}
-                    onChange={(event) => this.handleChange(event, "message")}
-                    onBlur={() => this.validateField("message")}
-                  ></textarea>
-                  <ValidationText error={this.state.validState.error.message} />
-                </div>
-                {this.state.isLoading === true ? (
-                  <button
-                    className="prm-btn"
-                  >
-                    Loading...
-                  </button>
-                ) : (
-                  <button
-                    className="prm-btn"
-                    onClick={() => this.sendInquiryToAdmin()}
-                  >
-                    Send message
-                  </button>
-                )}
               </div>
             </div>
           </div>
