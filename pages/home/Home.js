@@ -22,7 +22,9 @@ class Home extends Component {
                 <button className="banner-btn">Know more</button>
                 <div className="banner-stats">
                   <p>
-                    <span>10+</span>Years of<br/>experience
+                    <span>10+</span>Years of
+                    <br />
+                    experience
                   </p>
                   <p>
                     <span>10</span>Products
@@ -111,23 +113,58 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="contact-cta">
+          <div className="masonry-sec">
             <div className="container">
-              <div className="cta-inner">
-                <div className="cta-text">
-                  <h2>
-                    Want More Information? Let’s Connect – Contact Us Today!
-                  </h2>
-                  <p>
-                    Our friendly and knowledgeable team is ready to help. Reach
-                    out for inquiries, support, or to learn more about our
-                    products.
-                  </p>
+              <h2>What We Provide</h2>
+              <div className="masonry-inner">
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Tablet dosage form</h3>
                 </div>
-                <button className="cta-btn">
-                  <img src="contact-support.svg" alt="Contact" />
-                  Contact now
-                </button>
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Capsule dosage form</h3>
+                </div>
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Liquid dosage form</h3>
+                </div>
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Powder dosage form</h3>
+                </div>
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Dosage in sachets</h3>
+                </div>
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Packing solution</h3>
+                </div>
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Customized solution</h3>
+                </div>
+                <div className="masonry-card">
+                  <div className="card-img">
+                    <img src="Rectangle 38.png" alt="Tablet" />
+                  </div>
+                  <h3>Innovative approach</h3>
+                </div>
               </div>
             </div>
           </div>
@@ -238,57 +275,69 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <div className="contact-cta">
+            <div className="container">
+              <div className="cta-inner">
+                <div className="cta-text">
+                  <h2>
+                    Want More Information? Let’s Connect – Contact Us Today!
+                  </h2>
+                  <p>
+                    Our friendly and knowledgeable team is ready to help. Reach
+                    out for inquiries, support, or to learn more about our
+                    products.
+                  </p>
+                </div>
+                <button className="cta-btn">
+                  <img src="contact-support.svg" alt="Contact" />
+                  Contact now
+                </button>
+              </div>
+            </div>
+          </div>
           <div className="portfolio">
             <div className="container">
               <h2>Portfolio</h2>
               <div className="portfolio-inner">
-                <div className="zigzag">
-                  <div className="zigzag-img">
-                    <img src="Skin-hair-Supplement.jpg" alt="Skin and Hair" />
-                  </div>
-                  <div className="zigzag-text">
-                    <h3>Skin & hair Supplement</h3>
-                    <p>
-                      Extract Preparation, Pinebark Ext. (pycnogenol), Moringa
-                      Oleifera, Saw Palmetto, Biotin, Msm, lnositol, Zinc,
-                      stinging Nettle, Glutamic Acid.dl-methionine, Aspartic
-                      Acid, L-lysine, Proline, Serine, Phenylalanine,
-                      Isoleucine,valine, Glycine, Tyrosine, Alanine,
-                      Threonine,histidine, Cystine...
-                    </p>
-                    <a
-                      className="download-btn"
-                      href="./UTI_Skin_supply.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Know More
-                      <FontAwesomeIcon icon={faArrowDown} />
-                    </a>
+                <div className="zig-zag">
+                  <div className="zig-zag-inner">
+                    <div className="zig-zag-img">
+                      <img src="ortho.jpg" alt="Orthopedic" />
+                    </div>
+                    <div className="zig-zag-text">
+                      <h3>Orthopedic Suppliments</h3>
+                      <p>
+                        Products that supports bone growth formulations with
+                        Calcium Supplement like Calcium Citrate, Calcium
+                        Carbonate, Calcitrol, Minerals, Vitamin D, Magnesium,
+                        Zinc, Folic Acid, Methylcobalamin, Vitamin K27,
+                        Calcitrol, Glucosamine, Diacerein, Boswellia Serrata
+                        Extract, Rosehip Ext, Cissus Quadrangularis, Collagen
+                        Peptide, Sodium Hyaluronate, Vitamin C, L-Arginine,
+                        Chondrotine and many more.
+                      </p>
+                      <button>Know more</button>
+                    </div>
                   </div>
                 </div>
-                <div className="zigzag-rev">
-                  <div className="zigzag-rev-img">
-                    <img src="Pediatric-Supplement.jpg" alt="Pediatric" />
-                  </div>
-                  <div className="zigzag-rev-text">
-                    <h3>Pediatric Supplement</h3>
-                    <p>
-                      Enzyme Preparation, Omega-3 Fatty Acid, Amylase, Protease,
-                      Lactase, lipase, DHA, L-Lysine HCL, Vitamin C, Vitamin A,
-                      E, B1, B2, B3, B5, B6, A, D3, Elemental Zinc, Choline,
-                      Biotin, Coenzyme Q10, Vitamin A, E, B1, B2, B3, B5, B6, A,
-                      E, C, D3, Vitamin K1, Biotin, Zinc, Selenium, Sodium...
-                    </p>
-                    <a
-                      className="download-btn"
-                      href="./Pediatric_Supply.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Know More
-                      <FontAwesomeIcon icon={faArrowDown} />
-                    </a>
+                <div className="zig-zag-rev">
+                  <div className="zig-zag-rev-inner">
+                    <div className="zig-zag-rev-img">
+                      <img src="Immunity-Supplements.jpg" alt="Immunity" />
+                    </div>
+                    <div className="zig-zag-rev-text">
+                      <h3>Immunity Supplements</h3>
+                      <p>
+                        Multivitamins, Multiminerals, Extracts
+                        formulations-L-Carnitine, L-Arginine, Vitamin C, Iron,
+                        Magnesium, Niacinamide, Zinc, L-Glutamic Acid, Vitamin
+                        E, Lycopene, L-Glycine, L-Taurine, Vit. B1, Vit. B2,
+                        Vit. B5, Vit. B6, B12, Beta Carotene, Copper, Folic
+                        Acid, Biotin, Iodine, Vitamin K, Vit. D3, Lutein, Ginkgo
+                        Biloba, ALA, DHA, Pycnogenol
+                      </p>
+                      <button>Know more</button>
+                    </div>
                   </div>
                 </div>
                 <button
