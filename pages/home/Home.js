@@ -1,6 +1,6 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
@@ -19,7 +19,7 @@ class Home extends Component {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <button className="banner-btn">Know more</button>
+                <button className="prm-btn" onClick={() => Navigate(Routes.about)}>Know more</button>
                 <div className="banner-stats">
                   <p>
                     <span>10+</span>Years of
@@ -119,49 +119,49 @@ class Home extends Component {
               <div className="masonry-inner">
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Tablet.jpg" alt="Tablet dosage" />
                   </div>
                   <h3>Tablet dosage form</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Capsule.jpg" alt="Capsule dosage" />
                   </div>
                   <h3>Capsule dosage form</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Liquid.jpg" alt="Liquid dosage" />
                   </div>
                   <h3>Liquid dosage form</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Powder.jpg" alt="Powder" />
                   </div>
                   <h3>Powder dosage form</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Sachet.jpg" alt="Sachet dosage" />
                   </div>
                   <h3>Dosage in sachets</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Package.jpg" alt="Packing solution" />
                   </div>
                   <h3>Packing solution</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Customized.jpg" alt="Customized solution" />
                   </div>
                   <h3>Customized solution</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
-                    <img src="Rectangle 38.png" alt="Tablet" />
+                    <img src="Innovative.jpg" alt="Innovative approach" />
                   </div>
                   <h3>Innovative approach</h3>
                 </div>
@@ -288,10 +288,53 @@ class Home extends Component {
                     products.
                   </p>
                 </div>
-                <button className="cta-btn">
+                <button className="cta-btn" onClick={() => Navigate(Routes.contact)}>
                   <img src="contact-support.svg" alt="Contact" />
                   Contact now
                 </button>
+              </div>
+            </div>
+          </div>
+          <div className="product-sec">
+            <div className="container">
+              <h2>Our Products</h2>
+              <div className="product-inner">
+                <div className="product-card">
+                  <div className="card-img">
+                    <img src="Tablet.jpg" alt="Tablet" />
+                  </div>
+                  <div className="card-text">
+                    <span>Catagory</span>
+                    <h3>Product name</h3>
+                  </div>
+                </div>
+                <div className="product-card">
+                  <div className="card-img">
+                    <img src="Powder.jpg" alt="Powder" />
+                  </div>
+                  <div className="card-text">
+                    <span>Catagory</span>
+                    <h3>Product name</h3>
+                  </div>
+                </div>
+                <div className="product-card">
+                  <div className="card-img">
+                    <img src="Liquid.jpg" alt="Liquid" />
+                  </div>
+                  <div className="card-text">
+                    <span>Catagory</span>
+                    <h3>Product name</h3>
+                  </div>
+                </div>
+                <div className="product-card">
+                  <div className="card-img">
+                    <img src="Sachet.jpg" alt="Sachet" />
+                  </div>
+                  <div className="card-text">
+                    <span>Catagory</span>
+                    <h3>Product name</h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -316,7 +359,9 @@ class Home extends Component {
                         Peptide, Sodium Hyaluronate, Vitamin C, L-Arginine,
                         Chondrotine and many more.
                       </p>
-                      <button>Know more</button>
+                      <a href="Ortho_supplements_Sanitus_Profile.pdf" target="_blank" className="download-btn">
+                        Know more <FontAwesomeIcon icon={faArrowRight} />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -336,7 +381,9 @@ class Home extends Component {
                         Acid, Biotin, Iodine, Vitamin K, Vit. D3, Lutein, Ginkgo
                         Biloba, ALA, DHA, Pycnogenol
                       </p>
-                      <button>Know more</button>
+                      <a href="Immun.pdf" target="_blank" className="download-btn">
+                        Know more <FontAwesomeIcon icon={faArrowRight} />
+                      </a>
                     </div>
                   </div>
                 </div>

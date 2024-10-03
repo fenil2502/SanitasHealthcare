@@ -1,6 +1,6 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 class Portfolio extends Component {
   render() {
@@ -34,7 +34,14 @@ class Portfolio extends Component {
                       Hyaluronate, Vitamin C, L-Arginine, Chondrotine and many
                       more.
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="Ortho_supplements_Sanitus_Profile.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -54,7 +61,14 @@ class Portfolio extends Component {
                       Iodine, Vitamin K, Vit. D3, Lutein, Ginkgo Biloba, ALA,
                       DHA, Pycnogenol
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="Immun.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -75,7 +89,14 @@ class Portfolio extends Component {
                       Copper, Folic Acid, Vit. B12, Ferrous Ascorbate, Folic
                       Acid, Zinc Sulphate.
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="Gynec_infertility_Supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -93,7 +114,14 @@ class Portfolio extends Component {
                       Biotin, Coenzyme Q10, Vitamin A, E, B1, B2, B3, B5, B6, A,
                       E, C, D3, Vitamin K1, Biotin, Zinc, Selenium, Sodium...
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="Pediatric_Supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -115,7 +143,14 @@ class Portfolio extends Component {
                       Longum, Streptococcus Thermophilus & Lactobacillus
                       Acidophilus...
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="gastro_liver_supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -133,7 +168,14 @@ class Portfolio extends Component {
                       Sugar, Vit. C, Zinc, Lactobacillus, Sodium Chloride,
                       Sodium Citrate, Potassium Chloride
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="gastro_liver_supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -152,7 +194,14 @@ class Portfolio extends Component {
                       Isoleucine,valine, Glycine, Tyrosine, Alanine,
                       Threonine,histidine, Cystine...
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="UTI_Skin_supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -167,7 +216,14 @@ class Portfolio extends Component {
                       Cranberry & Hibiscuss, D-Mannose, Propolis Ext. &
                       Pomegranate Ext...
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="UTI_Skin_supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -179,7 +235,14 @@ class Portfolio extends Component {
                   <div className="zig-zag-text">
                     <h3>Appetizer</h3>
                     <p>Enzyme preparation</p>
-                    <button>Know more</button>
+                    <a
+                      href="UTI_Skin_supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -197,10 +260,37 @@ class Portfolio extends Component {
                       Coffee Ext, Natural Energy and Focus Blend (Caffeine,
                       Theobromine)
                     </p>
-                    <button>Know more</button>
+                    <a
+                      href="Protein supply.pdf"
+                      target="_blank"
+                      className="download-btn"
+                    >
+                      Know more
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </a>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-cta">
+          <div className="container">
+            <div className="cta-inner">
+              <div className="cta-text">
+                <h2>
+                  Want More Information? Let’s Connect – Contact Us Today!
+                </h2>
+                <p>
+                  Our friendly and knowledgeable team is ready to help. Reach
+                  out for inquiries, support, or to learn more about our
+                  products.
+                </p>
+              </div>
+              <button className="cta-btn">
+                <img src="contact-support.svg" alt="Contact" />
+                Contact now
+              </button>
             </div>
           </div>
         </div>

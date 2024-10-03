@@ -20,12 +20,33 @@ class About extends Component {
               <div className="sanitas">
                 <span>About Us</span>
                 <h2>We At Sanitas</h2>
-                <p>Sanitas Healthcare is occupied in the manufacturing of different range of nutraceuticals products (Tablets, Capsules, Powders, Syrup etc.)</p>
-                <p>We at Sanitas Healthcare work at a state of the art manufacturing facility in Gujarat with large scale capacity for wide range of nutraceuticals products.</p>
-                <p className="icon-list"><img src="Manufacture.svg" alt="Manufacture"/>State of the art manufacturing unit</p>
-                <p className="icon-list"><img src="Dosage.svg" alt="Dosage"/>All dosage form at one place</p>
-                <p className="icon-list"><img src="Formulation.svg" alt="Formulation"/>In house F&D facility</p>
-                <img className="about-img" src="About-sanitas.png" alt="Sanitas Healthcare"/>
+                <p>
+                  Sanitas Healthcare is occupied in the manufacturing of
+                  different range of nutraceuticals products (Tablets, Capsules,
+                  Powders, Syrup etc.)
+                </p>
+                <p>
+                  We at Sanitas Healthcare work at a state of the art
+                  manufacturing facility in Gujarat with large scale capacity
+                  for wide range of nutraceuticals products.
+                </p>
+                <p className="icon-list">
+                  <img src="Manufacture.svg" alt="Manufacture" />
+                  State of the art manufacturing unit
+                </p>
+                <p className="icon-list">
+                  <img src="Dosage.svg" alt="Dosage" />
+                  All dosage form at one place
+                </p>
+                <p className="icon-list">
+                  <img src="Formulation.svg" alt="Formulation" />
+                  In house F&D facility
+                </p>
+                <img
+                  className="about-img"
+                  src="About-sanitas.png"
+                  alt="Sanitas Healthcare"
+                />
               </div>
             </div>
           </div>
@@ -34,10 +55,22 @@ class About extends Component {
           <div className="container">
             <div className="cta-inner">
               <div className="cta-text">
-                <h2>Want More Information? Let’s Connect – Contact Us Today!</h2>
-                <p>Our friendly and knowledgeable team is ready to help. Reach out for inquiries, support, or to learn more about our products.</p>
+                <h2>
+                  Want More Information? Let’s Connect – Contact Us Today!
+                </h2>
+                <p>
+                  Our friendly and knowledgeable team is ready to help. Reach
+                  out for inquiries, support, or to learn more about our
+                  products.
+                </p>
               </div>
-              <button className="cta-btn"><img src="contact-support.svg" alt="Contact"/>Contact now</button>
+              <button
+                className="cta-btn"
+                onClick={() => Navigate(Routes.contact)}
+              >
+                <img src="contact-support.svg" alt="Contact" />
+                Contact now
+              </button>
             </div>
           </div>
         </div>

@@ -40,13 +40,13 @@ class Header extends Component {
 
   navigateFromHeader = (page) => {
     if (page === "Home") {
-      Navigate(Routes.home)
-    }else if(page === "About"){
-      Navigate(Routes.about)
-    }else if(page === "Portfolio"){
-      Navigate(Routes.portfolio)
+      Navigate(Routes.home);
+    } else if (page === "About") {
+      Navigate(Routes.about);
+    } else if (page === "Portfolio") {
+      Navigate(Routes.portfolio);
     }
-    this.toggleMenu()
+    this.toggleMenu();
   };
 
   render() {
@@ -67,14 +67,12 @@ class Header extends Component {
                 </div>
                 <button onClick={() => Navigate(Routes.contact)}>
                   Contact Us
-                  <div className="btn-arrow">
-                    <FontAwesomeIcon icon={faArrowRight} />
-                  </div>
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
             </div>
             <div className="navbar">
-              <div className="navbar-logo">
+              <div className="navbar-logo" onClick={() => Navigate(Routes.home)}>
                 <img src="Sanitash_logo.svg" alt="Sanitas" />
               </div>
               <div className="navbar-menu">
