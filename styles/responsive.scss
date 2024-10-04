@@ -1701,9 +1701,11 @@
           flex-direction: column;
 
           .overview {
+            text-align: start;
+
             .icon-set {
               flex-direction: column;
-              align-items: center;
+              align-items: flex-start;
             }
 
             .overview-img {
@@ -1751,6 +1753,14 @@
     .about-sec {
       .about-inner {
         padding: 40px 0;
+
+        .sanitas {
+          text-align: start;
+
+          .icon-list {
+            justify-content: flex-start;
+          }
+        }
       }
     }
 
