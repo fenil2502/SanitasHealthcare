@@ -332,6 +332,7 @@ class Home extends Component {
                   this.state.scrollPosition > 3400 ||  this.state.scrollPosition > 7200 ? "cta-inner" : ""
                 }`}
               >
+                {this.state.scrollPosition}
                 <div className="cta-text">
                   <h2>
                     Want More Information? Let’s Connect – Contact Us Today!
@@ -405,6 +406,7 @@ class Home extends Component {
                       this.state.scrollPosition > 4350 || this.state.scrollPosition > 8600 ? "zig-zag-inner" : ""
                     }`}
                   >
+                    {this.state.scrollPosition}
                     <div className="zig-zag-img">
                       <img src="ortho.jpg" alt="Orthopedic" />
                     </div>
