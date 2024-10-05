@@ -4,6 +4,7 @@ import {
   faArrowRight,
   faBarsStaggered,
   faXmark,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import Link from "next/link";
@@ -82,7 +83,7 @@ class Header extends Component {
                   />
                 </div>
                 <button onClick={() => Navigate(Routes.contact)}>
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faPhone} />
                 </button>
               </div>
             </div>

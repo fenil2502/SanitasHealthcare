@@ -14,12 +14,18 @@ class Home extends Component {
               <div className="banner-content">
                 <h1>Manufacturer of Nutraceuticals Products</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  We are a leading manufacturer of nutraceutical products,
+                  offering innovative and high-quality supplements to support
+                  overall health and wellness. With a focus on science-backed
+                  formulations and natural ingredients, we deliver trusted
+                  solutions for your health needs.
                 </p>
-                <button className="prm-btn" onClick={() => Navigate(Routes.about)}>Know more</button>
+                <button
+                  className="prm-btn"
+                  onClick={() => Navigate(Routes.about)}
+                >
+                  Know more
+                </button>
                 <div className="banner-stats">
                   <p>
                     <span>10+</span>Years of
@@ -288,7 +294,10 @@ class Home extends Component {
                     products.
                   </p>
                 </div>
-                <button className="cta-btn" onClick={() => Navigate(Routes.contact)}>
+                <button
+                  className="cta-btn"
+                  onClick={() => Navigate(Routes.contact)}
+                >
                   <img src="contact-support.svg" alt="Contact" />
                   Contact now
                 </button>
@@ -359,7 +368,11 @@ class Home extends Component {
                         Peptide, Sodium Hyaluronate, Vitamin C, L-Arginine,
                         Chondrotine and many more.
                       </p>
-                      <a href="Ortho_supplements_Sanitus_Profile.pdf" target="_blank" className="download-btn">
+                      <a
+                        href="Ortho_supplements_Sanitus_Profile.pdf"
+                        target="_blank"
+                        className="download-btn"
+                      >
                         Know more <FontAwesomeIcon icon={faArrowRight} />
                       </a>
                     </div>
@@ -381,7 +394,11 @@ class Home extends Component {
                         Acid, Biotin, Iodine, Vitamin K, Vit. D3, Lutein, Ginkgo
                         Biloba, ALA, DHA, Pycnogenol
                       </p>
-                      <a href="Immun.pdf" target="_blank" className="download-btn">
+                      <a
+                        href="Immun.pdf"
+                        target="_blank"
+                        className="download-btn"
+                      >
                         Know more <FontAwesomeIcon icon={faArrowRight} />
                       </a>
                     </div>

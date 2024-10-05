@@ -207,7 +207,7 @@ class Contact extends Component {
                     <div>
                       <input
                         type="text"
-                        placeholder="name*"
+                        placeholder="Name*"
                         id="name"
                         name="name"
                         value={this.state.contactDetails.name}
@@ -221,7 +221,7 @@ class Contact extends Component {
                     <div>
                       <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="Email*"
                         id="email"
                         name="email"
                         value={this.state.contactDetails.email}

@@ -402,6 +402,7 @@
 
       h2 {
         margin-bottom: 30px;
+        text-align: center;
       }
 
       .masonry-inner {
@@ -1145,7 +1146,7 @@
             border-radius: 20px;
 
             svg {
-              height: 20px;
+              height: 15px;
               width: auto;
             }
           }
@@ -1530,7 +1531,8 @@
               .zig-zag-text,
               .zig-zag-rev-text {
                 min-height: fit-content;
-                padding: 40px;
+                padding: 25px;
+                border-radius: 30px;
               }
             }
           }
@@ -1562,7 +1564,8 @@
             .zig-zag-text,
             .zig-zag-rev-text {
               min-height: fit-content;
-              padding: 40px;
+              padding: 25px;
+              border-radius: 30px;
             }
           }
         }
