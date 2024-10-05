@@ -1533,6 +1533,10 @@
                 min-height: fit-content;
                 padding: 25px;
                 border-radius: 30px;
+
+                p {
+                  line-height: 24PX;
+                }
               }
             }
           }
@@ -1566,6 +1570,10 @@
               min-height: fit-content;
               padding: 25px;
               border-radius: 30px;
+
+              p {
+                line-height: 24PX;
+              }
             }
           }
         }
