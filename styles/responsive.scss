@@ -316,6 +316,8 @@
         padding: 80px 0;
         display: grid;
         justify-content: center;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in forwards;
         .overview {
           max-width: 900px;
           text-align: center;
@@ -323,15 +325,24 @@
           h2 {
             margin-bottom: 30px;
             color: var(--secondary);
+            opacity: 0;
+            animation: slideIn 1.2s ease-out forwards;
+            animation-delay: 0.5s;
           }
           p {
             margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out forwards;
+            animation-delay: 1s;
           }
 
           .icon-set {
             display: flex;
             justify-content: center;
             gap: 30px;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out forwards;
+            animation-delay: 1.5s;
 
             .icon-list {
               display: flex;
@@ -343,18 +354,27 @@
 
           .overview-img {
             margin-top: 40px;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out forwards;
+            animation-delay: 1.8s;
           }
 
           .vision-mission {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             margin-top: 40px;
+            opacity: 0;
+            animation: fadeIn 1.8s ease-out forwards;
+            animation-delay: 2s;
 
             .vision,
             .mission {
               padding: 30px;
               text-align: start;
               border-radius: 5px;
+              opacity: 0;
+              animation: fadeInUp 2s ease-out forwards;
+              animation-delay: 2.2s;
 
               .icon-title {
                 display: flex;
@@ -395,6 +415,36 @@
         }
       }
     }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
     .masonry-sec {
       background-color: var(--background);
@@ -426,6 +476,11 @@
             color: var(--stats);
             margin-top: 10px;
             font-weight: 400;
+            margin-bottom: 5px;
+          }
+          p {
+            color: var(--black);
+            line-height: 24px;
           }
         }
 
@@ -445,6 +500,11 @@
             color: var(--stats);
             margin-top: 10px;
             font-weight: 400;
+            margin-bottom: 5px;
+          }
+          p {
+            color: var(--black);
+            line-height: 24px;
           }
         }
         .masonry-card:nth-child(6),
@@ -572,7 +632,7 @@
         .product-card {
           display: flex;
           align-items: center;
-          background-color: #FFFDFB;
+          background-color: #fffdfb;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
           border-radius: 5px;
 
@@ -616,6 +676,7 @@
         align-items: center;
 
         .zig-zag {
+          animation: fadeIn 0.8s ease-out forwards;
           .zig-zag-inner {
             display: flex;
             align-items: stretch;
@@ -626,6 +687,7 @@
               justify-content: center;
               align-items: center;
               width: 350px;
+              animation: zoomIn 0.8s ease forwards;
 
               img {
                 width: 100%;
@@ -645,18 +707,21 @@
               background-color: var(--primary);
               border-radius: 50px;
               padding: 40px 60px;
+              animation: slideInLeft 1s ease forwards;
 
               h3 {
                 margin-bottom: 20px;
               }
               p {
                 margin-bottom: 30px;
+                line-height: 24px;
               }
             }
           }
         }
 
         .zig-zag-rev {
+          animation: fadeIn 0.8s ease-out forwards;
           .zig-zag-rev-inner {
             display: flex;
             flex-direction: row-reverse;
@@ -668,6 +733,7 @@
               justify-content: center;
               align-items: center;
               width: 350px;
+              animation: zoomIn 0.8s ease forwards;
 
               img {
                 width: 100%;
@@ -687,12 +753,14 @@
               background-color: var(--primary);
               border-radius: 50px;
               padding: 40px 60px;
+              animation: slideInRight 1s ease forwards;
 
               h3 {
                 margin-bottom: 20px;
               }
               p {
                 margin-bottom: 30px;
+                line-height: 24px;
               }
             }
           }
@@ -700,7 +768,51 @@
 
         button.prm-btn {
           margin-top: 20px;
+          animation: fadeIn 0.8s ease-out forwards;
         }
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
       }
     }
   }
@@ -723,6 +835,8 @@
       display: grid;
       justify-content: center;
       padding: 80px 0;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
 
       .sanitas {
         max-width: 900px;
@@ -732,24 +846,69 @@
           font-size: 16px;
           line-height: normal;
           font-weight: 700;
+          opacity: 0;
+          animation: slideIn 1.2s ease-out forwards;
+          animation-delay: 0.5s;
         }
         h2 {
           margin: 5px 0 30px;
           color: var(--secondary);
+          opacity: 0;
+          animation: slideIn 1.2s ease-out forwards;
+          animation-delay: 0.5s;
         }
         p {
           margin-bottom: 15px;
+          opacity: 0;
+          animation: fadeInUp 1.2s ease-out forwards;
+          animation-delay: 1s;
         }
         .icon-list {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 10px;
+          opacity: 0;
+          animation: fadeIn 1.2s ease-out forwards;
+          animation-delay: 1.5s;
         }
         .about-img {
           margin-top: 40px;
+          opacity: 0;
+          animation: fadeInUp 1.5s ease-out forwards;
+          animation-delay: 1.8s;
         }
       }
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
@@ -855,6 +1014,7 @@
       gap: 50px;
 
       .zig-zag {
+        animation: fadeIn 0.8s ease-out forwards;
         .zig-zag-inner {
           display: flex;
           align-items: stretch;
@@ -865,6 +1025,7 @@
             justify-content: center;
             align-items: center;
             width: 350px;
+            animation: zoomIn 0.8s ease forwards;
 
             img {
               width: 100%;
@@ -884,18 +1045,21 @@
             background-color: var(--primary);
             border-radius: 50px;
             padding: 40px 60px;
+            animation: slideInLeft 1s ease forwards;
 
             h3 {
               margin-bottom: 20px;
             }
             p {
               margin-bottom: 30px;
+              line-height: 24px;
             }
           }
         }
       }
 
       .zig-zag-rev {
+        animation: fadeIn 0.8s ease-out forwards;
         .zig-zag-rev-inner {
           display: flex;
           flex-direction: row-reverse;
@@ -907,6 +1071,7 @@
             justify-content: center;
             align-items: center;
             width: 350px;
+            animation: zoomIn 0.8s ease forwards;
 
             img {
               width: 100%;
@@ -926,12 +1091,14 @@
             background-color: var(--primary);
             border-radius: 50px;
             padding: 40px 60px;
+            animation: slideInRight 1s ease forwards;
 
             h3 {
               margin-bottom: 20px;
             }
             p {
               margin-bottom: 30px;
+              line-height: 24px;
             }
           }
         }
@@ -1535,7 +1702,7 @@
                 border-radius: 30px;
 
                 p {
-                  line-height: 24PX;
+                  line-height: 24px;
                 }
               }
             }
@@ -1572,7 +1739,7 @@
               border-radius: 30px;
 
               p {
-                line-height: 24PX;
+                line-height: 24px;
               }
             }
           }

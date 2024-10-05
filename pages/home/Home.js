@@ -128,48 +128,68 @@ class Home extends Component {
                     <img src="Tablet.jpg" alt="Tablet dosage" />
                   </div>
                   <h3>Tablet dosage form</h3>
+                  <p>
+                    Chewable Tablets, Mouth Dissolving Tablets, Effervescent
+                    Tablets, Coated Tablets, DT Tablets
+                  </p>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Capsule.jpg" alt="Capsule dosage" />
                   </div>
                   <h3>Capsule dosage form</h3>
+                  <p>Veg Capsules, Hard gelatine Capsules</p>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Liquid.jpg" alt="Liquid dosage" />
                   </div>
                   <h3>Liquid dosage form</h3>
+                  <p>Liquid Syrup, 5ml shots, Taste masking Syrup</p>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Powder.jpg" alt="Powder" />
                   </div>
                   <h3>Powder dosage form</h3>
+                  <p>
+                    Protein powders including hwey protein, Soya protein, Skim
+                    milk protein, Energy powder, Free flowing powder
+                  </p>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Sachet.jpg" alt="Sachet dosage" />
                   </div>
                   <h3>Dosage in sachets</h3>
+                  <p>Sachet with delicious flavour and free flow powder</p>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Package.jpg" alt="Packing solution" />
                   </div>
                   <h3>Packing solution</h3>
+                  <p>
+                    Attractive and asthetic packing at special rates from small
+                    to large scale production
+                  </p>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Customized.jpg" alt="Customized solution" />
                   </div>
                   <h3>Customized solution</h3>
+                  <p>Specialist for bespoke formulation service</p>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Innovative.jpg" alt="Innovative approach" />
                   </div>
                   <h3>Innovative approach</h3>
+                  <p>
+                    Special attention towards customers demand in new product
+                    development
+                  </p>
                 </div>
               </div>
             </div>

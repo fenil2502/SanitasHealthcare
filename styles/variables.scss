@@ -13,6 +13,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInSlideUp 1.5s ease-in-out forwards;
 
   .cta-inner {
     padding: 80px 0;
@@ -22,13 +25,25 @@
 
     .cta-text {
       max-width: 660px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: textFadeInSlideUp 1.8s ease-out forwards;
+      animation-delay: 0.5s;
 
       h2 {
         color: var(--white);
         margin-bottom: 30px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: textFadeInSlideUp 1.5s ease-out forwards;
+        animation-delay: 0.8s;
       }
+
       p {
         color: var(--white);
+        opacity: 0;
+        animation: fadeIn 2s ease-out forwards;
+        animation-delay: 1.3s;
       }
     }
 
@@ -42,12 +57,69 @@
       color: var(--white);
       border-radius: 50px;
       transition: all 0.3s ease;
+      opacity: 0;
+      transform: scale(0.9);
+      animation: buttonZoomIn 2s ease-out forwards;
+      animation-delay: 1.5s;
+
+      img {
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+        animation: fadeIn 2.2s ease-out forwards;
+        animation-delay: 2s;
+      }
     }
+
     button.cta-btn:hover {
       background: linear-gradient(45deg, #c1492a, #e67e22);
       letter-spacing: 1.5px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+      transition: all 0.3s ease;
     }
+  }
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
