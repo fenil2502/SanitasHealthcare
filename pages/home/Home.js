@@ -26,6 +26,14 @@ class Home extends Component {
   }
 
   render() {
+
+    const slidesToShowForTestimonials =
+    window.innerWidth > 1024
+      ? "Desktop"
+      : window.innerWidth < 1024 && window.innerWidth > 767
+      ? "Mobile"
+      : "Mobile";
+      
     return (
       <div className="homepage">
         <div className="home-inner">
@@ -329,10 +337,9 @@ class Home extends Component {
             <div className="container">
               <div
                 className={`${
-                  this.state.scrollPosition > 3400 ||  this.state.scrollPosition > 6690 ? "cta-inner" : ""
+                  this.state.scrollPosition > 3400 && slidesToShowForTestimonials === "Desktop" ? "cta-inner" : this.state.scrollPosition > 6690 && slidesToShowForTestimonials === "Desktop" ? "cta-inner" : "" 
                 }`}
               >
-                {this.state.scrollPosition}
                 <div className="cta-text">
                   <h2>
                     Want More Information? Let’s Connect – Contact Us Today!
