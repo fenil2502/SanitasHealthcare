@@ -18,11 +18,11 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   render() {
@@ -64,7 +64,11 @@ class Home extends Component {
           </div>
           <div className="overview-sec">
             <div className="container">
-              <div className={`  ${this.state.scrollPosition > 70 ? "overview-inner" : ""}`}>
+              <div
+                className={`  ${
+                  this.state.scrollPosition > 70 ? "overview-inner" : ""
+                }`}
+              >
                 <div className="overview">
                   <h2>
                     Sanitas Healthcare
@@ -323,7 +327,11 @@ class Home extends Component {
           </div>
           <div className="contact-cta">
             <div className="container">
-              <div className="cta-inner">
+              <div
+                className={`${
+                  this.state.scrollPosition > 3400 ? "cta-inner" : ""
+                }`}
+              >
                 <div className="cta-text">
                   <h2>
                     Want More Information? Let’s Connect – Contact Us Today!
@@ -392,7 +400,11 @@ class Home extends Component {
               <h2>Portfolio</h2>
               <div className="portfolio-inner">
                 <div className="zig-zag">
-                  <div className="zig-zag-inner">
+                  <div
+                    className={`  ${
+                      this.state.scrollPosition > 4350 ? "zig-zag-inner" : ""
+                    }`}
+                  >
                     <div className="zig-zag-img">
                       <img src="ortho.jpg" alt="Orthopedic" />
                     </div>
