@@ -402,7 +402,7 @@ class Home extends Component {
                 <div className="zig-zag">
                   <div
                     className={`  ${
-                      this.state.scrollPosition > 8200 ? "zig-zag-inner" : ""
+                      this.state.scrollPosition > 8250 ? "zig-zag-inner" : ""
                     }`}
                   >
                     <div className="zig-zag-img">
