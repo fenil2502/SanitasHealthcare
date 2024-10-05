@@ -5,6 +5,26 @@ import Link from "next/link";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrollPosition: 0,
+    };
+  }
+
+  handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    this.setState({ scrollPosition });
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   render() {
     return (
       <div className="homepage">
@@ -44,7 +64,7 @@ class Home extends Component {
           </div>
           <div className="overview-sec">
             <div className="container">
-              <div className="overview-inner">
+              <div className={`  ${this.state.scrollPosition > 70 ? "overview-inner" : ""}`}>
                 <div className="overview">
                   <h2>
                     Sanitas Healthcare
