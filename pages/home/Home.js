@@ -329,7 +329,7 @@ class Home extends Component {
             <div className="container">
               <div
                 className={`${
-                  this.state.scrollPosition > 3400 ||  this.state.scrollPosition > 7200 ? "cta-inner" : ""
+                  this.state.scrollPosition > 3400 ||  this.state.scrollPosition > 6690 ? "cta-inner" : ""
                 }`}
               >
                 {this.state.scrollPosition}
@@ -403,7 +403,7 @@ class Home extends Component {
                 <div className="zig-zag">
                   <div
                     className={`  ${
-                      this.state.scrollPosition > 4350 || this.state.scrollPosition > 8600 ? "zig-zag-inner" : ""
+                      this.state.scrollPosition > 4350 || this.state.scrollPosition > 8130 ? "zig-zag-inner" : ""
                     }`}
                   >
                     {this.state.scrollPosition}
