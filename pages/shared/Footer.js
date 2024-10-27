@@ -17,7 +17,11 @@ class Footer extends Component {
           <div className="footer-inner">
             <div className="footer-top">
               <div className="footer-col-1">
-                <img src="Sanitash_logo.svg" alt="Sanitas Healthcare" onClick={() => Navigate(Routes.home)}/>
+                <img
+                  src="Sanitash_logo.svg"
+                  alt="Sanitas Healthcare"
+                  onClick={() => Navigate(Routes.home)}
+                />
                 <p>Your guide to a healthier, happier life.</p>
                 <div className="social-media">
                   <a
@@ -85,12 +89,12 @@ class Footer extends Component {
                       <FontAwesomeIcon icon={faEnvelope} />
                       <h5>Email</h5>
                     </div>
-                    <a href="mailto:info@sanitashealthcare.in">
-                      info@sanitashealthcare.in
-                    </a>
-                    <br />
                     <a href="mailto:sanitashealthcareinfo@gmail.com">
                       sanitashealthcareinfo@gmail.com
+                    </a>
+                    <br />
+                    <a href="mailto:info@sanitashealthcare.in">
+                      info@sanitashealthcare.in
                     </a>
                   </div>
                   <div className="connect-details">
