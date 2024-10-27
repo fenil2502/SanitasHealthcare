@@ -35,6 +35,16 @@ class Footer extends Component {
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </div>
+                <div className="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.841651710847!2d72.47901561135409!3d23.10289177903038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9da63372eef3%3A0xf8e7767d96d8fdce!2sSanitas%20Healthcare!5e0!3m2!1sen!2sin!4v1726817008146!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Location Map: Senitaas Healthcare"
+                  />
+                </div>
               </div>
               <div className="footer-col-2">
                 <h4>Quick Links</h4>
@@ -79,8 +89,8 @@ class Footer extends Component {
                       info@sanitashealthcare.in
                     </a>
                     <br />
-                    <a href="mailto:export@sanitashealthcare.in">
-                      export@sanitashealthcare.in
+                    <a href="mailto:sanitashealthcareinfo@gmail.com">
+                      sanitashealthcareinfo@gmail.com
                     </a>
                   </div>
                   <div className="connect-details">

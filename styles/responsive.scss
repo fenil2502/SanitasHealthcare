@@ -107,6 +107,9 @@
       padding: 80px 0;
 
       .footer-col-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         img {
           height: 70px;
           width: auto;
@@ -149,6 +152,17 @@
                 color: #ddc6bf;
               }
             }
+          }
+        }
+        .map {
+          width: 100%;
+          height: 50%;
+          border-radius: 10px;
+          margin-top: 20px;
+          iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
           }
         }
       }
@@ -339,16 +353,9 @@
           .icon-set {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            opacity: 0;
-            animation: fadeIn 1.2s ease-out forwards;
-            animation-delay: 1.5s;
 
-            .icon-list {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              margin: 0;
+            .mobile {
+              display: none;
             }
           }
 
@@ -662,6 +669,7 @@
 
     .portfolio {
       padding: 80px 0;
+      text-align: center;
 
       h2 {
         text-align: center;
@@ -669,24 +677,24 @@
       }
 
       .portfolio-inner {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
         width: 100%;
-        align-items: center;
+        margin-bottom: 30px;
 
-        .zig-zag {
+        .three-col {
           animation: fadeIn 0.8s ease-out forwards;
-          .zig-zag-inner {
+          .three-col-inner {
             display: flex;
-            align-items: stretch;
-            gap: 50px;
+            flex-direction: column;
+            align-items: center;
 
-            .zig-zag-img {
+            .three-col-img {
               display: flex;
               justify-content: center;
               align-items: center;
-              width: 350px;
+              width: 100%;
               animation: zoomIn 0.8s ease forwards;
 
               img {
@@ -698,19 +706,13 @@
               }
             }
 
-            .zig-zag-text {
-              flex: 1;
-              min-height: 350px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              background-color: var(--primary);
+            .three-col-text {
               border-radius: 50px;
-              padding: 40px 60px;
               animation: slideInLeft 1s ease forwards;
 
               h3 {
-                margin-bottom: 20px;
+                font-size: 22px;
+                margin-top: 5px;
               }
               p {
                 margin-bottom: 30px;
@@ -1882,8 +1884,12 @@
             text-align: start;
 
             .icon-set {
-              flex-direction: column;
-              align-items: flex-start;
+              .desk {
+                display: none;
+              }
+              .mobile {
+                display: block;
+              }
             }
 
             .overview-img {
@@ -1922,6 +1928,20 @@
 
         h2 {
           margin-bottom: 30px;
+        }
+
+        .portfolio-inner {
+          grid-template-columns: repeat(1, minmax(320px, 1fr));
+          .three-col {
+            .three-col-inner {
+              .three-col-img {
+                height: 350px;
+                img {
+                  height: 100%;
+                }
+              }
+            }
+          }
         }
       }
     }
