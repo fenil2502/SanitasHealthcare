@@ -84,7 +84,11 @@ class Home extends Component {
                   </p>
                   <div className="icon-set">
                     <img className="desk" src="Desk-img.svg" alt="Success" />
-                    <img className="mobile" src="Mobile-img.svg" alt="Success" />
+                    <img
+                      className="mobile"
+                      src="Mobile-img.svg"
+                      alt="Success"
+                    />
                   </div>
                   <img
                     className="overview-img"
@@ -153,6 +157,13 @@ class Home extends Component {
                   </div>
                   <h3>Powder dosage form</h3>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="masonry-card-sec">
+            <div className="container">
+              <h2>What We Provide</h2>
+              <div className="masonry-inner">
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Package.jpg" alt="Packing solution" />
@@ -281,11 +292,13 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="contact-cta">
+          {/* <div className="contact-cta">
             <div className="container">
               <div
                 className={`${
-                  this.state.scrollPosition > 6690 ? "cta-inner" : "cta-inner               "
+                  this.state.scrollPosition > 6690
+                    ? "cta-inner"
+                    : "cta-inner               "
                 }`}
               >
                 <div className="cta-text">
@@ -307,7 +320,7 @@ class Home extends Component {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="portfolio">
             <div className="container">
               <h2>Our Products</h2>
@@ -345,6 +358,16 @@ class Home extends Component {
                     </div>
                     <div className="three-col-text">
                       <h3>Pediatric Supplement</h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="three-col">
+                  <div className="three-col-inner">
+                    <div className="three-col-img">
+                      <img src="Skin-hair-Supplement.jpg" alt="Skin-hair" />
+                    </div>
+                    <div className="three-col-text">
+                      <h3>Skin hair Supplement</h3>
                     </div>
                   </div>
                 </div>

@@ -465,18 +465,16 @@
       .masonry-inner {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 330px));
-        gap: 40px 20px;
+        gap: 30px;
 
-        .masonry-card:nth-child(2),
-        .masonry-card:nth-child(4),
-        .masonry-card:nth-child(5),
-        .masonry-card:nth-child(7) {
+        .masonry-card {
           .card-img {
-            height: 300px;
+            height: 230px;
             img {
               height: 100%;
               width: 100%;
               object-fit: cover;
+              border-radius: 10px;
             }
           }
           h3 {
@@ -490,17 +488,32 @@
             line-height: 24px;
           }
         }
+      }
+    }
 
-        .masonry-card:nth-child(1),
-        .masonry-card:nth-child(3),
-        .masonry-card:nth-child(6),
-        .masonry-card:nth-child(8) {
+    .masonry-card-sec {
+      background-color: var(--primary);
+      padding: 80px 0;
+
+      h2 {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .masonry-inner {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 330px));
+        gap: 30px;
+        justify-content: center;
+
+        .masonry-card {
           .card-img {
-            height: 400px;
+            height: 230px;
             img {
               height: 100%;
               width: 100%;
               object-fit: cover;
+              border-radius: 10px;
             }
           }
           h3 {
@@ -513,10 +526,6 @@
             color: var(--black);
             line-height: 24px;
           }
-        }
-        .masonry-card:nth-child(6),
-        .masonry-card:nth-child(8) {
-          margin-top: -100px;
         }
       }
     }
@@ -670,6 +679,7 @@
     .portfolio {
       padding: 80px 0;
       text-align: center;
+      background-color: var(--primary);
 
       h2 {
         text-align: center;
@@ -678,8 +688,8 @@
 
       .portfolio-inner {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 60px;
         width: 100%;
         margin-bottom: 30px;
 
@@ -1427,25 +1437,17 @@
           grid-template-columns: repeat(3, minmax(0, 330px));
           gap: 30px;
 
-          .masonry-card:nth-child(6),
-          .masonry-card:nth-child(8) {
-            margin-top: 0px;
-          }
-
-          .masonry-card:nth-child(1),
-          .masonry-card:nth-child(2),
-          .masonry-card:nth-child(3),
-          .masonry-card:nth-child(4),
-          .masonry-card:nth-child(5),
-          .masonry-card:nth-child(6),
-          .masonry-card:nth-child(7),
-          .masonry-card:nth-child(8) {
+          .masonry-card {
             .card-img {
-              height: 290px;
+              height: 230px;
               img {
                 height: 100%;
                 width: 100%;
               }
+            }
+            h3 {
+              font-size: 24px;
+              font-weight: 500;
             }
           }
         }
@@ -1909,7 +1911,17 @@
         padding: 40px 0;
 
         .masonry-inner {
-          grid-template-columns: repeat(1, minmax(0, 330px));
+          grid-template-columns: repeat(2, minmax(0, 330px));
+          gap: 20px;
+          justify-content: center;
+        }
+      }
+
+      .masonry-card-sec {
+        padding: 40px 0;
+
+        .masonry-inner {
+          grid-template-columns: repeat(2, minmax(0, 330px));
           gap: 20px;
           justify-content: center;
         }
