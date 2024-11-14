@@ -163,12 +163,12 @@ class Contact extends Component {
                     </div>
                     <div className="mail-id">
                       <h3>Mail us on:</h3>
-                      <a href="mailto:info@sanitashealthcare.in">
-                        info@sanitashealthcare.in
+                      <a href="mailto:sanitashealthcareinfo@gmail.com">
+                        sanitashealthcareinfo@gmail.com
                       </a>
                       <br />
-                      <a href="mailto:export@sanitashealthcare.in">
-                        export@sanitashealthcare.in
+                      <a href="mailto:info@sanitashealthcare.in">
+                        info@sanitashealthcare.in
                       </a>
                     </div>
                   </div>

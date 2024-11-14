@@ -32,7 +32,7 @@ class Home extends Component {
           <div className="banner">
             <div className="banner-inner">
               <div className="banner-content">
-                <h1>Nutraceuticals Manufacturer & Exponer</h1>
+                <h1>Nutraceuticals Manufacturer & Exporter</h1>
                 <p>
                   We are a leading manufacturer of nutraceutical products,
                   offering innovative and high-quality supplements to support
@@ -137,32 +137,32 @@ class Home extends Component {
                   <div className="card-img">
                     <img src="Tablet.jpg" alt="Tablet dosage" />
                   </div>
-                  <h3>Tablet dosage form</h3>
+                  <h3>Tablets</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Capsule.jpg" alt="Capsule dosage" />
                   </div>
-                  <h3>Capsule dosage form</h3>
+                  <h3>Capsules</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Liquid.jpg" alt="Liquid dosage" />
                   </div>
-                  <h3>Liquid dosage form</h3>
+                  <h3>Liquids</h3>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Powder.jpg" alt="Powder" />
                   </div>
-                  <h3>Powder dosage form</h3>
+                  <h3>Powders</h3>
                 </div>
               </div>
             </div>
           </div>
           <div className="masonry-card-sec">
             <div className="container">
-              <h2>What We Provide</h2>
+              <h2>Innovative Customized Approach</h2>
               <div className="masonry-inner">
                 <div className="masonry-card">
                   <div className="card-img">
@@ -325,51 +325,64 @@ class Home extends Component {
             <div className="container">
               <h2>Our Products</h2>
               <div className="portfolio-inner">
-                <div className="three-col">
-                  <div
-                    className={`  ${
-                      this.state.scrollPosition > 8250
-                        ? "three-col-inner"
-                        : "three-col-inner"
-                    }`}
+                <div className="product-card">
+                  <a
+                    className="product-card-inner"
+                    href="Ortho_supplements_Sanitus_Profile.pdf"
+                    target="_blank"
                   >
-                    <div className="three-col-img">
+                    <div className="product-card-img">
                       <img src="ortho.jpg" alt="Orthopedic" />
                     </div>
-                    <div className="three-col-text">
+                    <div className="product-card-text">
                       <h3>Orthopedic Suppliments</h3>
                     </div>
-                  </div>
+                  </a>
                 </div>
-                <div className="three-col">
-                  <div className="three-col-inner">
-                    <div className="three-col-img">
+                <div className="product-card">
+                  <a
+                    className="product-card-inner"
+                    href="Immun.pdf"
+                    target="_blank"
+                  >
+                    <div className="product-card-img">
                       <img src="Immunity-Supplements.jpg" alt="Immunity" />
                     </div>
-                    <div className="three-col-text">
+                    <div className="product-card-text">
                       <h3>Immunity Supplements</h3>
                     </div>
-                  </div>
+                  </a>
                 </div>
-                <div className="three-col">
-                  <div className="three-col-inner">
-                    <div className="three-col-img">
+                <div className="product-card">
+                  <a
+                    className="product-card-inner"
+                    href="Gynec_infertility_Supply.pdf"
+                    target="_blank"
+                  >
+                    <div className="product-card-img">
+                      <img
+                        src="Gynec-Infertility-Supply.jpg"
+                        alt="Gynec Infertility"
+                      />
+                    </div>
+                    <div className="product-card-text">
+                      <h3>Gynec Infertility Supplements</h3>
+                    </div>
+                  </a>
+                </div>
+                <div className="product-card">
+                  <a
+                    className="product-card-inner"
+                    href="Pediatric_Supply.pdf"
+                    target="_blank"
+                  >
+                    <div className="product-card-img">
                       <img src="Pediatric-Supplement.jpg" alt="Pediatric" />
                     </div>
-                    <div className="three-col-text">
+                    <div className="product-card-text">
                       <h3>Pediatric Supplement</h3>
                     </div>
-                  </div>
-                </div>
-                <div className="three-col">
-                  <div className="three-col-inner">
-                    <div className="three-col-img">
-                      <img src="Skin-hair-Supplement.jpg" alt="Skin-hair" />
-                    </div>
-                    <div className="three-col-text">
-                      <h3>Skin hair Supplement</h3>
-                    </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <button

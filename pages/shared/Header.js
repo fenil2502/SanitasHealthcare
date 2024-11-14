@@ -58,7 +58,11 @@ class Header extends Component {
           <div className="header-inner">
             <div className="header-desktop">
               <div className="header-logo">
-                <img src="Sanitash_logo.svg" alt="Sanitas" />
+                <img
+                  src="Sanitash_logo.svg"
+                  alt="Sanitas"
+                  onClick={() => Navigate(Routes.home)}
+                />
               </div>
               <div className="header-menu">
                 <div className="header-links">
@@ -73,7 +77,10 @@ class Header extends Component {
               </div>
             </div>
             <div className="navbar">
-              <div className="navbar-logo" onClick={() => Navigate(Routes.home)}>
+              <div
+                className="navbar-logo"
+                onClick={() => Navigate(Routes.home)}
+              >
                 <img src="Sanitash_logo.svg" alt="Sanitas" />
               </div>
               <div className="navbar-menu">
