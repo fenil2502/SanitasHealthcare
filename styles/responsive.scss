@@ -700,7 +700,7 @@
         .product-card {
           animation: fadeIn 0.8s ease-out forwards;
           cursor: pointer;
-          
+
           .product-card-inner {
             display: flex;
             flex-direction: column;
@@ -1251,7 +1251,7 @@
         width: 70%;
         display: grid;
         gap: 30px;
-        
+
         table {
           width: 100%;
           border-collapse: collapse;
@@ -1741,7 +1741,8 @@
       padding: 60px 0;
 
       .supplement-details-inner {
-        display: block;
+        display: flex;
+        flex-direction: column-reverse;
         gap: 20px;
 
         .supplement-sidebar {
@@ -2120,6 +2121,39 @@
 
     .supplement-details {
       padding: 40px 0;
+
+      .supplement-details-inner {
+
+        .supplement-sidebar {
+          h2 {
+            font-size: 24px;
+          }
+        }
+
+        .supplement-table {
+          font-size: 12px;
+
+          table {
+            thead {
+              padding: 10px;
+
+              tr {
+                th {
+                  padding: 10px;
+                }
+              }
+            }
+
+            tbody {
+              tr {
+                td {
+                  padding: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
