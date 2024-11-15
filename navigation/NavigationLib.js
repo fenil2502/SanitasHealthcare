@@ -31,6 +31,76 @@ export const Routes = {
     isQueryParams: true,
     isEncryptParams: false,
   },
+
+  orthopedicsupplements: {
+    rawPath: "/orthopedicSupplements/OrthopedicSupplements",
+    urlPath: "/orthopedicSupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  appetizersupplements: {
+    rawPath: "/appetizerSupplements/AppetizerSupplements",
+    urlPath: "/appetizerSupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  gastrointestinalsupplements: {
+    rawPath: "/gastroIntestinalSupplements/GastroIntestinalSupplements",
+    urlPath: "/gastroIntestinalSupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  gynecinfertilitysupplements: {
+    rawPath: "/gynecInfertilitySupplements/GynecInfertilitySupplements",
+    urlPath: "/gynecInfertilitySupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  immunitysupplements: {
+    rawPath: "/immunitySupplements/ImmunitySupplements",
+    urlPath: "/immunitySupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  liversupplement: {
+    rawPath: "/liverSupplement/LiverSupplement",
+    urlPath: "/liverSupplement",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  pediatricsupplements: {
+    rawPath: "/pediatricSupplements/PediatricSupplements",
+    urlPath: "/pediatricSupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  proteinsupplement: {
+    rawPath: "/proteinSupplement/ProteinSupplement",
+    urlPath: "/proteinSupplement",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  skinhairsupplements: {
+    rawPath: "/skinHairSupplements/SkinHairSupplements",
+    urlPath: "/skinHairSupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
+
+  utisupplements: {
+    rawPath: "/utiSupplements/UtiSupplements",
+    urlPath: "/utiSupplements",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
 };
 
 //Common navigation method

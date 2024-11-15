@@ -699,6 +699,8 @@
 
         .product-card {
           animation: fadeIn 0.8s ease-out forwards;
+          cursor: pointer;
+          
           .product-card-inner {
             display: flex;
             flex-direction: column;
@@ -989,6 +991,7 @@
       .product-card {
         animation: fadeIn 0.8s ease-out forwards;
         text-align: center;
+        cursor: pointer;
 
         .product-card-inner {
           display: flex;
@@ -1185,6 +1188,105 @@
   }
 }
 /* ----- Contact css end ----- */
+
+.supplementpage {
+  .banner {
+    padding: 80px 0;
+    height: 400px;
+  }
+
+  .supplement-details {
+    padding: 80px 0;
+
+    .supplement-details-inner {
+      display: flex;
+      gap: 40px;
+
+      .supplement-sidebar {
+        background-color: var(--primary);
+        border-radius: 5px;
+        padding: 20px;
+        height: fit-content;
+        width: 30%;
+
+        h2 {
+          font-size: 28px;
+        }
+
+        ul {
+          display: grid;
+          gap: 15px;
+          margin-top: 20px;
+
+          li {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            color: var(--black);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 15px;
+            background-color: var(--white);
+
+            svg {
+              width: 16px;
+              color: var(--secondary);
+            }
+
+            &:hover {
+              background-color: var(--secondary);
+              color: var(--white);
+
+              svg {
+                color: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      .supplement-table {
+        width: 70%;
+        display: grid;
+        gap: 30px;
+        
+        table {
+          width: 100%;
+          border-collapse: collapse;
+
+          thead {
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px;
+            border: 1px solid var(--secondary);
+            text-align: left;
+
+            tr {
+              th {
+                padding: 10px;
+                border: 1px solid var(--white);
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              td {
+                padding: 10px;
+                border: 1px solid #dee2e6;
+
+                &:nth-child(1) {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .header {
@@ -1622,6 +1724,30 @@
       }
     }
   }
+
+  .supplementpage {
+    .banner {
+      padding: 60px 0;
+      height: 400px;
+    }
+
+    .supplement-details {
+      padding: 60px 0;
+
+      .supplement-details-inner {
+        display: block;
+        gap: 20px;
+
+        .supplement-sidebar {
+          width: 100%;
+        }
+
+        .supplement-table {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 // @media screen and (max-width: 991px) {
@@ -1977,6 +2103,17 @@
           }
         }
       }
+    }
+  }
+
+  .supplementpage {
+    .banner {
+      padding: 40px 0;
+      height: 400px;
+    }
+
+    .supplement-details {
+      padding: 40px 0;
     }
   }
 }

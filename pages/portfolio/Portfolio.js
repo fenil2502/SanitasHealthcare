@@ -1,6 +1,7 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 class Portfolio extends Component {
   render() {
@@ -18,18 +19,19 @@ class Portfolio extends Component {
             <h2>Supplements We Make</h2>
             <div className="supplements-cards">
               <div className="product-card">
-                <a
+                <div
                   className="product-card-inner"
-                  href="Ortho_supplements_Sanitus_Profile.pdf"
-                  target="_blank"
+                  onClick={() => Navigate(Routes.orthopedicsupplements)}
+                  // href="Ortho_supplements_Sanitus_Profile.pdf"
+                  // target="_blank"
                 >
                   <div className="product-card-img">
                     <img src="ortho.jpg" alt="Orthopedic" />
                   </div>
                   <div className="product-card-text">
-                    <h3>Orthopedic Suppliments</h3>
+                    <h3>Orthopedic Supplements</h3>
                   </div>
-                </a>
+                </div>
               </div>
               <div className="product-card">
                 <a
@@ -72,7 +74,7 @@ class Portfolio extends Component {
                     <img src="Pediatric-Supplement.jpg" alt="Pediatric" />
                   </div>
                   <div className="product-card-text">
-                    <h3>Pediatric Supplement</h3>
+                    <h3>Pediatric Supplements</h3>
                   </div>
                 </a>
               </div>
@@ -117,7 +119,7 @@ class Portfolio extends Component {
                     <img src="Skin-hair-Supplement.jpg" alt="Skin and Hair" />
                   </div>
                   <div className="product-card-text">
-                    <h3>Skin & hair Supplement</h3>
+                    <h3>Skin & hair Supplements</h3>
                   </div>
                 </a>
               </div>
@@ -131,7 +133,7 @@ class Portfolio extends Component {
                     <img src="uti-supp.jpg" alt="UTI" />
                   </div>
                   <div className="product-card-text">
-                    <h3>UTI Supplement</h3>
+                    <h3>UTI Supplements</h3>
                   </div>
                 </a>
               </div>
@@ -145,7 +147,7 @@ class Portfolio extends Component {
                     <img src="Appetizer.jpg" alt="Appetizer" />
                   </div>
                   <div className="product-card-text">
-                    <h3>Appetizer</h3>
+                    <h3>Appetizer Supplements</h3>
                   </div>
                 </a>
               </div>
@@ -159,7 +161,7 @@ class Portfolio extends Component {
                     <img src="Protein-Supplement.jpg" alt="Protein" />
                   </div>
                   <div className="product-card-text">
-                    <h3>Protein Supplement</h3>
+                    <h3>Protein Supplements</h3>
                   </div>
                 </a>
               </div>
