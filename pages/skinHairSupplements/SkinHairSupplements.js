@@ -1,7 +1,6 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import orthoImage from "../../assets/images/ortho.jpg";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 const data = [
@@ -58,8 +57,11 @@ class SkinHairSupplements extends Component {
         <div
           className="banner"
           style={{
-            backgroundImage: `url(${orthoImage})`,
-            height: `100vh`,
+            backgroundImage: `url(./meds.jpg)`,
+            backgroundSize: `100%`,
+            backgroundRepeat: `no-repeat`,
+            objectFit: `cover`,
+            alignContent: `center`,
           }}
         >
           <div className="container">
