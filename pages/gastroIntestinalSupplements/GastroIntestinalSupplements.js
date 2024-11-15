@@ -2,6 +2,7 @@ import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import orthoImage from "../../assets/images/ortho.jpg";
+import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 const data = [
   {
@@ -82,7 +83,7 @@ class GastroIntestinalSupplements extends Component {
         >
           <div className="container">
             <div className="banner-inner">
-              <h1>Orthopedic Supplements</h1>
+              <h1>Gastro Intestinal Supplements</h1>
             </div>
           </div>
         </div>
@@ -99,39 +100,66 @@ class GastroIntestinalSupplements extends Component {
                     Orthopedic Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.immunitysupplements)}
+                  >
                     Immunity Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.gynecinfertilitysupplements)}
+                  >
                     Gynec Infertility Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.pediatricsupplements)}
+                  >
                     Pediatric Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.gastrointestinalsupplements)}
+                  >
                     Gastro Intestinal Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.liversupplement)}
+                  >
                     Liver Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.skinhairsupplements)}
+                  >
                     Skin & hair Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.utisupplements)}
+                  >
                     UTI Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.appetizersupplements)}
+                  >
                     Appetizer Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.proteinsupplement)}
+                  >
                     Protein Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>

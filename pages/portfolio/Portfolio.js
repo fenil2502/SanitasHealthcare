@@ -36,8 +36,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="Immun.pdf"
-                  target="_blank"
+                  // href="Immun.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.immunitysupplements)}
                 >
                   <div className="product-card-img">
                     <img src="Immunity-Supplements.jpg" alt="Immunity" />
@@ -50,8 +51,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="Gynec_infertility_Supply.pdf"
-                  target="_blank"
+                  // href="Gynec_infertility_Supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.gynecinfertilitysupplements)}
                 >
                   <div className="product-card-img">
                     <img
@@ -67,8 +69,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="Pediatric_Supply.pdf"
-                  target="_blank"
+                  // href="Pediatric_Supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.pediatricsupplements)}
                 >
                   <div className="product-card-img">
                     <img src="Pediatric-Supplement.jpg" alt="Pediatric" />
@@ -81,8 +84,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="gastro_liver_supply.pdf"
-                  target="_blank"
+                  // href="gastro_liver_supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.gastrointestinalsupplements)}
                 >
                   <div className="product-card-img">
                     <img
@@ -98,8 +102,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="gastro_liver_supply.pdf"
-                  target="_blank"
+                  // href="gastro_liver_supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.liversupplement)}
                 >
                   <div className="product-card-img">
                     <img src="Liver-supplements.jpg" alt="Liver" />
@@ -112,8 +117,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="UTI_Skin_supply.pdf"
-                  target="_blank"
+                  // href="UTI_Skin_supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.skinhairsupplements)}
                 >
                   <div className="product-card-img">
                     <img src="Skin-hair-Supplement.jpg" alt="Skin and Hair" />
@@ -126,8 +132,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="UTI_Skin_supply.pdf"
-                  target="_blank"
+                  // href="UTI_Skin_supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.utisupplements)}
                 >
                   <div className="product-card-img">
                     <img src="uti-supp.jpg" alt="UTI" />
@@ -140,8 +147,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="UTI_Skin_supply.pdf"
-                  target="_blank"
+                  // href="UTI_Skin_supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.appetizersupplements)}
                 >
                   <div className="product-card-img">
                     <img src="Appetizer.jpg" alt="Appetizer" />
@@ -154,8 +162,9 @@ class Portfolio extends Component {
               <div className="product-card">
                 <a
                   className="product-card-inner"
-                  href="Protein supply.pdf"
-                  target="_blank"
+                  // href="Protein supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.proteinsupplement)}
                 >
                   <div className="product-card-img">
                     <img src="Protein-Supplement.jpg" alt="Protein" />

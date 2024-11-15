@@ -2,6 +2,7 @@ import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import orthoImage from "../../assets/images/ortho.jpg";
+import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 const data = [
   {
@@ -202,21 +203,72 @@ class OrthopedicSupplements extends Component {
                     className="sidebar-link"
                     onClick={() => Navigate(Routes.orthopedicsupplements)}
                   >
-                    Orthopedic Supplements<FontAwesomeIcon icon={faArrowRight} />
+                    Orthopedic Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">Immunity Supplements<FontAwesomeIcon icon={faArrowRight} /></li>
-                  <li className="sidebar-link">
-                    Gynec Infertility Supplements<FontAwesomeIcon icon={faArrowRight} />
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.immunitysupplements)}
+                  >
+                    Immunity Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">Pediatric Supplements<FontAwesomeIcon icon={faArrowRight} /></li>
-                  <li className="sidebar-link">
-                    Gastro Intestinal Supplements<FontAwesomeIcon icon={faArrowRight} />
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.gynecinfertilitysupplements)}
+                  >
+                    Gynec Infertility Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
                   </li>
-                  <li className="sidebar-link">Liver Supplements<FontAwesomeIcon icon={faArrowRight} /></li>
-                  <li className="sidebar-link">Skin & hair Supplements<FontAwesomeIcon icon={faArrowRight} /></li>
-                  <li className="sidebar-link">UTI Supplements<FontAwesomeIcon icon={faArrowRight} /></li>
-                  <li className="sidebar-link">Appetizer Supplements<FontAwesomeIcon icon={faArrowRight} /></li>
-                  <li className="sidebar-link">Protein Supplements<FontAwesomeIcon icon={faArrowRight} /></li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.pediatricsupplements)}
+                  >
+                    Pediatric Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.gastrointestinalsupplements)}
+                  >
+                    Gastro Intestinal Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.liversupplement)}
+                  >
+                    Liver Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.skinhairsupplements)}
+                  >
+                    Skin & hair Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.utisupplements)}
+                  >
+                    UTI Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.appetizersupplements)}
+                  >
+                    Appetizer Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.proteinsupplement)}
+                  >
+                    Protein Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
                 </ul>
               </div>
               <div className="supplement-table">

@@ -2,6 +2,7 @@ import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import orthoImage from "../../assets/images/ortho.jpg";
+import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 const data = [
   {
@@ -43,7 +44,7 @@ class UtiSupplements extends Component {
         >
           <div className="container">
             <div className="banner-inner">
-              <h1>Orthopedic Supplements</h1>
+              <h1>UTI Supplements</h1>
             </div>
           </div>
         </div>
