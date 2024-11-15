@@ -185,6 +185,8 @@ class OrthopedicSupplements extends Component {
           style={{
             backgroundImage: `url(./ortho.jpg)`,
             height: `100vh`,
+            backgroundSize : `100%`,
+            backgroundRepeat: `no-repeat`
           }}
         >
           <div className="container">
