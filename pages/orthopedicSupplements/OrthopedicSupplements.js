@@ -1,7 +1,7 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import orthoImage from "../../assets/images/ortho.jpg";
+// import orthoImage from "./ortho.jpg";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 const data = [
@@ -138,7 +138,7 @@ const data = [
     srNo: 22,
     classification: "Calcium Supplement with Vit. & Minerals",
     ingredient:
-      "Calcium Aspartate, Calcium Orotate, Zinc, Magnesium, Cynocobalamine with Calcitrol",
+      "Calcium Aspartate, Calcium Orotate, Zinc, Magnesium, Cynocobalamin with Calcitrol",
     dosageForm: "Tablet",
   },
   {
@@ -183,7 +183,7 @@ class OrthopedicSupplements extends Component {
         <div
           className="banner"
           style={{
-            backgroundImage: `url(${orthoImage})`,
+            backgroundImage: `url(./ortho.jpg)`,
             height: `100vh`,
           }}
         >
