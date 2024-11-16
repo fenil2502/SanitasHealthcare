@@ -98,7 +98,7 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <div className="team">
+        {/* <div className="team">
           <div className="container">
             <h2>Our team</h2>
             <div className="team-inner">
@@ -146,7 +146,7 @@ class About extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
