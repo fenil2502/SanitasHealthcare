@@ -326,24 +326,26 @@ class Home extends Component {
               <h2>Our Products</h2>
               <div className="portfolio-inner">
                 <div className="product-card">
-                  <a
+                  <div
                     className="product-card-inner"
-                    href="Ortho_supplements_Sanitus_Profile.pdf"
-                    target="_blank"
+                    onClick={() => Navigate(Routes.orthopedicsupplements)}
+                    // href="Ortho_supplements_Sanitus_Profile.pdf"
+                    // target="_blank"
                   >
                     <div className="product-card-img">
                       <img src="ortho.jpg" alt="Orthopedic" />
                     </div>
                     <div className="product-card-text">
-                      <h3>Orthopedic Suppliments</h3>
+                      <h3>Orthopedic Supplements</h3>
                     </div>
-                  </a>
+                  </div>
                 </div>
                 <div className="product-card">
                   <a
                     className="product-card-inner"
-                    href="Immun.pdf"
-                    target="_blank"
+                    // href="Immun.pdf"
+                    // target="_blank"
+                    onClick={() => Navigate(Routes.immunitysupplements)}
                   >
                     <div className="product-card-img">
                       <img src="Immunity-Supplements.jpg" alt="Immunity" />
@@ -356,8 +358,9 @@ class Home extends Component {
                 <div className="product-card">
                   <a
                     className="product-card-inner"
-                    href="Gynec_infertility_Supply.pdf"
-                    target="_blank"
+                    // href="Gynec_infertility_Supply.pdf"
+                    // target="_blank"
+                    onClick={() => Navigate(Routes.gynecinfertilitysupplements)}
                   >
                     <div className="product-card-img">
                       <img
@@ -373,14 +376,15 @@ class Home extends Component {
                 <div className="product-card">
                   <a
                     className="product-card-inner"
-                    href="Pediatric_Supply.pdf"
-                    target="_blank"
+                    // href="Pediatric_Supply.pdf"
+                    // target="_blank"
+                    onClick={() => Navigate(Routes.pediatricsupplements)}
                   >
                     <div className="product-card-img">
                       <img src="Pediatric-Supplement.jpg" alt="Pediatric" />
                     </div>
                     <div className="product-card-text">
-                      <h3>Pediatric Supplement</h3>
+                      <h3>Pediatric Supplements</h3>
                     </div>
                   </a>
                 </div>
