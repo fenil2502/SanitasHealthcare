@@ -22,6 +22,7 @@ module.exports = {
       { source: '/proteinSupplement', destination: '/proteinSupplement/ProteinSupplement' },
       { source: '/skinHairSupplements', destination: '/skinHairSupplements/SkinHairSupplements' },
       { source: '/utiSupplements', destination: '/utiSupplements/UtiSupplements' },
+      { source: '/weightLoss', destination: '/weightLoss/WeightLoss' },
     ];
   },
 };

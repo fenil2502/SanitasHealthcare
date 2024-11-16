@@ -174,6 +174,21 @@ class Portfolio extends Component {
                   </div>
                 </a>
               </div>
+              <div className="product-card">
+                <a
+                  className="product-card-inner"
+                  // href="Protein supply.pdf"
+                  // target="_blank"
+                  onClick={() => Navigate(Routes.weightloss)}
+                >
+                  <div className="product-card-img">
+                    <img src="weight-loss.jpg" alt="Weight Loss" />
+                  </div>
+                  <div className="product-card-text">
+                    <h3>Weight Loss Supplements</h3>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>

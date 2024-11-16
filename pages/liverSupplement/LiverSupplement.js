@@ -155,6 +155,13 @@ class LiverSupplement extends Component {
                     Protein Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.weightloss)}
+                  >
+                    Weight Loss Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
                 </ul>
               </div>
               <div className="supplement-table">

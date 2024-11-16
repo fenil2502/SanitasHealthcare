@@ -148,21 +148,18 @@ class AppetizerSupplements extends Component {
                     Protein Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
+                  <li
+                    className="sidebar-link"
+                    onClick={() => Navigate(Routes.weightloss)}
+                  >
+                    Weight Loss Supplements
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </li>
                 </ul>
               </div>
               <div className="supplement-table">
                 <table>
                   <thead>
-                    <tr>
-                      <th
-                        colSpan="4"
-                        style={{
-                          textAlign: `center`,
-                        }}
-                      >
-                        Appetizer Supplements
-                      </th>
-                    </tr>
                     <tr>
                       <td>Active Classification</td>
                       <td>Active Ingredient</td>
@@ -171,36 +168,6 @@ class AppetizerSupplements extends Component {
                   </thead>
                   <tbody>
                     {data.map((item, index) => (
-                      <tr key={index}>
-                        <td>{item.srNo}</td>
-                        <td>{item.classification}</td>
-                        <td>{item.ingredient}</td>
-                        <td>{item.dosageForm}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th
-                        colSpan="4"
-                        style={{
-                          textAlign: `center`,
-                        }}
-                      >
-                        Weight Loss Supplements
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>Active Classification</td>
-                      <td>Active Ingredient</td>
-                      <td>Dosage Form</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {info.map((item, index) => (
                       <tr key={index}>
                         <td>{item.srNo}</td>
                         <td>{item.classification}</td>

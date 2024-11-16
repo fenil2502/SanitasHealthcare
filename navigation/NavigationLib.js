@@ -101,6 +101,13 @@ export const Routes = {
     isQueryParams: true,
     isEncryptParams: false,
   },
+
+  weightloss: {
+    rawPath: "/weightLoss/WeightLoss",
+    urlPath: "/weightLoss",
+    isQueryParams: true,
+    isEncryptParams: false,
+  },
 };
 
 //Common navigation method

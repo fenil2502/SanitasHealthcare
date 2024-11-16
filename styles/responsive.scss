@@ -1193,6 +1193,12 @@
   .banner {
     padding: 80px 0;
     height: 300px;
+
+    .banner-inner {
+      h1 {
+        color: var(--white);
+      }
+    }
   }
 
   .supplement-details {
@@ -1255,6 +1261,7 @@
         table {
           width: 100%;
           border-collapse: collapse;
+          height: fit-content;
 
           thead {
             background-color: var(--secondary);
@@ -2116,7 +2123,7 @@
   .supplementpage {
     .banner {
       padding: 40px 0;
-      height: fit-content;
+      height: 150px;
 
       .banner-inner {
         h1 {
