@@ -98,55 +98,55 @@ class About extends Component {
             </div>
           </div>
         </div>
-        {/* <div className="team">
-          <div className="container">
-            <h2>Our team</h2>
-            <div className="team-inner">
-              <div className="team-card">
-                <div className="team-img">
-                  <img src="Devendra-Patel.jpg" alt="Devendra Patel" />
+          {/* <div className="team">
+            <div className="container">
+              <h2>Our team</h2>
+              <div className="team-inner">
+                <div className="team-card">
+                  <div className="team-img">
+                    <img src="Devendra-Patel.jpg" alt="Devendra Patel" />
+                  </div>
+                  <div className="team-text">
+                    <h3>Devendra Patel</h3>
+                    <p className="position">Co-owner</p>
+                    <p>
+                      Bachlore in Pharmacy Manager,
+                      <br />
+                      Formulation & Development
+                    </p>
+                  </div>
                 </div>
-                <div className="team-text">
-                  <h3>Devendra Patel</h3>
-                  <p className="position">Co-owner</p>
-                  <p>
-                    Bachlore in Pharmacy Manager,
-                    <br />
-                    Formulation & Development
-                  </p>
+                <div className="team-card">
+                  <div className="team-img">
+                    <img src="Tapan-Patel.jpg" alt="Tapan Patel" />
+                  </div>
+                  <div className="team-text">
+                    <h3>Tapan Patel</h3>
+                    <p className="position">Co-owner</p>
+                    <p>
+                      Master in Pharmacy HOD,
+                      <br />
+                      Sales
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="team-card">
-                <div className="team-img">
-                  <img src="Tapan-Patel.jpg" alt="Tapan Patel" />
-                </div>
-                <div className="team-text">
-                  <h3>Tapan Patel</h3>
-                  <p className="position">Co-owner</p>
-                  <p>
-                    Master in Pharmacy HOD,
-                    <br />
-                    Sales
-                  </p>
-                </div>
-              </div>
-              <div className="team-card">
-                <div className="team-img">
-                  <img src="Vikram-Patel.jpg" alt="Vikram Patel" />
-                </div>
-                <div className="team-text">
-                  <h3>Vikram Patel</h3>
-                  <p className="position">Co-owner</p>
-                  <p>
-                    Bachlore in Pharmacy HOD,
-                    <br />
-                    Production
-                  </p>
+                <div className="team-card">
+                  <div className="team-img">
+                    <img src="Vikram-Patel.jpg" alt="Vikram Patel" />
+                  </div>
+                  <div className="team-text">
+                    <h3>Vikram Patel</h3>
+                    <p className="position">Co-owner</p>
+                    <p>
+                      Bachlore in Pharmacy HOD,
+                      <br />
+                      Production
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div> */}
+          </div> */}
       </div>
     );
   }

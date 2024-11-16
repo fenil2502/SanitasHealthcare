@@ -132,13 +132,19 @@ class UtiSupplements extends Component {
                 <table>
                   <thead>
                     <tr>
-                      <th>Appetizer Supplements</th>
+                      <th
+                        colSpan="4"
+                        style={{
+                          textAlign: `center`,
+                        }}
+                      >
+                        UTI Supplements
+                      </th>
                     </tr>
                     <tr>
-                      <th>Sr No.</th>
-                      <th>Active Classification</th>
-                      <th>Active Ingredient</th>
-                      <th>Dosage Form</th>
+                      <td>Active Classification</td>
+                      <td>Active Ingredient</td>
+                      <td>Dosage Form</td>
                     </tr>
                   </thead>
                   <tbody>

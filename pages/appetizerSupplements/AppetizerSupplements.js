@@ -154,13 +154,19 @@ class AppetizerSupplements extends Component {
                 <table>
                   <thead>
                     <tr>
-                      <th>Appetizer Supplements</th>
+                      <th
+                        colSpan="4"
+                        style={{
+                          textAlign: `center`,
+                        }}
+                      >
+                        Appetizer Supplements
+                      </th>
                     </tr>
                     <tr>
-                      <th>Sr No.</th>
-                      <th>Active Classification</th>
-                      <th>Active Ingredient</th>
-                      <th>Dosage Form</th>
+                      <td>Active Classification</td>
+                      <td>Active Ingredient</td>
+                      <td>Dosage Form</td>
                     </tr>
                   </thead>
                   <tbody>
@@ -178,13 +184,19 @@ class AppetizerSupplements extends Component {
                 <table>
                   <thead>
                     <tr>
-                      <th>Weight Loss Supplements</th>
+                      <th
+                        colSpan="4"
+                        style={{
+                          textAlign: `center`,
+                        }}
+                      >
+                        Weight Loss Supplements
+                      </th>
                     </tr>
                     <tr>
-                      <th>Sr No.</th>
-                      <th>Active Classification</th>
-                      <th>Active Ingredient</th>
-                      <th>Dosage Form</th>
+                      <td>Active Classification</td>
+                      <td>Active Ingredient</td>
+                      <td>Dosage Form</td>
                     </tr>
                   </thead>
                   <tbody>

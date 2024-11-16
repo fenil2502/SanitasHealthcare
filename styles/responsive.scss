@@ -1264,14 +1264,14 @@
             text-align: left;
 
             tr {
-              th {
+              th,td {
                 padding: 10px;
                 border: 1px solid var(--white);
-
-                &:nth-child(1) {
-                  display: none;
-                }
+                font-weight: 600;
               }
+              // &:nth-child(2) {
+              //   display: none;
+              // }
             }
           }
 

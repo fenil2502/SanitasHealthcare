@@ -153,7 +153,6 @@ class ProteinSupplement extends Component {
                       <th>Appetizer Supplements</th>
                     </tr>
                     <tr>
-                      <th>Sr No.</th>
                       <th>Active Classification</th>
                       <th>Active Ingredient</th>
                       <th>Dosage Form</th>

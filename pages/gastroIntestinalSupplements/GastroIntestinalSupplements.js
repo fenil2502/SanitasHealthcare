@@ -171,7 +171,6 @@ class GastroIntestinalSupplements extends Component {
                 <table>
                   <thead>
                     <tr>
-                      <th>Sr No.</th>
                       <th>Active Classification</th>
                       <th>Active Ingredient</th>
                       <th>Dosage Form</th>
