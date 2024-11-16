@@ -124,7 +124,7 @@ class GastroIntestinalSupplements extends Component {
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
                   <li
-                    className="sidebar-link"
+                    className="sidebar-link active-page"
                     onClick={() => Navigate(Routes.gastrointestinalsupplements)}
                   >
                     Gastro Intestinal Supplements

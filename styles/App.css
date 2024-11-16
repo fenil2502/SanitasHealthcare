@@ -1,0 +1,8 @@
+.active-page{
+    background-color: var(--secondary) !important;
+    color: var(--white) !important;
+}
+
+.active-page svg{
+    color: var(--white) !important;
+}

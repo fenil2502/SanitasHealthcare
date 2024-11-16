@@ -138,7 +138,7 @@ class ProteinSupplement extends Component {
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
                   <li
-                    className="sidebar-link"
+                    className="sidebar-link active-page"
                     onClick={() => Navigate(Routes.proteinsupplement)}
                   >
                     Protein Supplements

@@ -202,7 +202,7 @@ class OrthopedicSupplements extends Component {
                 <h2>Supplements</h2>
                 <ul>
                   <li
-                    className="sidebar-link"
+                    className="sidebar-link active-page"
                     onClick={() => Navigate(Routes.orthopedicsupplements)}
                   >
                     Orthopedic Supplements

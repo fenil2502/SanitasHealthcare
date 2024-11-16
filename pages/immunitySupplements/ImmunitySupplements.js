@@ -142,7 +142,7 @@ class ImmunitySupplements extends Component {
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
                   <li
-                    className="sidebar-link"
+                    className="sidebar-link active-page"
                     onClick={() => Navigate(Routes.immunitysupplements)}
                   >
                     Immunity Supplements

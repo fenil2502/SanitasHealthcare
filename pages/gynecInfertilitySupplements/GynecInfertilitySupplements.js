@@ -158,7 +158,7 @@ class GynecInfertilitySupplements extends Component {
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
                   <li
-                    className="sidebar-link"
+                    className="sidebar-link active-page"
                     onClick={() => Navigate(Routes.gynecinfertilitysupplements)}
                   >
                     Gynec Infertility Supplements

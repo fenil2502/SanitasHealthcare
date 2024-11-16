@@ -121,7 +121,7 @@ class LiverSupplement extends Component {
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
                   <li
-                    className="sidebar-link"
+                    className="sidebar-link active-page"
                     onClick={() => Navigate(Routes.liversupplement)}
                   >
                     Liver Supplements
