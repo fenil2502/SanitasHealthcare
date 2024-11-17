@@ -133,7 +133,7 @@ class GynecInfertilitySupplements extends Component {
         >
           <div className="container">
             <div className="banner-inner">
-              <h1>Gynec Infertility Supplements</h1>
+              <h1>Gynec & Infertility Supplements</h1>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ class GynecInfertilitySupplements extends Component {
                     className="sidebar-link active-page"
                     onClick={() => Navigate(Routes.gynecinfertilitysupplements)}
                   >
-                    Gynec Infertility Supplements
+                    Gynec & Infertility Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
                   <li

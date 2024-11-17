@@ -62,7 +62,7 @@ class Portfolio extends Component {
                     />
                   </div>
                   <div className="product-card-text">
-                    <h3>Gynec Infertility Supplements</h3>
+                    <h3>Gynec & Infertility Supplements</h3>
                   </div>
                 </a>
               </div>

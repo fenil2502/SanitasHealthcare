@@ -94,7 +94,7 @@ class SkinHairSupplements extends Component {
                     className="sidebar-link"
                     onClick={() => Navigate(Routes.gynecinfertilitysupplements)}
                   >
-                    Gynec Infertility Supplements
+                    Gynec & Infertility Supplements
                     <FontAwesomeIcon icon={faArrowRight} />
                   </li>
                   <li
