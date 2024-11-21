@@ -18,7 +18,7 @@ class Contact extends Component {
         email: "",
         mobileNo: "",
         message: "",
-        adminEmail: "fenil9737@gmail.com",
+        adminEmail: "sanitashealthcareinfo@gmail.com",
         emailtemplateId: 3,
       },
       isLoading: false,
