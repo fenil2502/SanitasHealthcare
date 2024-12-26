@@ -59,7 +59,7 @@ class Header extends Component {
             <div className="header-desktop">
               <div className="header-logo">
                 <img
-                  src="Sanitash_logo.svg"
+                  src="Sanitash-logo.png"
                   alt="Sanitas"
                   onClick={() => Navigate(Routes.home)}
                 />
