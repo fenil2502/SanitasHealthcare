@@ -114,6 +114,9 @@ class Footer extends Component {
                 Copyright &copy; 2022 Sanitas Healthcare. All rights are
                 reserved.
               </p>
+              <p>
+                Built by <a href="https://www.zyden-it.com/" target="_blank" rel="noreferrer">Zyden IT Solutions</a>.
+              </p>
             </div>
           </div>
         </div>

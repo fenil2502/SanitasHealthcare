@@ -62,9 +62,8 @@ class Home extends Component {
           <div className="overview-sec">
             <div className="container">
               <div
-                className={`  ${
-                  this.state.scrollPosition > 70 ? "overview-inner" : ""
-                }`}
+                className={`  ${this.state.scrollPosition > 70 ? "overview-inner" : ""
+                  }`}
               >
                 <div className="overview">
                   <h2>
@@ -292,45 +291,98 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          {/* <div className="contact-cta">
-            <div className="container">
-              <div
-                className={`${
-                  this.state.scrollPosition > 6690
-                    ? "cta-inner"
-                    : "cta-inner               "
-                }`}
-              >
-                <div className="cta-text">
-                  <h2>
-                    Want More Information? Let’s Connect – Contact Us Today!
-                  </h2>
-                  <p>
-                    Our friendly and knowledgeable team is ready to help. Reach
-                    out for inquiries, support, or to learn more about our
-                    products.
-                  </p>
-                </div>
-                <button
-                  className="cta-btn"
-                  onClick={() => Navigate(Routes.contact)}
-                >
-                  <img src="contact-support.svg" alt="Contact" />
-                  Contact now
-                </button>
-              </div>
-            </div>
-          </div> */}
-          <div className="portfolio">
+          <div className="products">
             <div className="container">
               <h2>Our Products</h2>
+              <div className="products-inner">
+                <div className="product-card">
+                  <a href='https://www.amazon.in/dp/B0DR9897JQ' target="_blank" rel="noreferrer">
+                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
+                    <div className="product-card-img">
+                      <img src="Zustnutra-zinc.png" alt="Zustnutra" />
+                    </div>
+                    <div className="product-card-text">
+                      <div className="product-details">
+                        <span>Zustnutra</span>
+                        <h3>Calcium, Magnesium, Zinc+</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="product-card">
+                  <a href='https://www.amazon.in/dp/B0DR98HZS3' target="_blank" rel="noreferrer">
+                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
+                    <div className="product-card-img">
+                      <img src="Zustnutra-fat_burner.png" alt="Zustnutra" />
+                    </div>
+                    <div className="product-card-text">
+                      <div className="product-details">
+                        <span>Zustnutra</span>
+                        <h3>Fat Burner</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="product-card">
+                  <a href='https://www.amazon.in/dp/B0DR2N76KV' target="_blank" rel="noreferrer">
+                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
+                    <div className="product-card-img">
+                      <img src="Zustnutra-l_glutathione.png" alt="Zustnutra" />
+                    </div>
+                    <div className="product-card-text">
+                      <div className="product-details">
+                        <span>Zustnutra</span>
+                        <h3>L Glutathione</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="product-card">
+                  <a href='https://www.amazon.in/dp/B0DR7FP5XY' target="_blank" rel="noreferrer">
+                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
+                    <div className="product-card-img">
+                      <img
+                        src="Zustnutra-melatonin.png"
+                        alt="Zustnutra"
+                      />
+                    </div>
+                    <div className="product-card-text">
+                      <div className="product-details">
+                        <span>Zustnutra</span>
+                        <h3>Melatonin</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="product-card">
+                  <a
+                    href="https://www.amazon.in/dp/B0DR99H1M9" target="_blank" rel="noreferrer"
+                  >
+                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
+                    <div className="product-card-img">
+                      <img src="Zustnutra-testosterone.png" alt="Zustnutra" />
+                    </div>
+                    <div className="product-card-text">
+                      <div className="product-details">
+                        <span>Zustnutra</span>
+                        <h3>Testosterone Booster</h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="portfolio">
+            <div className="container">
+              <h2>Supplements We Provide</h2>
               <div className="portfolio-inner">
                 <div className="product-card">
                   <div
                     className="product-card-inner"
                     onClick={() => Navigate(Routes.orthopedicsupplements)}
-                    // href="Ortho_supplements_Sanitus_Profile.pdf"
-                    // target="_blank"
+                  // href="Ortho_supplements_Sanitus_Profile.pdf"
+                  // target="_blank"
                   >
                     <div className="product-card-img">
                       <img src="ortho.jpg" alt="Orthopedic" />
