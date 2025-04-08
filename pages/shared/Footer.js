@@ -105,6 +105,8 @@ class Footer extends Component {
                     <a href="tel:+919687361880">+91-9687361880</a>
                     <br />
                     <a href="tel:+919426829676">+91-9426829676</a>
+                    <br />
+                    <a href="tel:+919974875537">+91-9974875537</a>
                   </div>
                 </div>
               </div>
