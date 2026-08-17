@@ -1,11 +1,24 @@
 :root {
-  --primary: #fff7f1;
-  --secondary: #9d3a21;
+  /* ----- Brand ----- */
+  --secondary: #120a7b; /* deep indigo - headings, links, icons, borders */
+  --accent: #ff914d; /* orange - buttons, highlights, hovers */
+  --accent-dark: #e08044; /* orange, ~12% darker - button hover */
+  --accent-soft: #ffd8bc; /* light orange - soft fills, icon chips */
+
+  /* ----- Surfaces (all warm, tinted from the orange) ----- */
+  --primary: #fff4ec; /* light sections, text on indigo */
+  --background: #fbeee5; /* alternating sections, card hover */
+  --card-bg: #ffffff;
   --white: #ffffff;
-  --black: #2e3031;
-  --background: #f5efee;
-  --card-bg: #fffdfb;
-  --stats: #785546;
+  --black: #2e3031; /* neutral body text */
+  --stats: #120a7b; /* indigo - sub-headings and stat figures */
+
+  /* ----- Footer ----- */
+  --footer-bg: #120a7b;
+  --footer-bg-dark: #070330;
+  --footer-accent: #ff914d;
+  --footer-muted: rgba(255, 255, 255, 0.72);
+  --footer-border: rgba(255, 255, 255, 0.15);
 }
 
 .contact-cta {
@@ -52,7 +65,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      background-color: #9d3a21;
+      background-color: var(--accent);
       border: 2px solid var(--white);
       color: var(--white);
       border-radius: 50px;
@@ -72,7 +85,7 @@
     }
 
     button.cta-btn:hover {
-      background: linear-gradient(45deg, #c1492a, #e67e22);
+      background: var(--accent-dark);
       letter-spacing: 1.5px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       transform: scale(1.05);
@@ -124,7 +137,7 @@
 }
 
 .download-btn {
-  color: #9d3a21;
+  color: var(--secondary);
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -138,20 +151,21 @@
   }
 }
 .download-btn:hover {
-  color: #e67e22;
+  color: var(--accent);
   gap: 12px;
 }
 
 .prm-btn {
-  background-color: #9d3a21;
+  background-color: var(--accent);
   padding: 15px 30px;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: var(--white);
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
 .prm-btn:hover {
-  background-color: #c1492a;
+  background-color: var(--accent-dark);
   letter-spacing: 1.5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
