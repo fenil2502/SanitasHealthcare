@@ -491,7 +491,7 @@
     }
 
     .masonry-sec {
-      background-color: var(--background);
+      background-color: var(--primary);
       padding: 80px 0;
 
       h2 {
@@ -534,7 +534,6 @@
     }
 
     .masonry-card-sec {
-      background-color: var(--primary);
       padding: 80px 0;
 
       h2 {
@@ -579,7 +578,6 @@
 
     .how-we-work {
       padding: 80px 0;
-      background-color: var(--white);
 
       h2 {
         text-align: center;
@@ -609,9 +607,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(255, 145, 77, 0.2);
+            background-color: var(--accent);
             border-radius: 10px;
-            color: var(--secondary);
+            color: var(--white);
             transition: background-color 0.3s ease;
           }
 
@@ -626,8 +624,8 @@
             box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
 
             h3 {
-              background-color: var(--secondary);
-              color: var(--primary);
+              background-color: var(--accent-dark);
+              color: var(--white);
             }
 
             h4 {
@@ -1638,9 +1636,9 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background-color: rgba(255, 145, 77, 0.2);
+              background-color: var(--accent);
               border-radius: 10px;
-              color: var(--secondary);
+              color: var(--white);
               transition: background-color 0.3s ease;
             }
 
@@ -1655,8 +1653,8 @@
               box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
 
               h3 {
-                background-color: var(--secondary);
-                color: var(--primary);
+                background-color: var(--accent-dark);
+                color: var(--white);
               }
 
               h4 {
@@ -2087,9 +2085,9 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background-color: rgba(255, 145, 77, 0.2);
+              background-color: var(--accent);
               border-radius: 10px;
-              color: var(--secondary);
+              color: var(--white);
               transition: background-color 0.3s ease;
             }
 
@@ -2104,8 +2102,8 @@
               box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
 
               h3 {
-                background-color: var(--secondary);
-                color: var(--primary);
+                background-color: var(--accent-dark);
+                color: var(--white);
               }
 
               h4 {
