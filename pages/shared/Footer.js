@@ -18,11 +18,11 @@ class Footer extends Component {
             <div className="footer-top">
               <div className="footer-col-1">
                 <img
-                  src="Sanitash_logo_white.png"
+                  src="Sanitash_logo.svg"
                   alt="Sanitas Healthcare"
                   onClick={() => Navigate(Routes.home)}
                 />
-                {/* <p>Your guide to a healthier, happier life.</p> */}
+                <p>Your guide to a healthier, happier life.</p>
                 <div className="social-media">
                   <a
                     href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/"
