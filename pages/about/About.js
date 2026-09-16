@@ -1,76 +1,143 @@
 import React, { useState, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faShieldHalved,
+  faIndustry,
+  faCapsules,
+  faFlask,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 class About extends Component {
   render() {
     return (
       <div className="aboutpage">
-        <div className="banner">
+        <section className="page-hero">
           <div className="container">
-            <div className="banner-inner">
-              <h1>About Sanitas Healthcare</h1>
+            <div className="page-hero-inner">
+              <span className="section-eyebrow">About us</span>
+              <h1>
+                Inside <span>Sanitas Healthcare</span>
+              </h1>
+              <p>
+                A WHO&ndash;GMP certified nutraceutical manufacturer in Gujarat,
+                producing tablets, capsules, powders and syrups for brands
+                across India and abroad.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
         <div className="about-sec">
           <div className="container">
             <div className="about-inner">
-              <div className="sanitas">
-                <span>About Us</span>
-                <h2>We At Sanitas</h2>
+              <div className="about-visual">
+                <div className="visual-frame">
+                  <img src="sanitas-about.jpg" alt="Sanitas Healthcare" />
+                </div>
+                <span className="dot-grid" />
+              </div>
+
+              <div className="about-copy">
+                <span className="section-eyebrow">Why Sanitas</span>
+                <h2>
+                  We At <span>Sanitas</span>
+                </h2>
                 <p>
-                  Sanitas Healthcare is occupied in the manufacturing of
-                  different range of nutraceuticals products (Tablets, Capsules,
-                  Powders, Syrup etc.)
+                  Sanitas Healthcare is occupied in the manufacturing of different range of nutraceuticals products. We at Sanitas Healthcare work at a state of the art manufacturing facility in Gujarat with large scale capacity for wide range of nutraceuticals products.
                 </p>
-                <p>
-                  We at Sanitas Healthcare work at a state of the art
-                  manufacturing facility in Gujarat with large scale capacity
-                  for wide range of nutraceuticals products.
-                </p>
-                <p className="icon-list">
-                  <img src="Manufacture.svg" alt="Manufacture" />
-                  State of the art manufacturing unit
-                </p>
-                <p className="icon-list">
-                  <img src="Dosage.svg" alt="Dosage" />
-                  All dosage form at one place
-                </p>
-                <p className="icon-list">
-                  <img src="Formulation.svg" alt="Formulation" />
-                  In house F&D facility
-                </p>
-                <img
-                  className="about-img"
-                  src="About-sanitas.png"
-                  alt="Sanitas Healthcare"
-                />
+                <button
+                  className="learn-more"
+                  onClick={() => Navigate(Routes.portfolio)}
+                >
+                  Learn more
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </button>
+              </div>
+
+              <div className="about-highlights">
+                <div className="highlight-card">
+                  <span className="hl-icon">
+                    <FontAwesomeIcon icon={faShieldHalved} />
+                  </span>
+                  <h3>Quality Assurance</h3>
+                  <p>Strict quality control at every step</p>
+                </div>
+                <div className="highlight-card">
+                  <span className="hl-icon">
+                    <FontAwesomeIcon icon={faIndustry} />
+                  </span>
+                  <h3>Modern Facility</h3>
+                  <p>State of the art manufacturing unit</p>
+                </div>
+                <div className="highlight-card">
+                  <span className="hl-icon">
+                    <FontAwesomeIcon icon={faCapsules} />
+                  </span>
+                  <h3>All Dosage Forms</h3>
+                  <p>Tablets, capsules, powders and syrups</p>
+                </div>
+                <div className="highlight-card">
+                  <span className="hl-icon">
+                    <FontAwesomeIcon icon={faFlask} />
+                  </span>
+                  <h3>In-House F&amp;D</h3>
+                  <p>Science-driven formulation and development</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="contact-cta">
+
+
+        <div className="vision-mission">
           <div className="container">
-            <div className="cta-inner">
-              <div className="cta-text">
-                <h2>
-                  Want More Information? Let’s Connect – Contact Us Today!
-                </h2>
-                <p>
-                  Our friendly and knowledgeable team is ready to help. Reach
-                  out for inquiries, support, or to learn more about our
-                  products.
-                </p>
+            <div className="vm-inner">
+              <div className="vm-card">
+                <div className="vm-img">
+                  <img src="mission.png" alt="Mission" />
+                </div>
+                <div className="vm-text">
+                  <span className="vm-rule" />
+                  <h3>Mission</h3>
+                  <p>
+                    To be a benchmark in manufacturing practices for production
+                    of nutraceuticals healthcare products, and to dedicate
+                    ourselves to humanity&rsquo;s quest for longer, healthier,
+                    happier lives.
+                  </p>
+                </div>
               </div>
-              <button
-                className="cta-btn"
-                onClick={() => Navigate(Routes.contact)}
-              >
-                <img src="contact-support.svg" alt="Contact" />
-                Contact now
-              </button>
+
+              <div className="vm-card vm-card-alt">
+                <div className="vm-img">
+                  <img src="vision.png" alt="Vision" />
+                </div>
+                <div className="vm-text">
+                  <span className="vm-rule" />
+                  <h3>Vision</h3>
+                  <p>
+                    To provide affordable and innovative health supplement
+                    products for the better well-being of society and to be a
+                    vital part in nation building.
+                  </p>
+                </div>
+              </div>
+
+              <div className="vm-card">
+                <div className="vm-img">
+                  <img src="value.png" alt="Core Value" />
+                </div>
+                <div className="vm-text">
+                  <span className="vm-rule" />
+                  <h3>Core Value</h3>
+                  <p>
+                    Quality, transparency and consistency guide every batch we
+                    make, from in-house formulation through to final packaging.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -98,7 +165,142 @@ class About extends Component {
             </div>
           </div>
         </div>
-          {/* <div className="team">
+        <div className="contact-cta">
+          <div className="container">
+            <div className="cta-inner">
+              <div className="cta-text">
+                <h2>
+                  Want More Information? Let’s Connect – Contact Us Today!
+                </h2>
+                <p>
+                  Our friendly and knowledgeable team is ready to help. Reach
+                  out for inquiries, support, or to learn more about our
+                  products.
+                </p>
+              </div>
+              <button
+                className="cta-btn"
+                onClick={() => Navigate(Routes.contact)}
+              >
+                <img src="contact-support.svg" alt="Contact" />
+                Contact now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="how-we-work">
+          <div className="container">
+            <div className="section-head">
+              <span className="section-eyebrow">Our process</span>
+              <h2>How we work</h2>
+            </div>
+            <div className="hww-inner">
+              <div className="step-card">
+                <h3>01</h3>
+                <h4>One to one meeting with customer</h4>
+              </div>
+              <div className="step-card">
+                <h3>02</h3>
+                <h4>Discussion for product & Business Development</h4>
+              </div>
+              <div className="step-card">
+                <h3>03</h3>
+                <h4>Order generation</h4>
+              </div>
+              <div className="step-card">
+                <h3>04</h3>
+                <h4>P.O. approval</h4>
+              </div>
+              <div className="step-card">
+                <h3>08</h3>
+                <h4>Dispatch of goods(1-2 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>07</h3>
+                <h4>Manufacturing process(10-15 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>06</h3>
+                <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>05</h3>
+                <h4>Art work, design selection(2-3 days)</h4>
+              </div>
+            </div>
+            <div className="hww-inner-tablet">
+              <div className="step-card">
+                <h3>01</h3>
+                <h4>One to one meeting</h4>
+              </div>
+              <div className="step-card">
+                <h3>02</h3>
+                <h4>Discussion for product & business development</h4>
+              </div>
+              <div className="step-card">
+                <h3>03</h3>
+                <h4>Order generation</h4>
+              </div>
+              <div className="step-card">
+                <h3>06</h3>
+                <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>05</h3>
+                <h4>Art work, design selection(2-3 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>04</h3>
+                <h4>P.O. approval</h4>
+              </div>
+              <div className="step-card">
+                <h3>07</h3>
+                <h4>Manufacturinbg process(10-15 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>08</h3>
+                <h4>Dispatch of goods(1-2 days)</h4>
+              </div>
+            </div>
+            <div className="hww-inner-mobile">
+              <div className="step-card">
+                <h3>01</h3>
+                <h4>One to one meeting</h4>
+              </div>
+              <div className="step-card">
+                <h3>02</h3>
+                <h4>Discussion for product & business development</h4>
+              </div>
+              <div className="step-card">
+                <h3>03</h3>
+                <h4>Order generation</h4>
+              </div>
+              <div className="step-card">
+                <h3>04</h3>
+                <h4>P.O. approval</h4>
+              </div>
+              <div className="step-card">
+                <h3>05</h3>
+                <h4>Art work, design selection(2-3 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>06</h3>
+                <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>07</h3>
+                <h4>Manufacturinbg process(10-15 days)</h4>
+              </div>
+              <div className="step-card">
+                <h3>08</h3>
+                <h4>Dispatch of goods(1-2 days)</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {/* <div className="team">
             <div className="container">
               <h2>Our team</h2>
               <div className="team-inner">

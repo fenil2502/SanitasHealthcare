@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Header from "./Header";
 import Footer from "./Footer";
 import Head from "next/head";
+import ScrollReveal from "../../components/common/ScrollReveal";
 
 const Layout = ({ children, title, searchType }) => {
   let defaultHeader = null;
@@ -11,13 +12,17 @@ const Layout = ({ children, title, searchType }) => {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
         <title>{title} Sanitas Healthcare</title>
       </Head>
       {defaultHeader}
       <div>{children}</div>
+      <ScrollReveal />
       <Footer />
     </div>
   );

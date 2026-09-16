@@ -4,7 +4,6 @@ import {
   faArrowRight,
   faBarsStaggered,
   faXmark,
-  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import Link from "next/link";
@@ -14,7 +13,22 @@ class Header extends Component {
     super(props);
     this.state = {
       isMenuOpen: false,
+      scrollPosition: 0,
     };
+  }
+
+  handleScroll = () => {
+    this.setState({
+      scrollPosition: window.scrollY,
+    });
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   toggleMenu = () => {
@@ -46,6 +60,8 @@ class Header extends Component {
       Navigate(Routes.about);
     } else if (page === "Portfolio") {
       Navigate(Routes.portfolio);
+    } else if (page === "Contact") {
+      Navigate(Routes.contact);
     }
     this.toggleMenu();
   };
@@ -53,7 +69,10 @@ class Header extends Component {
   render() {
     const { isMenuOpen } = this.state;
     return (
-      <div className="header">
+      <div
+        className={`header ${this.state.scrollPosition > 50 ? "scrolled" : ""
+          }`}
+      >
         <div className="container">
           <div className="header-inner">
             <div className="header-desktop">
@@ -71,7 +90,7 @@ class Header extends Component {
                   <Link href="/portfolio">Portfolio</Link>
                 </div>
                 <button onClick={() => Navigate(Routes.contact)}>
-                  Contact Us
+                  Contact us
                   <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
@@ -89,9 +108,6 @@ class Header extends Component {
                     icon={isMenuOpen ? faXmark : faBarsStaggered}
                   />
                 </div>
-                <button onClick={() => Navigate(Routes.contact)}>
-                  <FontAwesomeIcon icon={faPhone} />
-                </button>
               </div>
             </div>
           </div>
@@ -101,6 +117,7 @@ class Header extends Component {
             <a onClick={() => this.navigateFromHeader("Portfolio")}>
               Portfolio
             </a>
+            <a onClick={() => this.navigateFromHeader("Contact")}>Contact</a>
           </div>
         </div>
       </div>

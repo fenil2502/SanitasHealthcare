@@ -1,381 +1,412 @@
 import React, { useState, Component } from "react";
+import {
+  faArrowRight,
+  faAward,
+  faBullseye,
+  faShieldHalved,
+} from "@fortawesome/free-solid-svg-icons";
+import { faAmazon } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  CirclesThreeIcon,
+  DropIcon,
+  FactoryIcon,
+  GrainsIcon,
+  JarLabelIcon,
+  PillIcon,
+  SealCheckIcon,
+} from "@phosphor-icons/react";
 import Link from "next/link";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
+/* ZustNutra consumer range - our own retail brand */
+const PRODUCTS = [
+  {
+    name: "Calcium, Magnesium, Zinc+",
+    image: "Zustnutra-zinc.png",
+  },
+  {
+    name: "Keto Fat Burner",
+    image: "Zustnutra-fat_burner.png",
+  },
+  {
+    name: "L Glutathione",
+    image: "Zustnutra-l_glutathione.png",
+  },
+  {
+    name: "Melatonin",
+    image: "Zustnutra-melatonin.png",
+  },
+  {
+    name: "Testosterone Booster",
+    image: "Zustnutra-testosterone.png",
+  },
+];
+
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      scrollPosition: 0,
-    };
-  }
-
-  handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    this.setState({ scrollPosition });
-  };
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
   render() {
     return (
       <div className="homepage">
         <div className="home-inner">
           <div className="banner">
             <div className="banner-inner">
-              <div className="banner-content">
-                <h1>Nutraceuticals Manufacturer & Exporter</h1>
+              <div className="banner-head">
+                <span className="hero-badge">
+                  <i className="spark" />
+                  <span>
+                    Trusted for over <strong>10+ years</strong>
+                  </span>
+                  <i className="spark" />
+                </span>
+
+                <h1>
+                  Nutraceuticals Manufacturer
+                  <br />
+                  &amp; Exporter
+                </h1>
+
                 <p>
-                  We are a leading manufacturer of nutraceutical products,
-                  offering innovative and high-quality supplements to support
-                  overall health and wellness. With a focus on science-backed
-                  formulations and natural ingredients, we deliver trusted
-                  solutions for your health needs.
+                  Science-backed formulations made at a WHO&ndash;GMP certified
+                  facility in Gujarat, across every dosage form your brand
+                  needs.
                 </p>
+
                 <button
-                  className="prm-btn"
+                  className="hero-btn"
                   onClick={() => Navigate(Routes.about)}
                 >
                   Know more
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </button>
-                <div className="banner-stats">
-                  <p>
-                    <span>10+</span>Years of
-                    <br />
-                    experience
-                  </p>
-                </div>
               </div>
-              <div className="banner-img">
-                <img src="Home-banner.jpg" alt="Sanitas" />
+
+              <div className="hero-stage">
+                <span className="stage-ring ring-inner" />
+                <span className="stage-arc" />
+                <span className="stage-dots dots-left" />
+                <span className="stage-dots dots-right" />
+
+                <span className="capsule cap-1" />
+                <span className="capsule cap-2" />
+                <span className="capsule cap-3" />
+                <span className="capsule cap-4" />
+                <span className="capsule cap-5" />
+                <span className="capsule cap-6" />
+
+                <div className="hero-product">
+                  <img src="HomeBanner.png" alt="Sanitas Healthcare" />
+                </div>
+
+                <div className="hero-note note-left">
+                  <span className="note-dot">
+                    <FontAwesomeIcon icon={faBullseye} />
+                  </span>
+                  <span className="note-text">
+                    <strong>ALL DOSAGE FORMS</strong>
+                    Tablets, capsules, powders and syrups
+                  </span>
+                </div>
+
+                <div className="hero-note note-right">
+                  <span className="note-dot">
+                    <FontAwesomeIcon icon={faShieldHalved} />
+                  </span>
+                  <span className="note-text">
+                    <strong>IN-HOUSE F&amp;D</strong>
+                    Formulation and development under one roof
+                  </span>
+                </div>
               </div>
             </div>
           </div>
           <div className="overview-sec">
             <div className="container">
-              <div
-                className={`  ${this.state.scrollPosition > 70 ? "overview-inner" : ""
-                  }`}
-              >
-                <div className="overview">
-                  <h2>
-                    Sanitas Healthcare
-                    <br />
-                    Where healthy life is created
-                  </h2>
-                  <p>
-                    We at Sanitas Healthcare work at a state of the art
-                    manufacturing facility in Gujarat with large scale capacity
-                    for wide range of nutraceuticals products.
-                  </p>
-                  <p>
-                    WHO–GMP Certified Company - Sanitas Healthcare is occupied
-                    in the manufacturing of different range of Nutraceuticals
-                    products (Tablets, Capsules, Powders, Syrup etc.)
-                  </p>
-                  <div className="icon-set">
-                    <img className="desk" src="Desk-img.svg" alt="Success" />
-                    <img
-                      className="mobile"
-                      src="Mobile-img.svg"
-                      alt="Success"
-                    />
+              <div className="overview">
+                <div className="overview-content">
+                  <div className="overview-copy">
+                    <div className="section-head">
+                      <span className="section-eyebrow">Who we are</span>
+                      <h2>Sanitas Healthcare</h2>
+                      <p>Where healthy life is created</p>
+                    </div>
+
+                    <p className="overview-lead">
+                      We at Sanitas Healthcare work at a state of the art
+                      manufacturing facility in Gujarat with large scale
+                      capacity for a wide range of nutraceutical products.
+                    </p>
+
+                    <div className="overview-points">
+                      <div className="overview-point">
+                        <span className="overview-point-icon">
+                          <FactoryIcon size={22} weight="duotone" />
+                        </span>
+                        <div className="overview-point-body">
+                          <h3>State of the art facility</h3>
+                          <p>
+                            Large scale capacity across tablets, capsules,
+                            powders and syrups.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="overview-point">
+                        <span className="overview-point-icon">
+                          <SealCheckIcon size={22} weight="duotone" />
+                        </span>
+                        <div className="overview-point-body">
+                          <h3>WHO&ndash;GMP certified</h3>
+                          <p>
+                            Every batch made to certified quality standards, in
+                            house from formulation to pack.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      className="overview-btn"
+                      onClick={() => Navigate(Routes.about)}
+                    >
+                      More about us
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </button>
                   </div>
-                  <img
-                    className="overview-img"
-                    src="medicines.jpg"
-                    alt="Sanitas Healthcare"
-                  />
-                  <div className="vision-mission">
-                    <div className="vision">
-                      <div className="icon-title">
-                        <div className="icon">
-                          <img src="vision.svg" alt="Vision" />
-                        </div>
-                        <h3>Vision</h3>
-                      </div>
-                      <p>
-                        To provide affordable and innovative health supplement
-                        products for better well-being of a society and be a
-                        vital part in nation building.
-                      </p>
+
+                  <div className="overview-visual">
+                    <div className="overview-image-shape">
+                      <img
+                        className="overview-img"
+                        src="AboutSanitas.png"
+                        alt="Sanitas Healthcare Nutraceutical Products"
+                      />
                     </div>
-                    <div className="mission">
-                      <div className="icon-title">
-                        <div className="icon">
-                          <img src="mission.svg" alt="Mission" />
-                        </div>
-                        <h3>Mission</h3>
-                      </div>
-                      <p>
-                        To be a benchmark in manufacturing practices for
-                        production of nutraceuticals healthcare products. To
-                        Dedicate ourseleves for humanity’s quest for longer,
-                        healthier, happier lives through innovation in
-                        medicines.
-                      </p>
-                    </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="masonry-sec">
+          <div className="product-showcase">
             <div className="container">
-              <h2>What We Provide</h2>
-              <div className="masonry-inner">
-                <div className="masonry-card">
-                  <div className="card-img">
-                    <img src="Tablet.jpg" alt="Tablet dosage" />
-                  </div>
-                  <h3>Tablets</h3>
+              <div className="section-head">
+                <span className="section-eyebrow">Dosage forms</span>
+                <h2>What We Provide</h2>
+              </div>
+
+              <div className="product-showcase-layout">
+
+                <div className="showcase-rings" aria-hidden="true">
+                  <span className="sc-ring sc-ring-1" />
+                  <span className="sc-ring sc-ring-2" />
+                  <span className="sc-ring sc-ring-3" />
                 </div>
-                <div className="masonry-card">
-                  <div className="card-img">
-                    <img src="Capsule.jpg" alt="Capsule dosage" />
+
+                <svg
+                  className="showcase-links"
+                  viewBox="0 0 1000 500"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    className="link-line"
+                    d="M 300 150 C 385 152, 425 200, 505 262"
+                  />
+                  <path
+                    className="link-line"
+                    d="M 300 350 C 385 348, 425 300, 505 238"
+                  />
+                  <path
+                    className="link-line"
+                    d="M 700 150 C 615 152, 575 200, 495 262"
+                  />
+                  <path
+                    className="link-line"
+                    d="M 700 350 C 615 348, 575 300, 495 238"
+                  />
+                  <path className="link-dot" d="M 300 150 h 0.01" />
+                  <path className="link-dot" d="M 300 350 h 0.01" />
+                  <path className="link-dot" d="M 700 150 h 0.01" />
+                  <path className="link-dot" d="M 700 350 h 0.01" />
+                </svg>
+
+                <div className="showcase-item showcase-item-1">
+                  <div className="showcase-icon">
+                    <CirclesThreeIcon size={24} weight="duotone" />
                   </div>
-                  <h3>Capsules</h3>
-                </div>
-                <div className="masonry-card">
-                  <div className="card-img">
-                    <img src="Liquid.jpg" alt="Liquid dosage" />
+                  <div className="showcase-text">
+                    <h3>
+                      Tablets
+                    </h3>
+                    <p>Easy and convenient dosage form</p>
                   </div>
-                  <h3>Liquids</h3>
                 </div>
-                <div className="masonry-card">
-                  <div className="card-img">
-                    <img src="Powder.jpg" alt="Powder" />
+
+                <div className="showcase-item showcase-item-2">
+                  <div className="showcase-icon">
+                    <PillIcon size={24} weight="duotone" />
                   </div>
-                  <h3>Powders</h3>
+                  <div className="showcase-text">
+                    <h3>
+                      Capsules
+                    </h3>
+                    <p>Precise and convenient delivery</p>
+                  </div>
                 </div>
+
+                <div className="showcase-center">
+                  <img
+                    className="showcase-product"
+                    src="provide.png"
+                    alt="Sanitas Healthcare nutraceutical product"
+                  />
+                </div>
+
+                <div className="showcase-item showcase-item-3">
+                  <div className="showcase-icon">
+                    <DropIcon size={24} weight="duotone" />
+                  </div>
+                  <div className="showcase-text">
+                    <h3>
+                      Liquids
+                    </h3>
+                    <p>Flexible and easy-to-use formulations</p>
+                  </div>
+                </div>
+
+                <div className="showcase-item showcase-item-4">
+                  <div className="showcase-icon">
+                    <JarLabelIcon size={24} weight="duotone" />
+                  </div>
+                  <div className="showcase-text">
+                    <h3>
+                      Powders
+                    </h3>
+                    <p>Versatile and convenient formulations</p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
           <div className="masonry-card-sec">
             <div className="container">
-              <h2>Innovative Customized Approach</h2>
+              <div className="section-head">
+                <span className="section-eyebrow">How we work</span>
+                <h2>Innovative Customized Approach</h2>
+              </div>
               <div className="masonry-inner">
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Package.jpg" alt="Packing solution" />
                   </div>
-                  <h3>Packing solution</h3>
+                  <div className="masonry-card-content">
+                    <h3>Packing solution</h3>
+                    <p>Smart and secure packaging for every need</p>
+                  </div>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Customized.jpg" alt="Customized solution" />
                   </div>
-                  <h3>Customized solution</h3>
+                  <div className="masonry-card-content">
+                    <h3>Customized solution</h3>
+                    <p>Tailored formulation to match your unique goals</p>
+                  </div>
                 </div>
                 <div className="masonry-card">
                   <div className="card-img">
                     <img src="Innovative.jpg" alt="Innovative approach" />
                   </div>
-                  <h3>Innovative approach</h3>
+                  <div className="masonry-card-content">
+                    <h3>Innovative approach</h3>
+                    <p>Forward-thinking solutions for a healthier tomorrow</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="how-we-work">
+          <div className="contact-cta">
             <div className="container">
-              <h2>How we work</h2>
-              <div className="hww-inner">
-                <div className="step-card">
-                  <h3>01</h3>
-                  <h4>One to one meeting with customer</h4>
+              <div className="cta-inner">
+                <div className="cta-text">
+                  <h2>
+                    Want More Information? Let’s Connect – Contact Us Today!
+                  </h2>
+                  <p>
+                    Our friendly and knowledgeable team is ready to help. Reach
+                    out for inquiries, support, or to learn more about our
+                    products.
+                  </p>
                 </div>
-                <div className="step-card">
-                  <h3>02</h3>
-                  <h4>Discussion for product & Business Development</h4>
-                </div>
-                <div className="step-card">
-                  <h3>03</h3>
-                  <h4>Order generation</h4>
-                </div>
-                <div className="step-card">
-                  <h3>04</h3>
-                  <h4>P.O. approval</h4>
-                </div>
-                <div className="step-card">
-                  <h3>08</h3>
-                  <h4>Dispatch of goods(1-2 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>07</h3>
-                  <h4>Manufacturing process(10-15 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>06</h3>
-                  <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>05</h3>
-                  <h4>Art work, design selection(2-3 days)</h4>
-                </div>
-              </div>
-              <div className="hww-inner-tablet">
-                <div className="step-card">
-                  <h3>01</h3>
-                  <h4>One to one meeting</h4>
-                </div>
-                <div className="step-card">
-                  <h3>02</h3>
-                  <h4>Discussion for product & business development</h4>
-                </div>
-                <div className="step-card">
-                  <h3>03</h3>
-                  <h4>Order generation</h4>
-                </div>
-                <div className="step-card">
-                  <h3>06</h3>
-                  <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>05</h3>
-                  <h4>Art work, design selection(2-3 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>04</h3>
-                  <h4>P.O. approval</h4>
-                </div>
-                <div className="step-card">
-                  <h3>07</h3>
-                  <h4>Manufacturinbg process(10-15 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>08</h3>
-                  <h4>Dispatch of goods(1-2 days)</h4>
-                </div>
-              </div>
-              <div className="hww-inner-mobile">
-                <div className="step-card">
-                  <h3>01</h3>
-                  <h4>One to one meeting</h4>
-                </div>
-                <div className="step-card">
-                  <h3>02</h3>
-                  <h4>Discussion for product & business development</h4>
-                </div>
-                <div className="step-card">
-                  <h3>03</h3>
-                  <h4>Order generation</h4>
-                </div>
-                <div className="step-card">
-                  <h3>04</h3>
-                  <h4>P.O. approval</h4>
-                </div>
-                <div className="step-card">
-                  <h3>05</h3>
-                  <h4>Art work, design selection(2-3 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>06</h3>
-                  <h4>Printing work(Foil, Label, Box)(10-15 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>07</h3>
-                  <h4>Manufacturinbg process(10-15 days)</h4>
-                </div>
-                <div className="step-card">
-                  <h3>08</h3>
-                  <h4>Dispatch of goods(1-2 days)</h4>
-                </div>
+                <button
+                  className="cta-btn"
+                  onClick={() => Navigate(Routes.contact)}
+                >
+                  <img src="contact-support.svg" alt="Contact" />
+                  Contact now
+                </button>
               </div>
             </div>
           </div>
-          <div className="products">
+          {/* <div className="products">
             <div className="container">
-              <h2>Our Products</h2>
+              <div className="section-head">
+                <span className="section-eyebrow">Our own brand</span>
+                <h2>Our Products</h2>
+                <p>
+                  ZustNutra is our consumer range, formulated and packed in the
+                  same GMP certified facility we manufacture for.
+                </p>
+              </div>
+
               <div className="products-inner">
-                <div className="product-card">
-                  <a href='https://www.amazon.in/dp/B0DR9897JQ' target="_blank" rel="noreferrer">
-                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
+                {PRODUCTS.map((product, index) => (
+                  <article className="product-card" key={product.name}>
+                    <span className="product-index">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
                     <div className="product-card-img">
-                      <img src="Zustnutra-zinc.png" alt="Zustnutra" />
-                    </div>
-                    <div className="product-card-text">
-                      <div className="product-details">
-                        <span>Zustnutra</span>
-                        <h3>Calcium, Magnesium, Zinc+</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className="product-card">
-                  <a href='https://www.amazon.in/dp/B0DR98HZS3' target="_blank" rel="noreferrer">
-                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
-                    <div className="product-card-img">
-                      <img src="Zustnutra-fat_burner.png" alt="Zustnutra" />
-                    </div>
-                    <div className="product-card-text">
-                      <div className="product-details">
-                        <span>Zustnutra</span>
-                        <h3>Fat Burner</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className="product-card">
-                  <a href='https://www.amazon.in/dp/B0DR2N76KV' target="_blank" rel="noreferrer">
-                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
-                    <div className="product-card-img">
-                      <img src="Zustnutra-l_glutathione.png" alt="Zustnutra" />
-                    </div>
-                    <div className="product-card-text">
-                      <div className="product-details">
-                        <span>Zustnutra</span>
-                        <h3>L Glutathione</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className="product-card">
-                  <a href='https://www.amazon.in/dp/B0DR7FP5XY' target="_blank" rel="noreferrer">
-                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
-                    <div className="product-card-img">
+                      <span className="product-glow" aria-hidden="true" />
+                      <span className="product-ring" aria-hidden="true" />
+                      <span className="product-stage" aria-hidden="true" />
                       <img
-                        src="Zustnutra-melatonin.png"
-                        alt="Zustnutra"
+                        className="product-shot"
+                        src={product.image}
+                        alt={`ZustNutra ${product.name}`}
                       />
                     </div>
+
                     <div className="product-card-text">
-                      <div className="product-details">
-                        <span>Zustnutra</span>
-                        <h3>Melatonin</h3>
-                      </div>
+                      <span className="product-brand">ZustNutra</span>
+                      <h3>{product.name}</h3>
+                      <span
+                        className="product-tag"
+                        aria-label="Available on Amazon"
+                      >
+                        <span className="product-tag-copy">
+                          Available on
+                        </span>
+                        <FontAwesomeIcon
+                          className="product-tag-amazon"
+                          icon={faAmazon}
+                          aria-hidden="true"
+                        />
+                      </span>
                     </div>
-                  </a>
-                </div>
-                <div className="product-card">
-                  <a
-                    href="https://www.amazon.in/dp/B0DR99H1M9" target="_blank" rel="noreferrer"
-                  >
-                    <img className="amazon-label" src="amazon-label.svg" alt="Amazon" />
-                    <div className="product-card-img">
-                      <img src="Zustnutra-testosterone.png" alt="Zustnutra" />
-                    </div>
-                    <div className="product-card-text">
-                      <div className="product-details">
-                        <span>Zustnutra</span>
-                        <h3>Testosterone Booster</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                  </article>
+                ))}
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="portfolio">
             <div className="container">
-              <h2>Supplements We Provide</h2>
+              <div className="section-head">
+                <span className="section-eyebrow">Therapeutic range</span>
+                <h2>Supplements We Provide</h2>
+              </div>
               <div className="portfolio-inner">
                 <div className="product-card">
                   <div
@@ -449,6 +480,7 @@ class Home extends Component {
               </button>
             </div>
           </div>
+
         </div>
       </div>
     );

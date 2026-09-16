@@ -7,16 +7,26 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="portfoliopage">
-        <div className="banner">
+        <section className="page-hero">
           <div className="container">
-            <div className="banner-inner">
-              <h1>Our portfolio</h1>
+            <div className="page-hero-inner">
+              <span className="section-eyebrow">Portfolio</span>
+              <h1>
+                Our <span>product portfolio</span>
+              </h1>
+              <p>
+                Eleven therapeutic ranges, formulated in house and manufactured
+                across every dosage form at our GMP certified facility.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
         <div className="text-media-sec">
           <div className="container">
-            <h2>Supplements We Make</h2>
+            <div className="section-head">
+              <span className="section-eyebrow">Full range</span>
+              <h2>Supplements We Make</h2>
+            </div>
             <div className="supplements-cards">
               <div className="product-card">
                 <div

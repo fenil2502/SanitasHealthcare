@@ -1,11 +1,22 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+  faClock,
+  faArrowRight,
+  faCircleNotch,
+} from "@fortawesome/free-solid-svg-icons";
 import CommonServices from "../../services/axios/apiServices/CommonServices";
 import { isValidForm, validate } from "../../utils/validations/CommonValidator";
 import ValidationText from "../../utils/validations/ValidationText";
 import { Messages } from "../../utils/Messages";
 import SwalServices from "../../services/swal/SwalServices";
+
+const MAP_DIRECTIONS_URL =
+  "https://www.google.com/maps/dir/?api=1&destination=Sanitas+Healthcare,+753+Nidhi+Industrial+Estate,+Rakanpur,+Kalol,+Gandhinagar+382721";
 
 class Contact extends Component {
   constructor(props) {
@@ -102,6 +113,19 @@ class Contact extends Component {
     return newValidState.isValid;
   };
 
+  resetForm = () => {
+    this.setState({
+      contactDetails: {
+        ...this.state.contactDetails,
+        name: "",
+        email: "",
+        mobileNo: "",
+        message: "",
+      },
+      validState: { isValid: true, error: {} },
+    });
+  };
+
   sendInquiryToAdmin = () => {
     let isAllvalidateField = this.isAllvalidateField();
     if (isAllvalidateField) {
@@ -110,6 +134,7 @@ class Contact extends Component {
       this.CommonServices.sendInquiryToAdmin(details).then((response) => {
         if (response.statusCode === 200 && response.responseItem != null) {
           this.setState({ isLoading: false });
+          this.resetForm();
           this.SwalServices.Success(
             "Message sent successfully, Our team will get back to you soon"
           );
@@ -124,162 +149,233 @@ class Contact extends Component {
     }
   };
 
+  fieldClass = (key) => {
+    return this.state.validState.error[key] ? "field has-error" : "field";
+  };
+
   render() {
+    const { contactDetails, validState, isLoading } = this.state;
+
     return (
       <div className="contactpage">
-        <div className="banner">
+        {/* ---------- Hero ---------- */}
+        <section className="page-hero">
           <div className="container">
-            <div className="banner-inner">
-              <h1>Contact Us</h1>
+            <div className="page-hero-inner">
+              <span className="section-eyebrow">Contact</span>
+              <h1>
+                Get in touch with <span>Sanitas Healthcare</span>
+              </h1>
+              <p>
+                Tell us what you are planning and our team will come back with
+                answers on formulation, dosage forms and timelines.
+              </p>
+
             </div>
           </div>
-        </div>
-        <div className="contact-sec">
+        </section>
+
+        {/* ---------- Form + details ---------- */}
+        <section className="contact-sec">
           <div className="container">
-            <div className="contact-inner">
-              <div className="contact-top">
-                <div className="contact-details">
-                  <div className="contact-heading">
-                    <h2>How can we help you?</h2>
-                    <p>With just few details we will be able to respond you.</p>
-                  </div>
-                  <div className="contact-address">
-                    <h3>
-                      753-Nidhi Industrial Estate, Rakanpur, Kalol,
-                      Gandhinagar-382721, India
-                    </h3>
-                    <span>
-                      <strong>Monday - Saturday:</strong> 08:00am to 08:00pm
-                    </span>
-                    <br />
-                    <span>
-                      <strong>Sunday:</strong> Holiday
-                    </span>
-                    <div className="mobile-no">
-                      <h3>Talk to us:</h3>
-                      <a href="tel:+919687361880">+91-9687361880</a>
-                      <br />
-                      <a href="tel:+919426829676">+91-9426829676</a>
-                      <br />
-                      <a href="tel:+919974875537">+91-9974875537</a>
-                    </div>
-                    <div className="mail-id">
-                      <h3>Mail us on:</h3>
-                      <a href="mailto:sanitashealthcareinfo@gmail.com">
-                        sanitashealthcareinfo@gmail.com
-                      </a>
-                      <br />
-                      <a href="mailto:info@sanitashealthcare.in">
-                        info@sanitashealthcare.in
-                      </a>
-                    </div>
-                  </div>
-                  <div className="social-media">
-                    <a
-                      href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faFacebookF} />
-                    </a>
-                    <a
-                      href="https://www.instagram.com/sanitashealthcare?igsh=YTBycW5nc2lzd3Rl"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                  </div>
+            <div className="contact-grid">
+              {/* Form */}
+              <div className="contact-form-card">
+                <div className="card-head">
+                  <h2>Send us a message</h2>
+                  <p>We usually reply within one working day.</p>
                 </div>
-                <div className="map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.841651710847!2d72.47901561135409!3d23.10289177903038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9da63372eef3%3A0xf8e7767d96d8fdce!2sSanitas%20Healthcare!5e0!3m2!1sen!2sin!4v1726817008146!5m2!1sen!2sin"
-                    width="600"
-                    height="450"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Location Map: Senitaas Healthcare"
-                  />
-                </div>
-              </div>
-              <div className="contact-bottom">
-                <h4>Fill up the form if you have any question</h4>
+
                 <div className="form">
-                  <div className="user-details">
-                    <div>
+                  <div className="field-row">
+                    <div className={this.fieldClass("name")}>
                       <input
                         type="text"
-                        placeholder="Name*"
                         id="name"
                         name="name"
-                        value={this.state.contactDetails.name}
+                        placeholder=" "
+                        autoComplete="name"
+                        value={contactDetails.name}
                         onChange={(event) => this.handleChange(event, "name")}
                         onBlur={() => this.validateField("name")}
                       />
-                      <ValidationText
-                        error={this.state.validState.error.name}
-                      />
+                      <label htmlFor="name">
+                        Full name <i>*</i>
+                      </label>
+                      <ValidationText error={validState.error.name} />
                     </div>
-                    <div>
+
+                    <div className={this.fieldClass("email")}>
                       <input
                         type="email"
-                        placeholder="Email*"
                         id="email"
                         name="email"
-                        value={this.state.contactDetails.email}
+                        placeholder=" "
+                        autoComplete="email"
+                        value={contactDetails.email}
                         onChange={(event) => this.handleChange(event, "email")}
                         onBlur={() => this.validateField("email")}
                       />
-                      <ValidationText
-                        error={this.state.validState.error.email}
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        placeholder="Mobile no.*"
-                        pattern="[0-9]{10}"
-                        id="mobileNo"
-                        name="mobileNo"
-                        value={this.state.contactDetails.mobileNo}
-                        onChange={(event) =>
-                          this.handleChange(event, "mobileNo")
-                        }
-                        onBlur={() => this.validateField("mobileNo")}
-                      />
-                      <ValidationText
-                        error={this.state.validState.error.mobileNo}
-                      />
+                      <label htmlFor="email">
+                        Email address <i>*</i>
+                      </label>
+                      <ValidationText error={validState.error.email} />
                     </div>
                   </div>
-                  <div className="user-msg">
+
+                  <div className={this.fieldClass("mobileNo")}>
+                    <input
+                      type="tel"
+                      id="mobileNo"
+                      name="mobileNo"
+                      placeholder=" "
+                      pattern="[0-9]{10}"
+                      autoComplete="tel"
+                      value={contactDetails.mobileNo}
+                      onChange={(event) => this.handleChange(event, "mobileNo")}
+                      onBlur={() => this.validateField("mobileNo")}
+                    />
+                    <label htmlFor="mobileNo">
+                      Mobile number <i>*</i>
+                    </label>
+                    <ValidationText error={validState.error.mobileNo} />
+                  </div>
+
+                  <div className={this.fieldClass("message") + " field-area"}>
                     <textarea
-                      placeholder="Message"
                       id="message"
                       name="message"
-                      value={this.state.contactDetails.message}
+                      rows="8"
+                      placeholder=" "
+                      value={contactDetails.message}
                       onChange={(event) => this.handleChange(event, "message")}
                       onBlur={() => this.validateField("message")}
-                    ></textarea>
-                    <ValidationText
-                      error={this.state.validState.error.message}
                     />
+                    <label htmlFor="message">
+                      Your message <i>*</i>
+                    </label>
+                    <ValidationText error={validState.error.message} />
                   </div>
-                  {this.state.isLoading === true ? (
-                    <button className="prm-btn">Loading...</button>
-                  ) : (
-                    <button
-                      className="prm-btn"
-                      onClick={() => this.sendInquiryToAdmin()}
-                    >
-                      Send message
-                    </button>
-                  )}
+
+                  <button
+                    type="button"
+                    className={
+                      isLoading ? "submit-btn is-loading" : "submit-btn"
+                    }
+                    disabled={isLoading}
+                    onClick={() => this.sendInquiryToAdmin()}
+                  >
+                    {isLoading ? (
+                      <React.Fragment>
+                        <FontAwesomeIcon icon={faCircleNotch} className="spin" />
+                        Sending
+                      </React.Fragment>
+                    ) : (
+                      "Send message"
+                    )}
+                  </button>
                 </div>
               </div>
+
+              {/* Details */}
+              <aside className="contact-aside">
+                <div className="detail-row">
+                  <span className="detail-icon">
+                    <FontAwesomeIcon icon={faLocationDot} />
+                  </span>
+                  <div className="detail-body">
+                    <h3>Address</h3>
+                    <p>
+                      753-Nidhi Industrial Estate, Rakanpur, Kalol,
+                      Gandhinagar-382721, India
+                    </p>
+                  </div>
+                </div>
+
+                <div className="detail-row">
+                  <span className="detail-icon">
+                    <FontAwesomeIcon icon={faPhone} />
+                  </span>
+                  <div className="detail-body">
+                    <h3>Phone</h3>
+                    <a href="tel:+919687361880">+91-9687361880</a>
+                    <a href="tel:+919426829676">+91-9426829676</a>
+                    <a href="tel:+919974875537">+91-9974875537</a>
+                  </div>
+                </div>
+
+                <div className="detail-row">
+                  <span className="detail-icon">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </span>
+                  <div className="detail-body">
+                    <h3>Email</h3>
+                    <a href="mailto:sanitashealthcareinfo@gmail.com">
+                      sanitashealthcareinfo@gmail.com
+                    </a>
+                    <a href="mailto:info@sanitashealthcare.in">
+                      info@sanitashealthcare.in
+                    </a>
+                  </div>
+                </div>
+
+                <div className="detail-row">
+                  <span className="detail-icon">
+                    <FontAwesomeIcon icon={faClock} />
+                  </span>
+                  <div className="detail-body">
+                    <h3>Working hours</h3>
+                    <p>Monday to Saturday, 08:00 am to 08:00 pm</p>
+                    <p className="muted">Sunday closed</p>
+                  </div>
+                </div>
+
+                <div className="detail-social">
+                  <a
+                    href="https://www.facebook.com/people/Sanitas-Healthcare/100091492130628/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/sanitashealthcare?igsh=YTBycW5nc2lzd3Rl"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                </div>
+              </aside>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* ---------- Map ---------- */}
+        <section className="contact-map-sec">
+          <div className="container">
+            <div className="map-head">
+              <div className="map-head-title">
+                <span className="section-eyebrow">Find us</span>
+                <h2>Our location</h2>
+              </div>
+              <a href={MAP_DIRECTIONS_URL} target="_blank" rel="noreferrer">
+                Get directions
+                <FontAwesomeIcon icon={faArrowRight} />
+              </a>
+            </div>
+            <div className="map-shell">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.841651710847!2d72.47901561135409!3d23.10289177903038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9da63372eef3%3A0xf8e7767d96d8fdce!2sSanitas%20Healthcare!5e0!3m2!1sen!2sin!4v1726817008146!5m2!1sen!2sin"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Location Map: Sanitas Healthcare"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     );
   }

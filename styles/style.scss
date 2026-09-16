@@ -2,14 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Fonts are loaded in pages/_document.js */
 
 body {
   padding: 0;
   margin: 0;
   background-color: var(--white);
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -25,13 +28,21 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
 p,
 a,
 span,
 li,
-button {
-  font-family: "Montserrat", sans-serif;
+button,
+input,
+textarea,
+select,
+label {
+  font-family: var(--font-body);
 }
 
 h1 {
@@ -66,21 +77,23 @@ h5 {
 
 p {
   font-size: 18px;
-  line-height: 22px;
+  /* Inter carries a taller x-height than Montserrat, so body copy needs
+     more leading to stay comfortable at this size. */
+  line-height: 29px;
   font-weight: 400;
 }
 
 a {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 26px;
   font-weight: 400;
 }
 
 button {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 17px;
+  line-height: 24px;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -114,3 +127,161 @@ button {
     font-weight: 500;
   }
 }
+
+/* ----- Shared section heading pattern -----
+   .section-head centres a heading block, .section-eyebrow is the small
+   caps label with a rule on either side that sits above every section
+   title across the site. */
+.section-head {
+  max-width: 660px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--accent);
+
+  &::before,
+  &::after {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background-color: rgba(255, 145, 77, 0.55);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-eyebrow {
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+
+    &::before,
+    &::after {
+      width: 18px;
+    }
+  }
+}
+
+/* ----- Shared inner page banner -----
+   One treatment for every inner page: warm gradient wash over a faint
+   grid, eyebrow, title with an accent phrase, and a short standfirst. */
+.page-hero {
+  position: relative;
+  background:
+    radial-gradient(circle at 86% 6%, rgba(255, 145, 77, 0.2), transparent 42%),
+    radial-gradient(circle at 2% 96%, rgba(18, 10, 123, 0.09), transparent 46%),
+    linear-gradient(135deg, #fff8f1 0%, #fdf2e8 48%, #f3f4ff 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(18, 10, 123, 0.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(18, 10, 123, 0.028) 1px, transparent 1px);
+    background-size: 76px 76px;
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-hero-inner {
+    padding: 92px 0 96px;
+    animation: heroRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+    .section-eyebrow {
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: 44px;
+      line-height: 55px;
+      font-weight: 600;
+      letter-spacing: -0.8px;
+      color: var(--secondary);
+
+      span {
+        color: var(--accent);
+      }
+    }
+
+    p {
+      margin-top: 18px;
+      max-width: 640px;
+      font-size: 17px;
+      line-height: 29px;
+      color: #6b6f7a;
+    }
+  }
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .page-hero .page-hero-inner {
+    padding: 68px 0 72px;
+
+    h1 {
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-hero .page-hero-inner {
+    padding: 48px 0 52px;
+
+    h1 {
+      font-size: 29px;
+      line-height: 39px;
+      letter-spacing: -0.4px;
+    }
+
+    p {
+      margin-top: 14px;
+      font-size: 15px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero .page-hero-inner {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@import "supplement.scss";
