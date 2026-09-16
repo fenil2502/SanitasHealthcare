@@ -11,7 +11,7 @@ import {
   PillIcon,
   ShieldCheckIcon,
   XIcon,
-} from "@phosphor-icons/react";
+} from "@phosphor-icons/react/dist/ssr";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import {
   SupplementCategories,

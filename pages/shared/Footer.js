@@ -7,7 +7,7 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { MapPinIcon, SealCheckIcon } from "@phosphor-icons/react";
+import { MapPinIcon, SealCheckIcon } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import { SupplementCategories } from "../../utils/SupplementCategories";
