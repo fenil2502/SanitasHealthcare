@@ -1,10 +1,5 @@
 import React, { useState, Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faBarsStaggered,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import { AlignRight, ArrowRight, X } from "lucide-react";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import Link from "next/link";
 
@@ -91,7 +86,7 @@ class Header extends Component {
                 </div>
                 <button onClick={() => Navigate(Routes.contact)}>
                   Contact us
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <ArrowRight size="1em" />
                 </button>
               </div>
             </div>
@@ -104,9 +99,7 @@ class Header extends Component {
               </div>
               <div className="navbar-menu">
                 <div className="navbar-links" onClick={this.toggleMenu}>
-                  <FontAwesomeIcon
-                    icon={isMenuOpen ? faXmark : faBarsStaggered}
-                  />
+                  {isMenuOpen ? <X size="1em" /> : <AlignRight size="1em" />}
                 </div>
               </div>
             </div>

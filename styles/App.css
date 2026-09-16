@@ -6,3 +6,10 @@
 .active-page svg{
     color: var(--white) !important;
 }
+
+/* lucide icons sit on the text baseline by default, where the Font Awesome
+   ones they replaced were nudged down. Keep the old optical alignment. */
+svg.lucide{
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+}

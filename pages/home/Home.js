@@ -1,21 +1,17 @@
 import React, { useState, Component } from "react";
-import {
-  faArrowRight,
-  faAward,
-  faBullseye,
-  faShieldHalved,
-} from "@fortawesome/free-solid-svg-icons";
 import { faAmazon } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  CirclesThreeIcon,
-  DropIcon,
-  FactoryIcon,
-  GrainsIcon,
-  JarLabelIcon,
-  PillIcon,
-  SealCheckIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  ArrowRight,
+  BadgeCheck,
+  Container,
+  Droplet,
+  Factory,
+  Pill,
+  ShieldHalf,
+  Tablets,
+  Target,
+} from "lucide-react";
 import Link from "next/link";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
@@ -76,7 +72,7 @@ class Home extends Component {
                   onClick={() => Navigate(Routes.about)}
                 >
                   Know more
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <ArrowRight size="1em" />
                 </button>
               </div>
 
@@ -99,7 +95,7 @@ class Home extends Component {
 
                 <div className="hero-note note-left">
                   <span className="note-dot">
-                    <FontAwesomeIcon icon={faBullseye} />
+                    <Target size="1em" />
                   </span>
                   <span className="note-text">
                     <strong>ALL DOSAGE FORMS</strong>
@@ -109,7 +105,7 @@ class Home extends Component {
 
                 <div className="hero-note note-right">
                   <span className="note-dot">
-                    <FontAwesomeIcon icon={faShieldHalved} />
+                    <ShieldHalf size="1em" />
                   </span>
                   <span className="note-text">
                     <strong>IN-HOUSE F&amp;D</strong>
@@ -139,7 +135,7 @@ class Home extends Component {
                     <div className="overview-points">
                       <div className="overview-point">
                         <span className="overview-point-icon">
-                          <FactoryIcon size={22} weight="duotone" />
+                          <Factory size={22} strokeWidth={1.75} />
                         </span>
                         <div className="overview-point-body">
                           <h3>State of the art facility</h3>
@@ -152,7 +148,7 @@ class Home extends Component {
 
                       <div className="overview-point">
                         <span className="overview-point-icon">
-                          <SealCheckIcon size={22} weight="duotone" />
+                          <BadgeCheck size={22} strokeWidth={1.75} />
                         </span>
                         <div className="overview-point-body">
                           <h3>WHO&ndash;GMP certified</h3>
@@ -169,7 +165,7 @@ class Home extends Component {
                       onClick={() => Navigate(Routes.about)}
                     >
                       More about us
-                      <FontAwesomeIcon icon={faArrowRight} />
+                      <ArrowRight size="1em" />
                     </button>
                   </div>
 
@@ -233,7 +229,7 @@ class Home extends Component {
 
                 <div className="showcase-item showcase-item-1">
                   <div className="showcase-icon">
-                    <CirclesThreeIcon size={24} weight="duotone" />
+                    <Tablets size={24} strokeWidth={1.75} />
                   </div>
                   <div className="showcase-text">
                     <h3>
@@ -245,7 +241,7 @@ class Home extends Component {
 
                 <div className="showcase-item showcase-item-2">
                   <div className="showcase-icon">
-                    <PillIcon size={24} weight="duotone" />
+                    <Pill size={24} strokeWidth={1.75} />
                   </div>
                   <div className="showcase-text">
                     <h3>
@@ -265,7 +261,7 @@ class Home extends Component {
 
                 <div className="showcase-item showcase-item-3">
                   <div className="showcase-icon">
-                    <DropIcon size={24} weight="duotone" />
+                    <Droplet size={24} strokeWidth={1.75} />
                   </div>
                   <div className="showcase-text">
                     <h3>
@@ -277,7 +273,7 @@ class Home extends Component {
 
                 <div className="showcase-item showcase-item-4">
                   <div className="showcase-icon">
-                    <JarLabelIcon size={24} weight="duotone" />
+                    <Container size={24} strokeWidth={1.75} />
                   </div>
                   <div className="showcase-text">
                     <h3>

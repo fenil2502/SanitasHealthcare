@@ -1,6 +1,4 @@
 import React, { useState, Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 class Portfolio extends Component {

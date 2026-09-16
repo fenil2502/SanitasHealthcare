@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import {
-  faLocationDot,
-  faPhone,
-  faEnvelope,
-  faClock,
-  faArrowRight,
-  faCircleNotch,
-} from "@fortawesome/free-solid-svg-icons";
+  ArrowRight,
+  Clock,
+  LoaderCircle,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 import CommonServices from "../../services/axios/apiServices/CommonServices";
 import { isValidForm, validate } from "../../utils/validations/CommonValidator";
 import ValidationText from "../../utils/validations/ValidationText";
@@ -267,7 +267,7 @@ class Contact extends Component {
                   >
                     {isLoading ? (
                       <React.Fragment>
-                        <FontAwesomeIcon icon={faCircleNotch} className="spin" />
+                        <LoaderCircle size="1em" className="spin" />
                         Sending
                       </React.Fragment>
                     ) : (
@@ -281,7 +281,7 @@ class Contact extends Component {
               <aside className="contact-aside">
                 <div className="detail-row">
                   <span className="detail-icon">
-                    <FontAwesomeIcon icon={faLocationDot} />
+                    <MapPin size="1em" />
                   </span>
                   <div className="detail-body">
                     <h3>Address</h3>
@@ -294,7 +294,7 @@ class Contact extends Component {
 
                 <div className="detail-row">
                   <span className="detail-icon">
-                    <FontAwesomeIcon icon={faPhone} />
+                    <Phone size="1em" />
                   </span>
                   <div className="detail-body">
                     <h3>Phone</h3>
@@ -306,7 +306,7 @@ class Contact extends Component {
 
                 <div className="detail-row">
                   <span className="detail-icon">
-                    <FontAwesomeIcon icon={faEnvelope} />
+                    <Mail size="1em" />
                   </span>
                   <div className="detail-body">
                     <h3>Email</h3>
@@ -321,7 +321,7 @@ class Contact extends Component {
 
                 <div className="detail-row">
                   <span className="detail-icon">
-                    <FontAwesomeIcon icon={faClock} />
+                    <Clock size="1em" />
                   </span>
                   <div className="detail-body">
                     <h3>Working hours</h3>
@@ -363,7 +363,7 @@ class Contact extends Component {
               </div>
               <a href={MAP_DIRECTIONS_URL} target="_blank" rel="noreferrer">
                 Get directions
-                <FontAwesomeIcon icon={faArrowRight} />
+                <ArrowRight size="1em" />
               </a>
             </div>
             <div className="map-shell">

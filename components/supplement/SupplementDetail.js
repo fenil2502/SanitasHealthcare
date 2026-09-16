@@ -1,17 +1,16 @@
 import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import {
-  ArrowRightIcon,
-  CaretDownIcon,
-  CaretRightIcon,
-  FlaskIcon,
-  ListBulletsIcon,
-  MagnifyingGlassIcon,
-  PackageIcon,
-  PillIcon,
-  ShieldCheckIcon,
-  XIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  ArrowRight,
+  ChevronDown,
+  FlaskConical,
+  List,
+  Package,
+  Pill,
+  Search,
+  ShieldCheck,
+  X,
+} from "lucide-react";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import {
   SupplementCategories,
@@ -69,7 +68,7 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
               aria-current={isActive ? "page" : undefined}
             >
               <span>{item.label}</span>
-              <ArrowRightIcon size={16} weight="bold" />
+              <ArrowRight size={16} strokeWidth={2.5} />
             </button>
           </li>
         );
@@ -100,16 +99,16 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
 
             <div className="sd-hero-meta">
               <span className="sd-chip">
-                <FlaskIcon size={18} weight="fill" />
+                <FlaskConical size={18} />
                 {data.length} formulation{data.length === 1 ? "" : "s"}
               </span>
               <span className="sd-chip">
-                <PillIcon size={18} weight="fill" />
+                <Pill size={18} />
                 {dosageForms.length} dosage form
                 {dosageForms.length === 1 ? "" : "s"}
               </span>
               <span className="sd-chip">
-                <ShieldCheckIcon size={18} weight="fill" />
+                <ShieldCheck size={18} />
                 GMP certified manufacturing
               </span>
             </div>
@@ -139,12 +138,12 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
                   aria-expanded={isNavOpen}
                 >
                   <span className="sd-mobile-nav-label">
-                    <ListBulletsIcon size={18} weight="bold" />
+                    <List size={18} />
                     {category && category.label}
                   </span>
-                  <CaretDownIcon
+                  <ChevronDown
                     size={16}
-                    weight="bold"
+                    strokeWidth={2.5}
                     className={isNavOpen ? "is-open" : ""}
                   />
                 </button>
@@ -163,7 +162,7 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
                 </div>
 
                 <div className="sd-search">
-                  <MagnifyingGlassIcon size={18} weight="bold" />
+                  <Search size={18} />
                   <input
                     type="text"
                     value={query}
@@ -178,7 +177,7 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
                       onClick={() => setQuery("")}
                       aria-label="Clear search"
                     >
-                      <XIcon size={14} weight="bold" />
+                      <X size={14} strokeWidth={2.5} />
                     </button>
                   )}
                 </div>
@@ -214,7 +213,7 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
 
               {filteredData.length === 0 ? (
                 <div className="sd-empty">
-                  <FlaskIcon size={40} weight="duotone" />
+                  <FlaskConical size={40} strokeWidth={1.5} />
                   <h3>No formulations match your search</h3>
                   <p>Try a different ingredient, or reset the filters.</p>
                   <button
@@ -310,7 +309,7 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
               <div className="sd-assurance">
                 <div className="sd-assurance-item">
                   <span className="sd-assurance-icon">
-                    <FlaskIcon size={22} weight="fill" />
+                    <FlaskConical size={22} />
                   </span>
                   <h4>In-house formulation</h4>
                   <p>
@@ -320,7 +319,7 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
                 </div>
                 <div className="sd-assurance-item">
                   <span className="sd-assurance-icon">
-                    <ShieldCheckIcon size={22} weight="fill" />
+                    <ShieldCheck size={22} />
                   </span>
                   <h4>Quality assured</h4>
                   <p>
@@ -330,7 +329,7 @@ const SupplementDetail = ({ categoryKey, data = [] }) => {
                 </div>
                 <div className="sd-assurance-item">
                   <span className="sd-assurance-icon">
-                    <PackageIcon size={22} weight="fill" />
+                    <Package size={22} />
                   </span>
                   <h4>Your pack, your brand</h4>
                   <p>

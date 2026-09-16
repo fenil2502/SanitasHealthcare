@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAnglesRight,
-  faPhone,
-  faLocationDot,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { MapPinIcon, SealCheckIcon } from "@phosphor-icons/react/dist/ssr";
+import { BadgeCheck, ChevronsRight, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 import { SupplementCategories } from "../../utils/SupplementCategories";
@@ -49,7 +43,7 @@ class Footer extends Component {
                 </p>
 
                 <span className="footer-badge">
-                  <SealCheckIcon size={16} weight="fill" />
+                  <BadgeCheck size={16} />
                   WHO&ndash;GMP certified facility
                 </span>
 
@@ -80,7 +74,7 @@ class Footer extends Component {
                     <li key={link.label}>
                       <Link href={link.href}>
                         <a>
-                          <FontAwesomeIcon icon={faAnglesRight} />
+                          <ChevronsRight size="1em" />
                           {link.label}
                         </a>
                       </Link>
@@ -96,7 +90,7 @@ class Footer extends Component {
                     <li key={category.key}>
                       <Link href={category.route.urlPath}>
                         <a>
-                          <FontAwesomeIcon icon={faAnglesRight} />
+                          <ChevronsRight size="1em" />
                           {category.shortLabel}
                         </a>
                       </Link>
@@ -111,7 +105,7 @@ class Footer extends Component {
                 <ul>
                   <li>
                     <span className="contact-icon">
-                      <FontAwesomeIcon icon={faLocationDot} />
+                      <MapPin size="1em" />
                     </span>
                     <div className="contact-body">
                       <span className="contact-label">Address</span>
@@ -130,7 +124,7 @@ class Footer extends Component {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <MapPinIcon size={13} weight="fill" />
+                        <MapPin size={13} />
                         View on Google Maps
                       </a>
                     </div>
@@ -138,7 +132,7 @@ class Footer extends Component {
 
                   <li>
                     <span className="contact-icon">
-                      <FontAwesomeIcon icon={faEnvelope} />
+                      <Mail size="1em" />
                     </span>
                     <div className="contact-body">
                       <span className="contact-label">Email</span>
@@ -153,7 +147,7 @@ class Footer extends Component {
 
                   <li>
                     <span className="contact-icon">
-                      <FontAwesomeIcon icon={faPhone} />
+                      <Phone size="1em" />
                     </span>
                     <div className="contact-body">
                       <span className="contact-label">Phone</span>

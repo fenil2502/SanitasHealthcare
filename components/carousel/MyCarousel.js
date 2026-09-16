@@ -2,18 +2,13 @@ import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faQuoteLeft,
-  faAngleRight,
-  faAngleLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
     <div className="next-arrow" onClick={onClick}>
-      <FontAwesomeIcon icon={faAngleRight} />
+      <ChevronRight size="1em" />
     </div>
   );
 }
@@ -22,7 +17,7 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <div className="prev-arrow" onClick={onClick}>
-      <FontAwesomeIcon icon={faAngleLeft} />
+      <ChevronLeft size="1em" />
     </div>
   );
 }
@@ -73,7 +68,7 @@ const MyCarousel = (props) => {
               <div key={key} className="slide" ref={(el) => (slideRefs.current[key] = el)}>
                 <div className="testimonial-card">
                   <div className="quote">
-                    <FontAwesomeIcon icon={faQuoteLeft} />
+                    <Quote size="1em" />
                     <p>{details.description}</p>
                   </div>
                   <div className="person">

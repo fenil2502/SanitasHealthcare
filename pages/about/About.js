@@ -1,13 +1,5 @@
 import React, { useState, Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheck,
-  faShieldHalved,
-  faIndustry,
-  faCapsules,
-  faFlask,
-  faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { ArrowRight, Factory, FlaskConical, Pill, ShieldHalf } from "lucide-react";
 import { Navigate, Routes } from "../../navigation/NavigationLib";
 
 
@@ -53,35 +45,35 @@ class About extends Component {
                   onClick={() => Navigate(Routes.portfolio)}
                 >
                   Learn more
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <ArrowRight size="1em" />
                 </button>
               </div>
 
               <div className="about-highlights">
                 <div className="highlight-card">
                   <span className="hl-icon">
-                    <FontAwesomeIcon icon={faShieldHalved} />
+                    <ShieldHalf size="1em" />
                   </span>
                   <h3>Quality Assurance</h3>
                   <p>Strict quality control at every step</p>
                 </div>
                 <div className="highlight-card">
                   <span className="hl-icon">
-                    <FontAwesomeIcon icon={faIndustry} />
+                    <Factory size="1em" />
                   </span>
                   <h3>Modern Facility</h3>
                   <p>State of the art manufacturing unit</p>
                 </div>
                 <div className="highlight-card">
                   <span className="hl-icon">
-                    <FontAwesomeIcon icon={faCapsules} />
+                    <Pill size="1em" />
                   </span>
                   <h3>All Dosage Forms</h3>
                   <p>Tablets, capsules, powders and syrups</p>
                 </div>
                 <div className="highlight-card">
                   <span className="hl-icon">
-                    <FontAwesomeIcon icon={faFlask} />
+                    <FlaskConical size="1em" />
                   </span>
                   <h3>In-House F&amp;D</h3>
                   <p>Science-driven formulation and development</p>
